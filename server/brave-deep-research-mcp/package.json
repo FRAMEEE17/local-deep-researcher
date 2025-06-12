@@ -1,0 +1,52 @@
+{
+  "name": "@suthio/brave-deep-research-mcp",
+  "version": "0.0.1",
+  "description": "DeepSearch MCP Server with Brave Search API and Puppeteer content extraction",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "ts-node-esm src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.7.0",
+    "dotenv": "^16.3.1",
+    "puppeteer": "^21.1.0",
+    "zod": "^3.22.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "bin": {
+    "brave-deep-research-mcp": "./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suthio/brave-deep-research-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "brave",
+    "search",
+    "puppeteer",
+    "web-scraping",
+    "ai-tools"
+  ],
+  "author": "suthio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suthio/brave-deep-research-mcp/issues"
+  },
+  "homepage": "https://github.com/suthio/brave-deep-research-mcp#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
