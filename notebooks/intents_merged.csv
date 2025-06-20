@@ -1,0 +1,980 @@
+sample_text,class,class_number,intent,sub_intent,language
+What's the latest on using transformers for instance segmentation in computer vision?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ผู้เชี่ยวชาญด้าน AI คิดอย่างไรเกี่ยวกับการใช้ ChatGPT ในการเรียนรู้ของเครื่อง,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How are the latest academic breakthroughs in quantum cryptography being used in real-world cybersecurity solutions?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+"What statistical methods are most effective for analyzing the performance of machine learning models in computer vision tasks, specifically object detection?",Academic Research Query,1,academic_intent,data_analysis,en
+ศึกษาการประยุกต์ใช้เทคนิค dimensionality reduction ในการวิเคราะห์ข้อมูลขนาดใหญ่ในอุตสาหกรรมและผลกระทบต่อประสิทธิภาพการทำงาน,Hybrid Research Query,3,hybrid_intent,search_request,th
+วิธีการเลือก parameter ที่เหมาะสมที่สุดสำหรับ super resolution ในการปรับปรุงคุณภาพภาพถ่ายโดยใช้เทคนิคการเรียนรู้ของเครื่อง?,Academic Research Query,1,academic_intent,source_request,th
+Think it'll rain later? Maybe we should grab an umbrella.,Casual Conversation and General Query,4,out_of_domain,weather_queries,en
+world models,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+"What is the formal definition of 'cross-modal alignment' in the context of multimodal machine learning, and how is it measured?",Academic Research Query,1,academic_intent,definition_request,en
+GPT-3 มีการพัฒนาอะไรใหม่ๆ บ้างที่น่าสนใจสำหรับนักเรียน AI เหมือนผม?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ฉันควรซื้อเสื้อผ้าใหม่สำหรับงานปาร์ตี้วันเสาร์นี้ไหม?,Casual Conversation and General Query,4,out_of_domain,shopping_advice,th
+"What are the statistical correlations between socioeconomic factors and voter turnout in the United States, as analyzed through regression analysis and hypothesis testing?",Academic Research Query,1,academic_intent,statistical_query,en
+What's the latest on using transformers for visual odometry in self-driving cars?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are the latest research findings and industry applications of knowledge graphs in recommender systems for e-commerce platforms?,Hybrid Research Query,3,hybrid_intent,case_study,en
+How has academic research on bias detection in facial recognition translated into real-world applications and regulations?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What are the latest industry applications of graph neural networks for bias detection in social media?,Hybrid Research Query,3,hybrid_intent,search_request,en
+การวิเคราะห์ข้อมูลภาพถ่ายด้วยกล้องวงจรปิดสามารถปรับปรุงประสิทธิภาพการตรวจจับวัตถุได้อย่างไร?,Academic Research Query,1,academic_intent,academic_query,th
+Edge computing กับ IoT มันเกี่ยวข้องกันยังไงอ่ะ?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"What are the applications of topological data analysis in understanding complex systems, and how does it compare to traditional machine learning methods?",Academic Research Query,1,academic_intent,academic_query,en
+มีวิธีการใดบ้างที่ใช้ quantum neural networks เพื่อปรับปรุงประสิทธิภาพการทำงานของระบบ recommendation ในธุรกิจออนไลน์ในปัจจุบัน?,Hybrid Research Query,3,hybrid_intent,search_request,th
+Generative AI ในการเขียนโค้ด มัน hype จริงหรือเปล่า?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What's the most popular pizza topping in the US?,Casual Conversation and General Query,4,out_of_domain,trivia,en
+RLVR กำลังเป็นเทรนด์ใน AI หรือเปล่า?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+อนาคตของการควบคุม AI จะเปลี่ยนแปลงอย่างไรหลังจาก Google ปรับนโยบาย AI?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+จะประเมินประสิทธิภาพของโมเดล Normalizing Flows ในการเรียนรู้แบบไม่มีผู้กำกับได้อย่างไร?,Academic Research Query,1,academic_intent,academic_query,th
+What's the latest on transformer architecture's impact on natural language processing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วันนี้คุณสบายดีไหม,Casual Conversation and General Query,4,out_of_domain,greeting,th
+Do text classification models trained on large datasets exhibit improved robustness to adversarial attacks compared to those trained on smaller datasets?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+ช่วยวิเคราะห์หน่อยว่างานวิจัย spiking neural networks มีแนวโน้มจะถูกนำไปใช้จริงในอุตสาหกรรมไหนบ้างมั้ย?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What are the established methods for evaluating the robustness of quadrupedal robot locomotion in unstructured environments?,Academic Research Query,1,academic_intent,methodology_query,en
+What's the latest on using blockchain for secure federated learning in AI applications?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are the implications of recent advancements in transformer architecture for NLP tasks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the ethical implications of using contrastive learning for facial recognition systems?,Academic Research Query,1,academic_intent,academic_query,en
+"What's the latest research on self-supervised learning and its applications in computer engineering, and how are companies like Google and Amazon currently utilizing it?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+"Can you explain how swarm robotics research is being applied in real-world industries like logistics and agriculture, and what are the current challenges?",Hybrid Research Query,3,hybrid_intent,case_study,en
+OpenAI's GPT-4: ผู้เชี่ยวชาญคิดว่ามันจะเปลี่ยนการเขียนโปรแกรมยังไง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Hey, I'm feeling stuck in my life, how do I find my passion again?",Casual Conversation and General Query,4,out_of_domain,personal_advice,en
+ความเห็นล่าสุดของผู้เชี่ยวชาญเกี่ยวกับโมเดล LLMs ใหม่ของ Meta เป็นอย่างไร?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ช่วยอธิบายการประยุกต์ใช้เทคนิค machine learning ในการปรับปรุงระบบเครือข่ายไร้สาย โดยอ้างอิงงานวิจัยล่าสุดและกรณีศึกษาในอุตสาหกรรม,Hybrid Research Query,3,hybrid_intent,search_request,th
+อากาศวันนี้ร้อนจังเลยเนอะ,Casual Conversation and General Query,4,out_of_domain,weather_queries,th
+การใช้ variational autoencoders ในการสร้างภาพมุมมองใหม่ (novel view synthesis) ส่งผลต่อคุณภาพของภาพที่สร้างขึ้นอย่างไร?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+"Should I ask my crush out, or wait for them to ask me?",Casual Conversation and General Query,4,out_of_domain,personal_advice,en
+การประยุกต์ใช้ graph neural networks ในระบบแนะนำภาพยนตร์เป็นอย่างไร และมีการศึกษาวิจัยใดที่แสดงให้เห็นถึงประสิทธิภาพของวิธีนี้?,Academic Research Query,1,academic_intent,literature_review,th
+explanation,Academic Research Query,1,academic_intent,explanation_request,th
+What are some reliable sources on evaluating the robustness of neural networks in multi-agent systems for my literature review?,Academic Research Query,1,academic_intent,source_request,en
+"How are Gaussian processes used in real-world cybersecurity applications, beyond academic research?",Hybrid Research Query,3,hybrid_intent,search_request,en
+แบบจำลอง Transformer ที่ใช้ attention mechanism จะแสดงประสิทธิภาพในการแปลภาษาไทย-อังกฤษดีกว่าแบบจำลอง RNN หรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How do recent advances in object detection using sensor fusion in academic research compare to their use in self-driving cars?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+"How does Google's BERT algorithm, born from academic research, perform in real-world applications like sentiment analysis and question answering?",Hybrid Research Query,3,hybrid_intent,case_study,en
+What's the impact of Google's new AI model on the future of computer vision?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Did you see that crazy play in the game last night?,Casual Conversation and General Query,4,out_of_domain,sports_news,en
+"How do continual learning methods address catastrophic forgetting in deep neural networks, and what are the theoretical underpinnings of these approaches?",Academic Research Query,1,academic_intent,explanation_request,en
+What's the latest expert take on the ethics of AI-generated synthetic data?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the theoretical foundations and empirical evaluations of uncertainty quantification methods in machine learning for robust topology optimization?,Academic Research Query,1,academic_intent,literature_review,en
+clarification_request,Web Search and Current Information Query,2,web_intent,clarification_request,th
+มีสูตรแกงเขียวหวานที่ไม่เผ็ดมากมั้ย,Casual Conversation and General Query,4,out_of_domain,cooking_recipes,th
+How are recent advances in quantum circuits being used to optimize peer-to-peer networks in practice?,Hybrid Research Query,3,hybrid_intent,search_request,en
+การนำแนวคิดการวิจัยเรื่อง Convolutional Neural Network มาใช้ปรับปรุงการวิเคราะห์ภาพถ่ายดาวเทียมในภาคเกษตรกรรมอย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+BERT ทำได้ดีในการประมวลผลภาษา แต่จะปรับใช้ยังไงให้ drone เข้าใจคำสั่งเสียงซับซ้อนในสภาพแวดล้อมจริงได้ดีขึ้น?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+วิธีการวิเคราะห์ข้อมูลแบบใดที่เหมาะสมที่สุดในการประเมินประสิทธิภาพของอัลกอริทึม Swarm Robotics ในการแก้ปัญหาการค้นหาเส้นทางที่เหมาะสมที่สุด?,Academic Research Query,1,academic_intent,data_analysis,th
+ขอแนะนำร้านอาหารไทยที่อร่อยและไม่แพงใกล้กรุงเทพฯ?,Casual Conversation and General Query,4,out_of_domain,food_recommendations,th
+Graphical Models,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+เข้าใจถูกไหมว่าโมเดล AI ที่ใช้ทรานส์ฟอร์มเมอร์สามารถเข้าใจภาษาไทยได้ดีขึ้นในปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"Can you summarize recent research on explainable AI and its current applications in the finance industry, including any notable success stories or challenges?",Hybrid Research Query,3,hybrid_intent,help_request,en
+How are recent advances in causal machine learning being used in real-world applications like personalized medicine?,Hybrid Research Query,3,hybrid_intent,search_request,en
+What are the latest advancements in federated learning for privacy-preserving robot perception?,Academic Research Query,1,academic_intent,academic_query,en
+"Hey, can you help me understand how sensor fusion techniques from research papers are being applied in real-world quadrupedal robot development?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What are the latest trends in neural rendering for VR?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+นักวิจัยสามารถใช้เทคนิคการวิเคราะห์ข้อมูลแบบไหนเพื่อปรับปรุงประสิทธิภาพของระบบตรวจจับการบุกรุกเครือข่ายได้?,Academic Research Query,1,academic_intent,explanation_request,th
+วิจัยล่าสุดเกี่ยวกับ Diffusion Model ในการสร้างภาพสังเคราะห์ มีการนำไปใช้จริงในอุตสาหกรรมอย่างไร และมีผลกระทบต่อการออกแบบกราฟิกในอนาคตอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"How are quantum algorithms used in real-world sensor networks, compared to theoretical models?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+วิธีการสร้างโมเดล Generative Adversarial Networks (GANs) ที่มีประสิทธิภาพสูงในการสร้างภาพถ่ายที่มีความสมจริง,Academic Research Query,1,academic_intent,definition_request,th
+"Hey, can you help me understand how edge computing's theoretical benefits are actually implemented in real-world IoT projects, beyond just academic research?",Hybrid Research Query,3,hybrid_intent,help_request,en
+"What is the formal definition of differential privacy in the context of machine learning, and how is it mathematically formulated?",Academic Research Query,1,academic_intent,definition_request,en
+Pareto optimality,Academic Research Query,1,academic_intent,definition_request,th
+มีบทความวิจัยหรือรายงานอุตสาหกรรมไหนที่เปรียบเทียบประสิทธิภาพของ collaborative filtering กับ deep learning ในระบบแนะนำสินค้าหรือไม่?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+foundation models,Academic Research Query,1,academic_intent,literature_review,th
+What are the latest research papers and industry applications of random forests in object detection for autonomous vehicles?,Hybrid Research Query,3,hybrid_intent,help_request,en
+"Hey, what's a good movie to watch on a lazy Sunday afternoon?",Casual Conversation and General Query,4,out_of_domain,movie_recommendations,en
+สามารถใช้การวิเคราะห์ข้อมูลเชิงลึกเพื่อตรวจสอบผลกระทบของตัวแปรต่อผลลัพธ์ของการทดลองได้หรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+What are people saying about the latest advancements in differential privacy?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What's the weirdest food combo you actually like?,Casual Conversation and General Query,4,out_of_domain,small_talk,en
+What are the ethical considerations of using bagging techniques in medical diagnosis systems?,Academic Research Query,1,academic_intent,academic_query,en
+การประยุกต์ใช้ genetic algorithms ในการ optimalize ระบบ recommender systems มีผลต่อความแม่นยำของการทำนายพฤติกรรมผู้ใช้ในระดับใด?,Academic Research Query,1,academic_intent,data_analysis,th
+มีวิธีจัดการกับเด็กที่ไม่ฟังคำสั่งหรือไม่?,Casual Conversation and General Query,4,out_of_domain,personal_advice,th
+การวิเคราะห์ข้อมูลแบบไม่มีผู้กำกับ (unsupervised learning) คืออะไร และมีการประยุกต์ใช้อย่างไรในการวิจัยด้าน robotic manipulation?,Academic Research Query,1,academic_intent,definition_request,th
+ผู้เชี่ยวชาญคิดอย่างไรเกี่ยวกับอนาคตของ Quantum Computing ในการปรับปรุง AI?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"Hey, what are some chill songs to listen to on a Sunday afternoon?",Casual Conversation and General Query,4,out_of_domain,music_recommendations,en
+How are recent advances in neuromorphic computing being applied in real-world embedded systems?,Hybrid Research Query,3,hybrid_intent,search_request,en
+What do experts think about Google's recent advancements in few-shot learning for NLP tasks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+การใช้เทคนิค Graph Neural Networks ส่งผลต่อประสิทธิภาพของระบบ Collaborative Filtering ในการทำนายความสนใจของผู้ใช้มากน้อยเพียงใด?,Academic Research Query,1,academic_intent,statistical_query,th
+งานวิจัยใหม่ๆ บอกอะไรเกี่ยวกับอนาคตของ face recognition บ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What statistical methods are most effective for analyzing large-scale text data in sentiment analysis research?,Academic Research Query,1,academic_intent,data_analysis,en
+What are the latest real-world applications of variational quantum algorithms in image generation and depth estimation?,Hybrid Research Query,3,hybrid_intent,search_request,en
+เราจะใช้ Large Language Model ในการพัฒนา chatbot ที่ให้คำปรึกษาทางการเงินได้ไหม?,Hybrid Research Query,3,hybrid_intent,case_study,th
+ผู้เชี่ยวชาญพูดว่าอย่างไรเกี่ยวกับการใช้ GPT-4 ในการวิเคราะห์ข้อมูลขนาดใหญ่?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Does self-supervised learning on image data lead to improved performance in relation extraction tasks?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+"How do advancements in Bayesian statistics impact real-world video analysis applications, and what are the industry implications of academic research in this space?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+Diffusion models กำลังไปทางไหนในปีนี้?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Hey, I'm bored. Can you recommend a good movie to watch this weekend?",Casual Conversation and General Query,4,out_of_domain,movie_recommendations,en
+คำถามวิจัย:** การประยุกต์ใช้อัลกอริทึม Clustering ในการวิเคราะห์ข้อมูลอนุกรมเวลาของตลาดหุ้นไทยมีประสิทธิภาพเพียงใด?,Academic Research Query,1,academic_intent,data_analysis,th
+ลำโพงบลูทูธของฉันไม่ต่อเน็ตเวิร์คแล้ว ทำไงดี?,Casual Conversation and General Query,4,out_of_domain,device_troubleshooting,th
+robustness,Academic Research Query,1,academic_intent,hypothesis_testing,en
+การประยุกต์ใช้เทคนิคการวิเคราะห์ข้อมูลแบบเบย์เชียน (Bayesian analysis) ในการตรวจจับพฤติกรรมผิดปกติในระบบเครือข่ายคอมพิวเตอร์เป็นอย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+วิธีการที่ใช้ในงานวิจัยนี้มีพื้นฐานมาจากทฤษฎีการเรียนรู้เชิงลึกแบบใด,Academic Research Query,1,academic_intent,academic_query,th
+วิเคราะห์แนวโน้มการวิจัยและผลกระทบของ AI ต่อการพัฒนาเครื่องจักรอัตโนมัติในอุตสาหกรรมเมื่อไม่นานมานี้,Hybrid Research Query,3,hybrid_intent,summary_request,th
+วิธีการวิเคราะห์ข้อมูลแบบ dimensionality reduction สามารถช่วยปรับปรุงประสิทธิภาพของการจำแนกข้อความ (text classification) ได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+เราจะใช้ active learning ในการสร้างระบบ 3D reconstruction ที่ดีขึ้นได้ยังไง ?,Hybrid Research Query,3,hybrid_intent,case_study,th
+ช่วยอธิบายการทำงานของ Quantum Circuit ในบริบทของการคำนวณควอนตัมล่าสุดหน่อยครับ,Web Search and Current Information Query,2,web_intent,clarification_request,th
+เข้าใจถูกไหมว่าโมเดล Llama ของ Meta AI ใช้เทคนิคการเรียนรู้แบบ few-shot หรือไม่,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What's the craziest thing you'd do if you won the lottery tomorrow?,Casual Conversation and General Query,4,out_of_domain,casual_chat,en
+RLVR กำลังจะเปลี่ยนแปลง AI อย่างไรบ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ผู้เชี่ยวชาญด้าน AI คิดอย่างไรเกี่ยวกับผลกระทบของโมเดลภาษาขนาดใหญ่ต่อความปลอดภัยของข้อมูลส่วนบุคคล?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"Hey, what's a great book to read on a relaxing summer vacation?",Casual Conversation and General Query,4,out_of_domain,book_recommendations,en
+Tell me a joke about dogs.,Casual Conversation and General Query,4,out_of_domain,jokes,en
+What's the expert verdict on Google's latest quantum AI model performance?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are the hottest new trends in neuromorphic computing?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+มีงานวิจัยใดบ้างที่ใช้ quadratic programming ในการแก้ปัญหา motion planning ของหุ่นยนต์?,Academic Research Query,1,academic_intent,source_request,th
+## คำถามวิจัย,Academic Research Query,1,academic_intent,explanation_request,th
+มีใครลองใช้ framework ใหม่ของ Google สำหรับพัฒนา AI บน edge device บ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+แถวนี้มีร้านอาหารอร่อยๆ บ้างไหม?,Casual Conversation and General Query,4,out_of_domain,restaurant_recommendations,th
+วิธีการที่ใช้ในการประเมินประสิทธิภาพของโมเดล adversarial robustness ในงานวิจัยนี้มีรายละเอียดอย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+How are recent advances in diffusion models impacting the development of digital twins in healthcare?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+How are genetic algorithms being used in cloud computing for scene understanding applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+RLVR มันคืออะไร? มีใครใช้มันในงานวิจัยปัจจุบันมั้ย?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"What are the implications of Google's new AI model, Gemini, on current NLP research?",Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"Hey, what's the best way to spend a lazy Sunday afternoon?",Casual Conversation and General Query,4,out_of_domain,casual_chat,en
+นักวิจัยด้าน AI คิดยังไงกับการใช้ GPT-3 ในการตรวจสอบข้อเท็จจริงบ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are the most effective statistical methods for analyzing network topology in social media data?,Academic Research Query,1,academic_intent,data_analysis,en
+วิธีจัดการกับเพื่อนที่ไม่เคยตอบกลับเมื่อมีปัญหา แต่จะตอบเรื่องอื่นแทน,Casual Conversation and General Query,4,out_of_domain,casual_chat,th
+How do meta-learning and transfer learning trends in academia translate to real-world applications in computer vision and natural language processing?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+"What are the key statistical methods for analyzing time series data in climate science, and how do they account for non-stationarity?",Academic Research Query,1,academic_intent,data_analysis,en
+ขอบคุณมากสำหรับคำแนะนำที่ดีนะครับ,Casual Conversation and General Query,4,out_of_domain,thanks,th
+ช่วยอธิบายว่าเทคนิคการเรียนรู้ของเครื่องจักรแบบอัตโนมัติสามารถนำไปใช้ในการควบคุมระบบอัตโนมัติของรถยนต์ไฟฟ้าได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+จะวิเคราะห์ผลกระทบของการปรับขนาดตัวแปรต่อประสิทธิภาพการทำนายของโมเดล machine learning ในการตรวจจับข้อมูลที่ผิดพลาดได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+What are the latest advancements in few-shot learning for robotics manipulation tasks?,Academic Research Query,1,academic_intent,academic_query,en
+"How are random forests used in autonomous vehicle development, both in research and industry?",Hybrid Research Query,3,hybrid_intent,summary_request,en
+ความแม่นยำของโมเดล machine learning ในการตรวจจับข้อมูลที่เป็นเท็จสามารถปรับปรุงได้อย่างไรโดยใช้เทคนิค cross-modal learning?,Academic Research Query,1,academic_intent,data_analysis,th
+"Hey, did the Lakers win their game against the Celtics last night?",Casual Conversation and General Query,4,out_of_domain,sports_news,en
+การวิจัยในด้าน Neural Rendering กำลังพัฒนาไปในทิศทางไหน และมีแนวโน้มที่จะนำไปใช้ในอุตสาหกรรมไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+To what extent do multilingual models exhibit cross-lingual transferability in low-resource settings?,Academic Research Query,1,academic_intent,statistical_query,en
+"Hey, what's a great book to read on a lazy Sunday afternoon?",Casual Conversation and General Query,4,out_of_domain,book_recommendations,en
+What are experts saying about the ethical implications of GPT-4?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the latest trends in quantum neural networks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+การใช้ attention mechanism ใน transformer architectures มีผลต่อประสิทธิภาพการแปลภาษาไทย-อังกฤษอย่างไร?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+"Does the incorporation of spiking neural networks in augmented intelligence systems enhance decision-making accuracy under uncertainty, compared to traditional neural networks?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+วิธีการที่ใช้ในการประเมินประสิทธิภาพของโมเดล text classification ในงานวิจัยที่เกี่ยวข้องกับภาษาไทยมีอะไรบ้าง?,Academic Research Query,1,academic_intent,methodology_query,th
+ทำไมโมเดล LLM ถึงได้รับความนิยมอย่างมากในอุตสาหกรรม AI ปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are experts saying about the latest advancements in Neural Rendering for Robotics?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Can someone explain the implications of Google's new AI model on current NLP research?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+สรุปแนวคิดและผลลัพธ์เชิงประยุกต์ของการนำเทคนิค attention mechanisms ไปใช้ในการวิเคราะห์ข้อมูลภาพทางการแพทย์ในปัจจุบัน?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+เข้าใจถูกไหมว่าโมเดล AI ที่ใช้ transformer มีความเสี่ยงต่อการโจมตีแบบ adversarial หรือไม่?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What statistical methods are most effective for analyzing the impact of hyperparameter tuning on model performance in multi-objective optimization problems?,Academic Research Query,1,academic_intent,data_analysis,en
+What's the latest on using transformer architecture for code generation in robotics?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+งานวิจัยเกี่ยวกับ Digital Twins ในด้านการผลิตกำลังไปถึงไหนแล้ว และมีบริษัทไหนที่นำไปใช้จริงบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+How did Microsoft's research on multilingual models lead to the development of Azure Cognitive Services' language translation features?,Hybrid Research Query,3,hybrid_intent,case_study,en
+งานวิจัยที่ผ่านมาได้สำรวจแนวทางการประยุกต์ GAN ในการควบคุมหุ่นยนต์แบบใดบ้าง?,Academic Research Query,1,academic_intent,literature_review,th
+ขอบคุณมากสำหรับของขวัญวันเกิดนะ,Casual Conversation and General Query,4,out_of_domain,thanks,th
+"Hey, my Bluetooth speaker won't connect. Any tips?",Casual Conversation and General Query,4,out_of_domain,tech_support,en
+วิธีการวิเคราะห์ประสิทธิภาพของอัลกอริทึมการเรียนรู้ของเครื่องจักร (machine learning) ในการทำนายผลลัพธ์ข้อมูลขนาดใหญ่คืออะไร?,Academic Research Query,1,academic_intent,methodology_query,th
+"What constitutes a 'spiking neural network' in the context of artificial intelligence, and how does it differ from traditional neural networks?",Academic Research Query,1,academic_intent,definition_request,en
+How is quantum machine learning being used in materials science research and development today?,Hybrid Research Query,3,hybrid_intent,search_request,en
+งานวิจัยล่าสุดเกี่ยวกับ augmented intelligence มีแนวโน้มที่จะเปลี่ยนแปลงวิธีการที่เราใช้ parallel computing ในอุตสาหกรรมอย่างไร?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+มีใครพอจะอธิบาย RLVR ในบริบทของ In-Context Learning ได้บ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How can probabilistic models be effectively applied to analyze and predict drone swarm behavior in dynamic environments?,Academic Research Query,1,academic_intent,data_analysis,en
+ไปทำอะไรให้โมโหไปแล้วรึเปล่า ?,Casual Conversation and General Query,4,out_of_domain,apology,th
+การเปรียบเทียบระหว่างการใช้เทคนิคการเรียนรู้ของเครื่องในด้านวิเคราะห์ข้อมูลขนาดใหญ่ในงานวิจัยวิชาการและอุตสาหกรรมคืออะไร?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are the most effective evaluation metrics for assessing the performance of panoptic segmentation models in computer vision research?,Academic Research Query,1,academic_intent,source_request,en
+What's the latest on using Graph Neural Networks for fraud detection in finance?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Transformer models กำลังจะปฏิวัติ NLP จริงหรือเปล่า?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การวิจัยเรื่อง quantum hardware มีแนวโน้มไปทางไหน แล้วมันจะส่งผลต่อระบบเครือข่ายของเราในอนาคตยังไง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+"How are recent advances in tactile sensing, like those found in academic papers, being used in robotics startups?",Hybrid Research Query,3,hybrid_intent,search_request,en
+What are the implications of adversarial attacks on the robustness of deep learning models in computer vision applications?,Academic Research Query,1,academic_intent,academic_query,en
+อากาศวันนี้ดีไหม,Casual Conversation and General Query,4,out_of_domain,weather_queries,th
+"What's the latest on using genetic algorithms for network optimization, and how do academic models translate to real-world blockchain applications?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+คอมพิวเตอร์ควอนตัมจะเปลี่ยนแปลงการออกแบบ AI ในอนาคตอย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+วิธีการนำเทคนิคการวิเคราะห์ข้อมูลเชิงลึกมาใช้ในการปรับปรุงระบบการเขียนโค้ดอัตโนมัติในอุตสาหกรรมซอฟต์แวร์,Hybrid Research Query,3,hybrid_intent,search_request,th
+BERT ของ Google ทำงานได้ดีขนาดไหนในโลกจริง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+What are the key methodologies and applications of transfer learning in deep neural networks for image classification tasks?,Academic Research Query,1,academic_intent,literature_review,en
+เปรียบเทียบผลกระทบของเทคนิคการเรียนรู้ของเครื่องต่อประสิทธิภาพของระบบวิเคราะห์ข้อมูลในธุรกิจค้าปลีก,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are the underlying mechanisms that enable visual transformers to outperform traditional convolutional neural networks in image classification tasks?,Academic Research Query,1,academic_intent,explanation_request,en
+BERT ของ Google ที่ใช้ในการค้นหาของ Google มันต่างจาก BERT เวอร์ชันที่ใช้ในงานวิจัยยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+"Hey, know any good Italian places to grab dinner around here?",Casual Conversation and General Query,4,out_of_domain,restaurant_recommendations,en
+การประยุกต์ใช้ Quantum Algorithms ในระบบเครือข่ายมีศักยภาพในการปฏิวัติวิธีการเข้ารหัสข้อมูลอย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+ผมอยากรู้ว่ามีงานวิจัยไหนที่ใช้ Knowledge Graph ช่วย optimize ระบบ Fog Computing บ้างมั้ย?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What are the underlying mechanisms that enable neural machine translation models to learn contextualized representations of words and phrases?,Academic Research Query,1,academic_intent,explanation_request,en
+"How can I apply transformer architecture research to improve chatbot sentiment analysis for customer support, like in recent industry innovations?",Hybrid Research Query,3,hybrid_intent,help_request,en
+How do recent advancements in deep learning for computer vision translate to industry adoption and startup funding in the autonomous vehicle space?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+What are the primary sources that discuss the applications of geometric deep learning in visual navigation for humanoid robots?,Academic Research Query,1,academic_intent,source_request,en
+My puppy chews everything! Any tips for stopping this?,Casual Conversation and General Query,4,out_of_domain,pet_advice,en
+คนส่วนใหญ่คิดไงเกี่ยวกับการใช้ AI ในการปรับปรุงประสิทธิภาพของระบบเครือข่ายคอมพิวเตอร์,Web Search and Current Information Query,2,web_intent,clarification_request,th
+ขอบคุณมากเลยนะ! ช่วยชี้ทางไปห้องน้ำหน่อยได้ไหม?,Casual Conversation and General Query,4,out_of_domain,thanks,th
+"Can you help me apply graph neural networks to real-world recommender systems, exploring both academic research and industry best practices?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What are the methodological implications of integrating transfer learning into multilingual models for improving cross-lingual text classification accuracy?,Academic Research Query,1,academic_intent,methodology_query,en
+explainability,Academic Research Query,1,academic_intent,definition_request,en
+ช่วยอธิบายว่า Generative AI ทำงานอย่างไร และมีผลกระทบต่อวิศวกรรมคอมพิวเตอร์อย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"How does recent research on neural rendering impact its applications in robotics and computer vision, and what are the current industry adoption challenges?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+ขอคำแนะนำเกี่ยวกับการประยุกต์ใช้เทคนิคการเรียนรู้ของเครื่องจักร (machine learning) ในการวิเคราะห์ข้อมูลลูกค้าเพื่อปรับปรุงประสบการณ์ผู้ใช้ในธุรกิจอีคอมเมิร์ซ,Hybrid Research Query,3,hybrid_intent,search_request,th
+What are the key challenges and limitations of applying graphical models to network analysis in the context of peer-to-peer networks?,Academic Research Query,1,academic_intent,literature_review,en
+"ผมกำลังศึกษา Motion Estimation บน video stream แบบ real-time ใน social media analytics, มีงานวิจัยอะไรที่เชื่อมโยงกับการประยุกต์ใช้จริงบ้าง?",Hybrid Research Query,3,hybrid_intent,help_request,th
+GPT-3 รู้จัก Transformer Architecture หรือเปล่า?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Can anyone explain how the new RLVR algorithm improves object detection in real-world applications?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"What are the latest research papers and industry applications of embodied AI in robotics, and how are they impacting real-world solutions?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+ลูกชายฉัน 3 ขวบไม่ยอมกินผักเลย มีวิธีไหนที่ทำให้เค้ากินง่ายขึ้นมั้ย?,Casual Conversation and General Query,4,out_of_domain,parenting_advice,th
+What are the latest breakthroughs in soft robotics tactile sensing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+จริงไหมว่าโมเดลภาษา LLM จะสามารถเขียนโค้ดได้ดีกว่าโปรแกรมเมอร์ในอนาคต?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the most effective feature extraction techniques for improving human pose estimation accuracy in computer vision applications?,Academic Research Query,1,academic_intent,data_analysis,en
+What are the latest advancements in active learning for named entity recognition in biomedical text?,Academic Research Query,1,academic_intent,source_request,en
+"Thanks for the movie tip, it was awesome!",Casual Conversation and General Query,4,out_of_domain,thanks,en
+การวิเคราะห์ข้อมูลแบบไม่มีโครงสร้างสามารถปรับปรุงประสิทธิภาพของโมเดลการเรียนรู้ของเครื่องจักรได้อย่างไรในด้านการตรวจจับการบุกรุก?,Academic Research Query,1,academic_intent,data_analysis,th
+ยังไงดีวะ?,Hybrid Research Query,3,hybrid_intent,case_study,th
+How are advancements in topological data analysis being used in real-world cybersecurity applications?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+What are the current ethical considerations surrounding the use of large language models in educational settings?,Academic Research Query,1,academic_intent,literature_review,en
+RLVR มีแนวโน้มจะเปลี่ยนแปลงการพัฒนา AI อย่างไรในปีนี้?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"What is the formal definition of 'contextuality' in the context of quantum error correction, and how is it measured?",Academic Research Query,1,academic_intent,definition_request,en
+การประยุกต์ใช้ convolutional neural networks ใน in-context learning มีประสิทธิภาพอย่างไรในการวิเคราะห์ภาพจากโดเมน computational biology ?,Academic Research Query,1,academic_intent,data_analysis,th
+What are the latest breakthroughs in VQA for drug discovery?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"I really like your new haircut, it looks great!",Casual Conversation and General Query,4,out_of_domain,compliment,en
+อะไรคือคำจำกัดความของ 'Emotion Analysis' ในบริบทของวิจัยด้านปัญญาประดิษฐ์ และมีวิธีการประเมินผลลัพธ์อย่างไร?,Academic Research Query,1,academic_intent,definition_request,th
+มีงานวิจัยหรือบทความไหนบ้างที่พูดถึงการประยุกต์ใช้ Generative Adversarial Networks (GANs) ในการสร้างภาพวิดีโอหรือภาพยนตร์?,Hybrid Research Query,3,hybrid_intent,search_request,th
+มีงานวิจัยใดบ้างที่ศึกษาถึงการประยุกต์ใช้ deep learning ในการวิเคราะห์อารมณ์ของข้อความภาษาไทย?,Academic Research Query,1,academic_intent,source_request,th
+"Hey, it was great chatting with you, talk to you later, have a nice day!",Casual Conversation and General Query,4,out_of_domain,goodbye,en
+"Hey, thanks for listening to me vent earlier!",Casual Conversation and General Query,4,out_of_domain,thanks,en
+What's the latest on Google's AI-powered coding assistant for software engineers?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"What are the optimal hyperparameter tuning methods for deep learning models in panoptic segmentation tasks, and how do they impact performance metrics?",Academic Research Query,1,academic_intent,methodology_query,en
+วิธีการสร้างโมเดล GPT ของ OpenAI ล่าสุดมีการปรับปรุงอย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"How did research on facial analysis evolve into commercial applications, and what startup funding trends emerged in the computer vision industry?",Hybrid Research Query,3,hybrid_intent,case_study,en
+What are the latest breakthroughs in protein folding prediction?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What's the industry take on using visual transformers for real-time drone control systems?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+ผู้เชี่ยวชาญคิดอย่างไรเกี่ยวกับการใช้ Quantum AI ในการวิเคราะห์ข้อมูลขนาดใหญ่ในปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การประยุกต์ใช้เทคนิคการเรียนรู้ของเครื่องเพื่อตรวจจับ bias ในข้อมูลขนาดใหญ่สามารถนำไปใช้จริงได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+RLVR กำลังจะเปลี่ยนแปลงงานของนักพัฒนาซอฟต์แวร์ยังไงบ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ช่วยอธิบายแนวคิดเรื่อง Quantum Simulation และการประยุกต์ใช้จริงในด้านวิศวกรรมคอมพิวเตอร์และระบบเครือข่าย,Hybrid Research Query,3,hybrid_intent,summary_request,th
+คำถามวิจัย: อธิบายแนวคิดหลักของ attention mechanisms ในโมเดลภาษา และความสำคัญของมันในงานวิจัยด้าน natural language processing,Academic Research Query,1,academic_intent,definition_request,th
+การเรียนรู้ Ontology ตอนนี้ฮิตมากใน AI แต่เอาไปใช้จริงในระบบเครือข่ายได้ยังไงวะ?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+zero-shot learning,Academic Research Query,1,academic_intent,hypothesis_testing,th
+What are the current state-of-the-art techniques for ontology learning from unstructured text data?,Academic Research Query,1,academic_intent,literature_review,en
+What are the most effective data visualization techniques for representing complex quantum information in research papers?,Academic Research Query,1,academic_intent,data_analysis,en
+"What are the latest breakthroughs in style transfer, and how are they being used in marketing today?",Hybrid Research Query,3,hybrid_intent,summary_request,en
+How can I statistically evaluate the impact of hyperparameter tuning on transformer model performance in natural language processing tasks?,Academic Research Query,1,academic_intent,data_analysis,en
+What are the latest breakthroughs in spiking neural networks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Could you recommend seminal papers on clustering algorithms for high-dimensional data in materials science?,Academic Research Query,1,academic_intent,source_request,en
+"How does research on human-robot interaction influence the development of commercial AI-powered chatbots, and what are the key startup funding trends in this space?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+"My phone's speaker is crackling, any ideas?",Casual Conversation and General Query,4,out_of_domain,device_troubleshooting,en
+"How are diffusion models used in drug discovery, both in research and industry?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What do experts think about the latest advancements in Explainable AI research?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+เข้าใจถูกไหมว่าโมเดล Quantum AI ของ Google จะเปลี่ยนแปลงการเขียนโค้ดในอนาคตอย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+RLVR vs LLMs: แบบไหนเหมาะกับงาน Text Classification มากกว่ากัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What quantitative methods are commonly used to analyze user interactions with social robots in educational settings?,Academic Research Query,1,academic_intent,data_analysis,en
+"Hey, how's it going? Just got back from a crazy weekend, how about you?",Casual Conversation and General Query,4,out_of_domain,greeting,en
+มีแนวโน้มการนำเทคนิค deep learning ไปใช้ในการวิเคราะห์ข้อมูลส่วนบุคคลในอุตสาหกรรมต่างๆ อย่างไรบ้าง?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+จะวิเคราะห์ประสิทธิภาพของอัลกอริทึมการเรียนรู้ของเครื่องในการทำนายผลลัพธ์ของระบบที่ซับซ้อนได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+คุณมีบทความวิจัยที่น่าสนใจเกี่ยวกับการประยุกต์ใช้ graph mining ในการวิเคราะห์เครือข่ายสังคมไหม?,Academic Research Query,1,academic_intent,source_request,th
+What are the key characteristics and limitations of topological data analysis in time series classification?,Academic Research Query,1,academic_intent,definition_request,en
+ผู้เชี่ยวชาญด้าน AI มีความคิดเห็นอย่างไรเกี่ยวกับการพัฒนา RLVR ที่มีประสิทธิภาพและปลอดภัย?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+คุณชอบทำอะไรในช่วงวันหยุดยาวๆ บ้าง?,Casual Conversation and General Query,4,out_of_domain,small_talk,th
+วิเคราะห์แนวโน้มการนำเทคนิคการเรียนรู้ของเครื่อง (machine learning) ไปใช้ในการตรวจจับและป้องกันการโจมตีทางไซเบอร์ในปัจจุบัน,Hybrid Research Query,3,hybrid_intent,search_request,th
+คำถามวิจัย:** อัลกอริทึมการลดมิติข้อมูลแบบ t-SNE มีประสิทธิภาพในการลดมิติข้อมูลสำหรับการวิเคราะห์ข้อมูลขนาดใหญ่ในด้าน computational biology อย่างไร?,Academic Research Query,1,academic_intent,statistical_query,th
+งานวิจัยเกี่ยวกับ quantum neural networks กำลังไปถึงไหนแล้ว? มีการนำไปใช้จริงในอุตสาหกรรมไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+วิธีการวิเคราะห์ข้อมูลแบบไหนที่เหมาะสมที่สุดในการตรวจสอบประสิทธิภาพของอัลกอริทึมการเรียนรู้ของเครื่องในโดเมนของการวิเคราะห์ข้อมูลขนาดใหญ่?,Academic Research Query,1,academic_intent,methodology_query,th
+LLMs กำลังพัฒนาไปในทิศทางไหนบ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Can you summarize research on quantum info applications in precision medicine and provide examples of current industry implementations?,Hybrid Research Query,3,hybrid_intent,help_request,en
+quantum computing,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+ขอแหล่งอ้างอิงสำหรับบทความสำคัญเรื่องการประยุกต์ใช้เทคนิค causal inference ในการวิเคราะห์ข้อมูล proteomics,Academic Research Query,1,academic_intent,literature_review,th
+วิธีการใดที่เหมาะสมที่สุดในการประยุกต์ใช้เทคนิค metaverse ในการปรับปรุงประสิทธิภาพของการเรียนรู้ของนักเรียนในโรงเรียน,Academic Research Query,1,academic_intent,literature_review,th
+RLVR กำลังจะเปลี่ยนวงการ AI จริงหรือเปล่า?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+เปรียบเทียบประสิทธิภาพของโมเดล Deep Learning กับวิธีการวิเคราะห์ข้อมูลแบบดั้งเดิมในการทำนายค่าใช้จ่ายด้านการดูแลสุขภาพ,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are the key advancements and challenges in applying contrastive learning to edge computing for image classification?,Academic Research Query,1,academic_intent,literature_review,en
+How are recent breakthroughs in quantum optimization being used in real-world coding and software development?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+GPT-3 vs. GPT-4: มีอะไรใหม่ที่น่าสนใจสำหรับงาน Data Science บ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+BERT ของ Google เก่งเรื่องการประมวลผลภาษาธรรมชาติ แต่เราจะใช้มันช่วยเพิ่มประสิทธิภาพการค้นหาข้อมูลในเว็บไซต์ของบริษัทได้ยังไง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+How are advances in quantum optimization being used to improve real-world applications like drug discovery?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+เราจะใช้เทคนิคการวิเคราะห์ความสัมพันธ์เชิงเส้นตรงแบบพหุคูณในการประมาณค่าพารามิเตอร์ของแบบจำลองการจำลองปริมาณฝนในอนาคตได้อย่างไร,Academic Research Query,1,academic_intent,statistical_query,th
+"Hey, do I need to bring an umbrella to the park today?",Casual Conversation and General Query,4,out_of_domain,weather_queries,en
+What are the ethical implications of using foundation models for personalized education?,Academic Research Query,1,academic_intent,academic_query,en
+งานวิจัยฉบับนี้เสนอวิธีการใหม่ในการเรียนรู้แบบ self-supervised บนข้อมูลที่กระจายกันหรือไม่?,Academic Research Query,1,academic_intent,explanation_request,th
+How does domain adaptation impact the performance of normalizing flows in medical image segmentation tasks?,Academic Research Query,1,academic_intent,academic_query,en
+How has research on non-convex optimization in machine learning impacted real-world software engineering practices?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+RLVR ในด้าน Quantum Simulation คืออะไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Do bandit algorithms outperform traditional methods for resource allocation in tactile sensing applications?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+การใช้เทคนิคการเรียนรู้เชิงลึกแบบ Zero-Shot สามารถปรับปรุงประสิทธิภาพของระบบตรวจจับอารมณ์ความรู้สึกในข้อความภาษาไทยได้หรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+เราจะวิเคราะห์ประสิทธิภาพของโมเดล machine learning ในการทำนายปริมาณฝนในประเทศไทยได้อย่างไร โดยใช้เทคนิค data mining และการเปรียบเทียบกับโมเดลอื่น ๆ?,Academic Research Query,1,academic_intent,data_analysis,th
+มีวิธีการใดบ้างที่ใช้เทคนิคการเรียนรู้เชิงลึกเพื่อปรับปรุงกระบวนการฟื้นฟูรูปภาพที่เสียหายหรือไม่ชัดเจน?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+จริงไหมที่โมเดลภาษาใหญ่สามารถเขียนโค้ดได้ดีกว่ามนุษย์แล้ว?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การใช้ contrastive learning ในการสังเคราะห์ภาพ ส่งผลต่อคุณภาพของภาพที่สร้างขึ้นอย่างไรเมื่อเทียบกับวิธีการแบบดั้งเดิม?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+มีวิธีการใดบ้างที่ใช้ machine learning ในการปรับปรุงระบบควบคุมหุ่นยนต์ เพื่อให้สามารถปรับตัวเข้ากับสภาพแวดล้อมที่เปลี่ยนแปลงได้อย่างรวดเร็ว?,Hybrid Research Query,3,hybrid_intent,search_request,th
+Thoughts on the latest Tesla Autopilot update?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ขอเปรียบเทียบระหว่างการใช้เทคนิคการเรียนรู้ของเครื่องแบบต่างๆ เช่น gaussian processes กับ neural networks ในการวิเคราะห์ข้อมูลที่ซับซ้อน,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+How does ensemble learning mitigate the risk of overfitting in action recognition models?,Academic Research Query,1,academic_intent,explanation_request,en
+What are the ethical considerations surrounding the use of facial analysis in political campaigning?,Academic Research Query,1,academic_intent,literature_review,en
+วิธีการวิเคราะห์ความสัมพันธ์ระหว่างขนาดข้อมูลการฝึกและประสิทธิภาพโมเดลโดยใช้วิธีการทางสถิติ?,Academic Research Query,1,academic_intent,statistical_query,th
+งานวิจัยเกี่ยวกับ continual learning ในด้าน 3D vision มีแนวโน้มไปทางไหน และมีการนำไปใช้จริงในอุตสาหกรรมไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+อยากทราบข้อมูลวิชาการและข้อมูลตลาดปัจจุบันเกี่ยวกับการใช้ Quantum Algorithms ในการแก้ปัญหาด้าน Optimization ในอุตสาหกรรม,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+มีเทคนิคการเรียนรู้ของเครื่องแบบใดบ้างที่ถูกนำมาประยุกต์ใช้ในอุตสาหกรรมปัจจุบันเพื่อปรับปรุงประสิทธิภาพของระบบ AI และมีผลกระทบอย่างไรต่อการพัฒนา AI ในอนาคต?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+What are people saying about the new GPT-4 update?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ในงานวิจัยเรื่องการประยุกต์ genetic algorithms ในการ optimal control ของ mobile robots มีวิธีการประเมินประสิทธิภาพของ algorithm ที่ใดบ้าง?,Academic Research Query,1,academic_intent,academic_query,th
+การประยุกต์ใช้เทคนิค contrastive learning ในการปรับปรุงประสิทธิภาพของโมเดล network topology สำหรับงาน web mining มีแนวทางและผลลัพธ์อย่างไรที่ผ่านมา?,Academic Research Query,1,academic_intent,literature_review,th
+แม่น้ำที่ยาวที่สุดในโลกคือแม่น้ำอะไร?,Casual Conversation and General Query,4,out_of_domain,trivia,th
+What's the latest on Google's advancements in Explainable AI for autonomous vehicles?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"Hey, can you recommend a good Italian restaurant near downtown for a date night?",Casual Conversation and General Query,4,out_of_domain,restaurant_recommendations,en
+การพัฒนาระบบ tactile sensing ในปัจจุบันใช้แนวคิดจาก topological data analysis ยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+ดูหนังเรื่องอะไรดีเนี่ย?,Casual Conversation and General Query,4,out_of_domain,movie_recommendations,th
+ทำไมไก่ข้ามถนน?,Casual Conversation and General Query,4,out_of_domain,jokes,th
+สบายดีมั้ยวันนี้?,Casual Conversation and General Query,4,out_of_domain,greeting,th
+หนังที่เธอเลือกมาดูคืนนี้น่าสนใจมากเลย!,Casual Conversation and General Query,4,out_of_domain,compliment,th
+มีวิธีใดที่จะนำหลักการของ variational quantum algorithms ไปประยุกต์ใช้กับการแก้ปัญหาในด้าน computational mathematics ได้อย่างมีประสิทธิภาพ,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+explainable AI,Academic Research Query,1,academic_intent,definition_request,en
+What are the limitations and advantages of using SLAM algorithms versus visual odometry for navigation in autonomous vehicles?,Academic Research Query,1,academic_intent,methodology_query,en
+"Generative AI กำลังบูม! คิดว่าแนวทางการพัฒนาแบบไหน (Chain-of-thought reasoning, Self-supervised learning, etc.) จะเหมาะกับการสร้าง chatbot ที่เข้าใจคนไทยลึกๆ?",Hybrid Research Query,3,hybrid_intent,case_study,th
+"What's the latest on using transformers for image processing, any expert opinions?",Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Hey, can you tell me a joke to brighten up my boring day?",Casual Conversation and General Query,4,out_of_domain,jokes,en
+"What's the most popular pizza topping in the United States, dude?",Casual Conversation and General Query,4,out_of_domain,trivia,en
+เปรียบเทียบผลการวิจัยเชิงทฤษฎีและความท้าทายในการใช้งานจริงของ Deep Learning กับ Reinforcement Learning ในระบบควบคุมอัตโนมัติ,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+วิธีการโมเดลภาษาแบบ transformer ใช้เพื่อปรับปรุงประสิทธิภาพการแปลภาษาได้อย่างไร?,Academic Research Query,1,academic_intent,explanation_request,th
+"Hey, can you give me a simple recipe for making delicious chicken wings?",Casual Conversation and General Query,4,out_of_domain,cooking_recipes,en
+continual learning,Academic Research Query,1,academic_intent,statistical_query,th
+จริงไหมที่ AI สามารถสร้างวิดีโอที่ดูจริงได้แล้ว และมีผลกระทบต่อการควบคุม AI อย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Hey, can you give me a simple recipe for making delicious chicken parmesan?",Casual Conversation and General Query,4,out_of_domain,cooking_recipes,en
+What's the latest industry take on the ethics of using facial recognition in AI systems?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Does incorporating chaos theory principles improve the robustness of path planning algorithms for unmanned aerial vehicles in dynamic environments?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+Quantum neural networks ใน data preprocessing มีศักยภาพจริงในการปฏิวัติอุตสาหกรรมไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+"I'm looking for research on using social robotics in healthcare, along with current market trends and enterprise adoption rates.",Hybrid Research Query,3,hybrid_intent,case_study,en
+"Hey, I'm really sorry I forgot your birthday, can I make it up somehow?",Casual Conversation and General Query,4,out_of_domain,apology,en
+มีงานวิจัยเกี่ยวกับการใช้ Graph Theory ในการ Optimize path planning สำหรับ robot autonomous navigation บ้างไหม?,Hybrid Research Query,3,hybrid_intent,help_request,th
+How does transfer learning in computer vision evolve from academic research to real-world applications in autonomous vehicles and robotics?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+นิยายเรื่องไหนที่คุณอยากแนะนำให้เพื่อนของคุณได้อ่าน?,Casual Conversation and General Query,4,out_of_domain,book_recommendations,th
+ผู้เชี่ยวชาญคิดอย่างไรเกี่ยวกับการนำ AI ไปใช้ในระบบเครือข่าย 5G?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ผมอยากรู้ว่างานวิจัยเกี่ยวกับ tactile sensing ตอนนี้ไปถึงไหนแล้ว แล้วมีบริษัทไหนเอาไปใช้ในอุตสาหกรรมบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+How is particle swarm optimization used in real-world coding projects compared to theoretical applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+Quantum computing กับ AI จะปฏิวัติ proteomics หรือเปล่า?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What do AI researchers think about the ethics of using facial recognition technology?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+กลไกการรักษาความปลอดภัยในระบบ cyber-physical ทำงานอย่างไรในการป้องกันการโจมตีแบบ denial-of-service?,Academic Research Query,1,academic_intent,explanation_request,th
+How has research on adversarial robustness in deep learning influenced real-world cybersecurity practices?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+การเดินทางไปต่างประเทศครั้งแรกควรเตรียมตัวอย่างไร,Casual Conversation and General Query,4,out_of_domain,introduction,th
+จะอธิบายการทำงานของอัลกอริทึม gradient boosting ในการเรียนรู้ของเครื่องได้อย่างไร?,Academic Research Query,1,academic_intent,explanation_request,th
+How do recent advances in green AI and in-context learning impact real-world applications like algorithmic trading and topological data analysis?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+## คำถาม Understanding Check,Web Search and Current Information Query,2,web_intent,understanding_check,th
+เห็นด้วยไหมว่าการใช้ Ontology Learning ในการพัฒนา Chatbot จะช่วยให้เข้าใจภาษาธรรมชาติได้ดีขึ้น? หาตัวอย่างการประยุกต์ใช้จริงมาประกอบด้วย,Hybrid Research Query,3,hybrid_intent,case_study,th
+วิธีการใช้ gaussian processes เพื่อปรับปรุงความแม่นยำของการทำนายในบริบทของ self-supervised learning คืออะไร?,Academic Research Query,1,academic_intent,explanation_request,th
+อยากได้ tips เริ่มต้นเลี้ยงต้นไม้เล็กๆ บ้างอ่ะ,Casual Conversation and General Query,4,out_of_domain,hobby_advice,th
+"What are the key methodologies and limitations of current research on causal inference in computer vision, particularly in the context of video understanding?",Academic Research Query,1,academic_intent,literature_review,en
+What is the statistical relationship between neural network depth and performance in natural language processing tasks?,Academic Research Query,1,academic_intent,statistical_query,en
+How is the academic research on transformer models impacting real-world applications like chatbots and machine translation?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+What are the latest advancements in using transfer learning for quadrupedal robot navigation in real-world settings?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+หมาพันธุ์อะไรที่เหมาะกับคนอยู่คอนโดคะ?,Casual Conversation and General Query,4,out_of_domain,pet_advice,th
+"What are the latest research findings and industry applications of machine learning in medical informatics, particularly in disease diagnosis and treatment?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"How are transformer models used in real-world robotic manipulation, beyond academic benchmarks?",Hybrid Research Query,3,hybrid_intent,summary_request,en
+รถยนต์คันนี้มันมีเสียงแปลกๆ เวลาเบรกอ่ะ เป็นอะไรไปนะ?,Casual Conversation and General Query,4,out_of_domain,car_maintenance,th
+ช่วยอธิบายการทำงานของระบบ AI ที่ใช้เทคนิค Transformers ในปัจจุบันหน่อย,Web Search and Current Information Query,2,web_intent,understanding_check,th
+How do reinforcement learning algorithms adapt to non-stationary environments in wireless sensor networks?,Academic Research Query,1,academic_intent,explanation_request,en
+Can transformer-based models outperform traditional computer vision techniques in image recognition tasks now?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What's the latest on using reinforcement learning for bipedal robot walking simulations?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Hey, I'm craving something spicy, what's a good restaurant for Korean BBQ around here?",Casual Conversation and General Query,4,out_of_domain,food_recommendations,en
+เสื้อตัวนี้สีสวยจัง!,Casual Conversation and General Query,4,out_of_domain,compliment,th
+"What are the latest advancements in force control, and how are they being used in robotics industry today?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+"What are the optimal hyperparameters for a support vector machine classifier in high-dimensional datasets, and how do they impact model performance statistically?",Academic Research Query,1,academic_intent,statistical_query,en
+ขอคำแนะนำเกี่ยวกับวิธีการใช้เทคนิค Continual Learning เพื่อปรับปรุงประสิทธิภาพของ Conversational AI ในการบริการลูกค้า,Hybrid Research Query,3,hybrid_intent,search_request,th
+มีวิธีการใดบ้างที่ใช้ variational autoencoders ในการสร้างโมเดลทางธุรกิจ เช่น การวิเคราะห์ข้อมูลลูกค้า หรือการทำนายผลการตลาด,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+GPT-3.5 vs GPT-4: มีอะไรใหม่ที่น่าสนใจในด้านการประมวลผลภาษาธรรมชาติ?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"What are the latest industry applications of foundation models in text generation, and what are the research gaps?",Hybrid Research Query,3,hybrid_intent,summary_request,en
+"Hey, any quick tips for beating this afternoon slump?",Casual Conversation and General Query,4,out_of_domain,health_tips,en
+การวิจัย về federated learning ในด้าน computational biology กำลังไปถึงไหนแล้ว?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+What do NLP experts think about Google's latest multilingual model updates?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+GPT-3 มีการพัฒนาอะไรใหม่ๆ บ้างที่น่าสนใจ ?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"What is the effect of cognitive biases on decision-making in human-robot collaboration, and can we develop a framework to mitigate their impact?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+ขอแหล่งอ้างอิงสำหรับบทความวิจัยเกี่ยวกับการประยุกต์ใช้เทคนิค Gaussian Splatting ในการประมวลผลภาพ 3 มิติได้ไหม?,Academic Research Query,1,academic_intent,source_request,th
+Does incorporating topological constraints in trajectory optimization lead to demonstrably improved path efficiency?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+What are the implications of the latest advancements in multimodal transformers for conversational AI?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+ความซับซ้อนเชิงคำนวณในอัลกอริทึม neural network ถูกนิยามอย่างไร?,Academic Research Query,1,academic_intent,definition_request,th
+ขอสรุปผลการวิจัยวิชาการและแนวโน้มปัจจุบันเกี่ยวกับ contrastive learning และการประยุกต์ใช้จริงในระบบแนะนำสินค้าแบบอัตโนมัติ,Hybrid Research Query,3,hybrid_intent,summary_request,th
+ไปเที่ยวที่ไหนดีช่วงสิ้นปีเนี่ย?,Casual Conversation and General Query,4,out_of_domain,travel_recommendations,th
+What are the key methodologies for evaluating the effectiveness of interactive visualization tools in facilitating insights from complex networks?,Academic Research Query,1,academic_intent,literature_review,en
+How are recent advancements in quantum machine learning being applied in real-world financial modeling?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What's the most random thing that happened to you today? (casual_chat),Casual Conversation and General Query,4,out_of_domain,casual_chat,en
+topological data analysis,Academic Research Query,1,academic_intent,definition_request,th
+GPT-3 กับ LaMDA ต่างกันยังไงในแง่การประยุกต์ใช้จริง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+How are recent advances in brain-inspired computing being used in real-world IoT applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+"Hey, I'm looking for a new TV, what brand should I go for?",Casual Conversation and General Query,4,out_of_domain,shopping_advice,en
+"Hey, did you hear about the crazy comeback in the NBA game last night?",Casual Conversation and General Query,4,out_of_domain,sports_news,en
+"What constitutes 'explainability' in the context of artificial intelligence, and how is it formally defined in academic literature?",Academic Research Query,1,academic_intent,definition_request,en
+การใช้ evolutionary algorithms ใน content-based filtering มีการพัฒนาไปไกลแค่ไหนแล้วในอุตสาหกรรม?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+What do experts think about the ethics of using AI in robotics engineering currently?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+adversarial training ใน NLP มีผลต่อประสิทธิภาพของ chatbot ในการบริการลูกค้าจริงอย่างไร?,Hybrid Research Query,3,hybrid_intent,case_study,th
+What are the latest advancements in quantum error correction for quantum computing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the latest advancements in image classification with GANs?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the latest breakthroughs in depth estimation for robotics?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+การวิเคราะห์เชิงลึกของวิธีการ Simulated Annealing ในการแก้ปัญหาการควบคุมหุ่นยนต์มีการตีพิมพ์ในวารสารใดบ้าง?,Academic Research Query,1,academic_intent,academic_query,th
+การนำเทคนิคการเรียนรู้ของเครื่องจักรมาใช้ในระบบการตรวจจับแรนซัมแวร์ (ransomware) มีความแตกต่างอย่างไรเมื่อเปรียบเทียบกับการใช้เทคนิคการวิเคราะห์เชิงลึก (deep analysis) ในการตรวจจับ?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+มีความแตกต่างอย่างไรระหว่างการใช้หลักการของ Green AI ในงานวิจัยวิชาการและภาคอุตสาหกรรม?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+จะหัดเล่นกีตาร์ไฟฟ้าได้อย่างไร,Casual Conversation and General Query,4,out_of_domain,hobby_advice,th
+How are recent advances in few-shot learning with visual transformers being used in real-world 3D vision applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+วิธีการวิเคราะห์ข้อมูลแบบ Topological จะช่วยปรับปรุงประสิทธิภาพการจำแนกประเภทของข้อมูลที่มีความซับซ้อนได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+What are experts saying about the future of unsupervised learning?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+นักวิจัย AI คิดยังไงเกี่ยวกับการใช้ GPT-3 ในการสร้างโค้ด?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+Can anyone explain the latest advancements in reinforcement learning for drone control systems?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+How is academic research on visual transformers impacting real-world image generation tools and techniques?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+มีงานวิจัยใดบ้างที่สำรวจผลกระทบของ adversarial training ต่อประสิทธิภาพของโมเดล continual learning ในงาน NLP?,Academic Research Query,1,academic_intent,source_request,th
+theoretical underpinnings,Academic Research Query,1,academic_intent,explanation_request,en
+What are the most commonly used statistical methods for analyzing the convergence of online optimization algorithms in machine learning?,Academic Research Query,1,academic_intent,statistical_query,en
+How are quantum error correction techniques being used in real-world applications like quantum computing?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+Quenda ต้องการคำแนะนำเกี่ยวกับวิธีการใช้ Transformer ในงาน Continual Learning อย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the limitations and potential biases of using ranking algorithms in evaluating the robustness of multilingual language models?,Academic Research Query,1,academic_intent,methodology_query,en
+การประยุกต์ใช้เทคนิคการวิเคราะห์ข้อมูลขนาดใหญ่ (Big Data) ในการทำนายผลลัพธ์ทางการแพทย์เป็นอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+มีบทความวิจัยใดที่ศึกษาผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศต่อการเติบโตของพืชผลในประเทศไทยโดยใช้เทคนิคการวิเคราะห์ข้อมูลขนาดใหญ่ (big data analytics) บ้าง?,Academic Research Query,1,academic_intent,literature_review,th
+"Hey, any good movies you've seen lately?",Casual Conversation and General Query,4,out_of_domain,movie_recommendations,en
+"What are the key differences between Bayesian and frequentist approaches to modeling uncertainty in deep learning, and how do they impact predictive performance?",Academic Research Query,1,academic_intent,academic_query,en
+คุณจะจัดการกับเพื่อนบ้านที่ชอบเล่นดนตรีเสียงดังยังไง?,Casual Conversation and General Query,4,out_of_domain,personal_advice,th
+What's the latest on Google's quantum AI breakthrough and its industry implications?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Let me know if you'd like more examples focused on a specific domain!,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วันนี้ฝนตกหนักจังเลย บ้านคุณเป็นยังไงบ้าง?,Casual Conversation and General Query,4,out_of_domain,introduction,th
+"Hey, how's it going? What's been the highlight of your week so far?",Casual Conversation and General Query,4,out_of_domain,introduction,en
+What are the latest breakthroughs in chain-of-thought reasoning?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"How are transfer learning techniques used in real-world applications like emotion recognition, compared to academic research?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What's the latest expert take on transformer architecture for natural language processing?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+เข้าใจถูกไหมว่าโมเดลทรานส์ฟอร์มเมอร์สามารถปรับปรุงความแม่นยำในการตรวจจับภาษาได้อย่างมากเมื่อเทียบกับโมเดลอื่นๆ?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What's the latest industry feedback on Google's new AI-powered chatbot framework?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Hey, any tips for painting a bathroom?",Casual Conversation and General Query,4,out_of_domain,home_improvement,en
+"Hey, any good recipes for chicken breast tonight?",Casual Conversation and General Query,4,out_of_domain,cooking_recipes,en
+GPT-3 สามารถสร้างโค้ดได้แล้ว ถ้าบริษัท BIG4 จะใช้ GPT-3 ในการพัฒนาซอฟต์แวร์ ควรคำนึงถึงอะไรบ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+"Hey, I need help understanding how few-shot learning can be applied to robotic manipulation in real-world industries, like manufacturing. Can you provide examples?",Hybrid Research Query,3,hybrid_intent,help_request,en
+เพลงอะไร सुनดีวะ?,Casual Conversation and General Query,4,out_of_domain,music_recommendations,th
+"What is the correlation between node centrality measures and information diffusion rates in social networks, and how do they impact community formation?",Academic Research Query,1,academic_intent,statistical_query,en
+วิธีการประเมินประสิทธิภาพของวิธี Quadratic Programming ในการควบคุมแรงดันและความเร็วในระบบอัตโนมัติเป็นอย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+OpenAI's ChatGPT: มันดีกว่า Google Search ในการหาข้อมูลแบบไหน?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+วิเคราะห์บทบาทของการเรียนรู้ด้วยตนเอง (self-supervised learning) ในการปรับปรุงประสิทธิภาพของระบบ AI ในการตรวจจับ malware และการนำไปใช้ในอุตสาหกรรมปัจจุบันอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"What are the latest research advancements and industry applications of domain adaptation in medical imaging, and how are they impacting healthcare outcomes?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"What are the applications of quantum neural networks in satellite imagery analysis, and how do they compare to traditional methods in industry?",Hybrid Research Query,3,hybrid_intent,case_study,en
+How are interpretable machine learning techniques being used in real-world software engineering projects?,Hybrid Research Query,3,hybrid_intent,search_request,en
+What are the key challenges in integrating knowledge graphs with neural machine translation models for improving semantic accuracy in low-resource languages?,Academic Research Query,1,academic_intent,academic_query,en
+Does the implementation of attention mechanisms in neural networks significantly enhance reading comprehension in natural language processing tasks?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+กำลังเป็นเทรนด์,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the best practices for evaluating the performance of self-supervised learning models in human pose estimation tasks?,Academic Research Query,1,academic_intent,methodology_query,en
+"Can someone help me apply game theory to real-world computer vision problems, with examples from recent academic research and industry case studies?",Hybrid Research Query,3,hybrid_intent,help_request,en
+คิดว่าฉันควรแต่งตัวแนวไหนไปงานวันเกิดเพื่อนดีนะ?,Casual Conversation and General Query,4,out_of_domain,personal_advice,th
+วิธีการใช้เทคนิคการเรียนรู้เชิงลึกเพื่อปรับปรุงความแม่นยำของระบบตรวจจับวัตถุในภาพถ่ายทางอากาศได้อย่างไร?,Academic Research Query,1,academic_intent,literature_review,th
+RLVR มันคืออะไร และมันจะเปลี่ยนวงการ AI ไหม?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ขอสรุปผลการวิจัยและประยุกต์ใช้จริงเกี่ยวกับ Convolutional Neural Network (CNN) ในการวิเคราะห์ภาพทางการแพทย์,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"Hey, any cool travel spots you'd recommend?",Casual Conversation and General Query,4,out_of_domain,travel_recommendations,en
+How are advances in geometric deep learning impacting real-world object detection in self-driving cars?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+เดี๋ยวไปละ See you!,Casual Conversation and General Query,4,out_of_domain,goodbye,th
+"What are the key methodologies and applications of Bayesian statistics in transformer models for natural language processing, and what are their limitations?",Academic Research Query,1,academic_intent,literature_review,en
+What's the latest expert take on the ethics of using LLMs in medical diagnosis?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+How does the latest academic research on **visual odometry** compare to its use in **self-driving cars** today?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+Can anyone recommend seminal papers on the ethical implications of quadrupedal robots in healthcare settings?,Academic Research Query,1,academic_intent,source_request,en
+"What's the latest research on graph neural networks and their applications in industry, particularly in sustainable computing and trustworthy AI?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+RLVR ใน Computer Vision คืออะไร มีคนใช้กันเยอะมั้ย?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Thoughts on OpenAI's latest safety paper?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+การประยุกต์ใช้ Quantum Computing ในการปรับปรุงระบบเครือข่ายมีผลกระทบต่อประสิทธิภาพและความปลอดภัยอย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+How are advancements in quantum information being used to improve cybersecurity in real-world applications?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+What are the key design considerations and optimization techniques for implementing graph neural networks in knowledge graph-based recommendation systems?,Academic Research Query,1,academic_intent,methodology_query,en
+RLVR มันคืออะไรอธิบายแบบง่ายๆหน่อยได้ไหม?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Could you provide me with seminal works on the application of non-parametric statistics in novel view synthesis algorithms?,Academic Research Query,1,academic_intent,source_request,en
+"Hey, I'm really sorry I forgot your birthday, how can I make it up?",Casual Conversation and General Query,4,out_of_domain,apology,en
+"How did advancements in diffusion models impact real-world applications in computer vision, such as image segmentation and object detection?",Hybrid Research Query,3,hybrid_intent,case_study,en
+Could you recommend recent publications on the application of bandit algorithms in active learning for bioinformatics?,Academic Research Query,1,academic_intent,source_request,en
+งานวิจัยเกี่ยวกับ decentralized systems ใน remote sensing มีแนวโน้มไปทางไหนในปีนี้บ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+นักพัฒนาคิดอย่างไรเกี่ยวกับการใช้ AI ในการพัฒนาเว็บไซต์ในปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+อยากทราบว่าการใช้กราฟนิวรัลเน็ตเวิร์กสามารถปรับปรุงประสิทธิภาพการจัดอันดับข้อมูลในธุรกิจได้อย่างไร และมีกรณีศึกษาใดที่น่าสนใจ?,Hybrid Research Query,3,hybrid_intent,search_request,th
+advancements,Academic Research Query,1,academic_intent,source_request,en
+เข้าใจถูกไหมว่าโมเดล AI ที่ใช้เทคนิค deep learning จะมีปัญหาเรื่องความปลอดภัยในอนาคต?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+งานวิจัยล่าสุดเกี่ยวกับ style transfer บนรูปภาพมีวิธีการประเมินผลลัพธ์ที่มีประสิทธิภาพสูงสุดอย่างไร?,Academic Research Query,1,academic_intent,statistical_query,th
+What are the latest research advancements and industry applications of edge computing in autonomous navigation systems for humanoid robots?,Hybrid Research Query,3,hybrid_intent,case_study,en
+How do energy-based models explain complex relationships within time series data?,Academic Research Query,1,academic_intent,explanation_request,en
+การประยุกต์ใช้วิธี topological data analysis ในการตรวจจับ anomalie ในระบบ tactile sensing มีประสิทธิภาพเพียงใด?,Academic Research Query,1,academic_intent,academic_query,th
+What are the statistical correlations between ensemble learning techniques and model robustness in image classification tasks?,Academic Research Query,1,academic_intent,statistical_query,en
+Thoughts on the latest paper on federated learning?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+Sorry about forgetting our coffee date yesterday.,Casual Conversation and General Query,4,out_of_domain,apology,en
+"What's the latest on autonomous vehicle research and its applications in the logistics industry, including recent breakthroughs and market trends?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+การเดินของหุ่นยนต์สองขา,Academic Research Query,1,academic_intent,explanation_request,th
+How are academic advancements in quadrupedal robot reasoning being translated into real-world applications?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What's the latest on Google's approach to multimodal few-shot learning with LLMs?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+Deep Learning กับ Reinforcement Learning ต่างกันยังไงในแง่การประยุกต์ใช้จริง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Does incorporating user feedback in real-time improve the accuracy of recommender systems for e-commerce platforms?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+Any thoughts on the latest advancements in federated learning?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ผู้เชี่ยวชาญด้าน AI คิดว่า RLVR จะเปลี่ยนแปลงอุตสาหกรรมไหนบ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+You have a really great sense of humor!,Casual Conversation and General Query,4,out_of_domain,compliment,en
+แว่นตากันแดดยี่ห้อไหนดีคะ กำลังหาอยู่พอดี,Casual Conversation and General Query,4,out_of_domain,shopping_advice,th
+"What are the latest advancements in robot learning and their applications in manufacturing, including research papers and industry success stories?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"Hey, what's a good workout routine to get rid of belly fat quickly?",Casual Conversation and General Query,4,out_of_domain,fitness_tips,en
+How are normalizing flows used in real-world coding applications compared to traditional methods?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+Any good recommendations for noise-canceling headphones?,Casual Conversation and General Query,4,out_of_domain,product_recommendations,en
+อยากรู้ว่างานวิจัย về contrastive learning นี่เอามาใช้กับ text-to-speech ในโลกจริงได้ยังไงบ้างวะ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What are the statistically significant differences in performance between federated learning and centralized training for image classification tasks?,Academic Research Query,1,academic_intent,statistical_query,en
+What are people saying about the new HuggingFace Transformers update?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ผู้เชี่ยวชาญด้าน AI คิดอย่างไรเกี่ยวกับการพัฒนาและอนาคตของ Conversational AI?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+ขอคำแนะนำเกี่ยวกับวิธีการใช้เครื่องมือ Convex Optimization สำหรับวิศวกรรมคอมพิวเตอร์,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การเปรียบเทียบระหว่างการใช้เทคนิคการเรียนรู้ของเครื่องแบบมีผู้สอน (Supervised Learning) และแบบไม่มีผู้สอน (Unsupervised Learning) ในการวิเคราะห์ข้อมูลลูกค้าในอุตสาหกรรมธนาคาร,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+เข้าใจถูกไหมว่า RLVR เริ่มถูกใช้ในแอปพลิเคชันจริงแล้วบ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What's the latest on using transformer models for time series analysis in finance?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+วิธีการวิเคราะห์ข้อมูลแบบไฮบริดของโครงข่ายประสาทเทียมที่มีประสิทธิภาพสูงสามารถปรับปรุงความแม่นยำในการจำแนกประเภทข้อมูลได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+"How do advancements in deep learning for computer vision translate to real-world applications in healthcare and finance, and what are the key industry adopters?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+การวิเคราะห์ข้อมูลจากงานวิจัยเรื่อง simulated annealing ในการแก้ปัญหา multi-objective optimization มีแนวทางและเทคนิคใดบ้าง?,Academic Research Query,1,academic_intent,data_analysis,th
+What statistical methods can be employed to test the null hypothesis that federated learning models perform comparably to centralized models in image classification tasks?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+LLM ไหนที่เหมาะสำหรับงานสรุปบทความภาษาไทยแบบ real-time บ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การเปรียบเทียบประสิทธิภาพของเครือข่ายประสาทเทียมแบบ Convolutional Neural Network (CNN) และ Recurrent Neural Network (RNN) ในการวิเคราะห์ข้อมูลภาพถ่ายจากโดรน,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+จะหาข้อมูลเกี่ยวกับเทคนิคการปรับปรุงประสิทธิภาพของโมเดล world models สำหรับการวิเคราะห์ข้อมูลขนาดใหญ่ได้จากแหล่งข้อมูลใด?,Academic Research Query,1,academic_intent,source_request,th
+แมวของฉันชอบข่วนเฟอร์นิเจอร์ ทำอย่างไรดี,Casual Conversation and General Query,4,out_of_domain,pet_advice,th
+อยากทราบว่าเทคนิค domain adaptation สามารถปรับปรุงประสิทธิภาพของระบบแนะนำภาพยนตร์ได้อย่างไรบ้าง,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+"Hey, any good books about travel adventures lately?",Casual Conversation and General Query,4,out_of_domain,book_recommendations,en
+Thoughts on the latest paper on RLVR for dialogue systems?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Hey, my phone's battery is dying fast, what's the best way to extend its life?",Casual Conversation and General Query,4,out_of_domain,tech_support,en
+ในการวิจัยการจดจำใบหน้าด้วย deep learning วิธีการใดที่เหมาะสมที่สุดในการประเมินความเที่ยงธรรมของโมเดลเมื่อเผชิญกับข้อมูลภาพที่มีความแตกต่างด้านเชื้อชาติ?,Academic Research Query,1,academic_intent,methodology_query,th
+เพลงใหม่ๆ มีอะไรน่าฟังบ้าง,Casual Conversation and General Query,4,out_of_domain,music_recommendations,th
+การวิเคราะห์เชิงปริมาณในงานวิจัยล่าสุดนี้ได้นำเสนอวิธีการใหม่ในการประเมินความเสี่ยงทางเศรษฐกิจหรือไม่?,Academic Research Query,1,academic_intent,academic_query,th
+"Catch you later, chatbot!",Casual Conversation and General Query,4,out_of_domain,goodbye,en
+ปัจจุบันมีการวิจัยเกี่ยวกับการใช้ multimodal learning ในการวิเคราะห์วิดีโอเพื่อตรวจจับอารมณ์มนุษย์ไปถึงขั้นไหนแล้วเหรอ?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+What are the latest breakthroughs in interpretable machine learning and how are they being used in real-world applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+"How are quantum algorithms used in real-world recommender systems, and what are the challenges?",Hybrid Research Query,3,hybrid_intent,search_request,en
+Let me know if you'd like more examples tailored to a specific knowledge domain!,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Hey, what's the best way to declutter my living room without losing my mind?",Casual Conversation and General Query,4,out_of_domain,home_improvement,en
+How are transformer models used in industry compared to their original academic applications?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+ความหมายของ fairness ใน AI คืออะไร และมีวิธีการประเมินใดบ้างที่ใช้กันอย่างแพร่หลายในปัจจุบัน?,Academic Research Query,1,academic_intent,definition_request,th
+มีวิธีการนำกราฟนิวรัลเน็ตเวิร์คมาปรับปรุงการวิเคราะห์ข้อมูลการแพทย์อย่างไร,Hybrid Research Query,3,hybrid_intent,search_request,th
+"Can you help me understand how to apply optical flow algorithms in real-world computer vision projects, and what are the industry best practices?",Hybrid Research Query,3,hybrid_intent,help_request,en
+ในการวิเคราะห์ข้อมูลจีโนมขนาดใหญ่ วิธีการใดที่เหมาะสมที่สุดสำหรับการระบุ varient ที่มีนัยสำคัญทางคลินิก?,Academic Research Query,1,academic_intent,methodology_query,th
+"Hey, I need help finding research papers and industry examples on using sensor fusion for activity recognition in unmanned aerial vehicles.",Hybrid Research Query,3,hybrid_intent,help_request,en
+วิธีการใช้เทคนิคการเรียนรู้เชิงลึกแบบ Bagging มีความแตกต่างจากเทคนิค Ensemble อื่นอย่างไรในการปรับปรุงประสิทธิภาพของโมเดล AI ในการวิเคราะห์ข้อมูลขนาดใหญ่,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+มีงานวิจัยหรือบทความใดบ้างที่อธิบายการนำเทคนิคการเรียนรู้ของเครื่องแบบ Semi-supervised มาใช้ในระบบตรวจจับวัตถุ (Object Detection) บนโมบายโรบอท (Mobile Robots) ในปัจจุบัน?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"What are the latest research advancements and industry applications of graph neural networks in finance, and how are they being used for risk management?",Hybrid Research Query,3,hybrid_intent,case_study,en
+วิเคราะห์ความสัมพันธ์ระหว่าง quantum gates กับการประยุกต์ใช้ AI ในระบบเครือข่าย เพื่อเพิ่มประสิทธิภาพและความปลอดภัยในการส่งข้อมูล,Hybrid Research Query,3,hybrid_intent,summary_request,th
+Does chain-of-thought prompting significantly improve robustness in image generation models compared to standard decoding methods?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+What are the latest research advancements and industry applications of deep learning in computer vision for autonomous vehicles?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+มีวิธีการนำแนวคิดเรื่อง Transfer Learning ไปประยุกต์ใช้กับการพัฒนาระบบ Conversational AI อย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+RLVR มีผลกระทบต่อการพัฒนา LLM อย่างไรบ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+วิเคราะห์กรณีศึกษาการใช้ knowledge graphs ในการปรับปรุงระบบค้นหาและแนะนำสินค้าบนแพลตฟอร์มอีคอมเมิร์ซ,Hybrid Research Query,3,hybrid_intent,search_request,th
+เข้าใจถูกไหมว่าปัจจุบันมีการใช้ AI ในการวิเคราะห์ข้อมูลขนาดใหญ่ในธุรกิจอย่างไร?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What's the latest consensus on transformer architecture's impact on natural language processing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+เข้าใจถูกไหมว่าโมเดล Quantum AI ใหม่สามารถทำงานร่วมกับเครือข่ายประสาทเทียมได้หรือไม่?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the latest advancements in graph neural networks for fraud detection in financial transactions?,Hybrid Research Query,3,hybrid_intent,search_request,en
+การวิจัยปัจจุบันได้สำรวจวิธีการใดบ้างในการปรับปรุงประสิทธิภาพของโมเดลภาษาขนาดใหญ่สำหรับงานแปลภาษาไทย?,Academic Research Query,1,academic_intent,literature_review,th
+แนวโน้มการนำเทคนิคการเรียนรู้ของเครื่องแบบไม่มีผู้ควบคุมมาใช้ในระบบตรวจจับและป้องกันการโจมตีเครือข่ายในปัจจุบันเป็นอย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+เราจะใช้เทคนิคการเรียนรู้เชิงลึกเพื่อปรับปรุงความแม่นยำของการจำแนกประเภทข้อมูลได้อย่างไร?,Academic Research Query,1,academic_intent,statistical_query,th
+How does academic research on topological data analysis impact real-world applications in autonomous vehicles?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+วิธีการใช้เทคนิคการเรียนรู้ด้วยตนเอง (self-supervised learning) ในระบบ AI สำหรับการวิเคราะห์วิดีโอแตกต่างจากการใช้เทคนิคการเรียนรู้แบบมีผู้ควบคุม (supervised learning) อย่างไร?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+How has Bayesian statistics been applied to address challenges in simultaneous localization and mapping for mobile robots?,Academic Research Query,1,academic_intent,literature_review,en
+"Hey, my phone's screen is freezing, what's going on with it?",Casual Conversation and General Query,4,out_of_domain,device_troubleshooting,en
+"What statistical methods are most effective for testing the significance of correlations in high-dimensional proteomics data, and what are their limitations?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+convolutional neural networks,Academic Research Query,1,academic_intent,data_analysis,en
+การกรองแบบแ adaptative,Academic Research Query,1,academic_intent,definition_request,th
+"Hey, how often do you change your car's oil, every 3 months or so?",Casual Conversation and General Query,4,out_of_domain,car_maintenance,en
+Diffusion models กำลังฮิตใน AI แต่การนำไปใช้จริงในระบบ sensor networks มีอุปสรรคอะไรบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+How does the use of transformer models in academic research on creative writing compare to their application in commercial chatbot development?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+What are the most effective data preprocessing techniques used in 3D reconstruction from point clouds?,Academic Research Query,1,academic_intent,methodology_query,en
+วิธีการที่ใช้ในการประมวลผลข้อมูลข้อความในงานวิจัยเรื่องนี้มีรายละเอียดอย่างไรบ้าง?,Academic Research Query,1,academic_intent,methodology_query,th
+variational autoencoders,Academic Research Query,1,academic_intent,explanation_request,en
+How are variational autoencoders used in real-world edge computing applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+ในการวิจัยเรื่องการเรียนรู้ของหุ่นยนต์โดยใช้เทคนิค transfer learning วิธีการประเมินประสิทธิภาพของโมเดลที่เหมาะสมควรเป็นอย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+ถ้าฉันเป็นนักแสดง ฉันจะเล่นเป็นคนบ้าได้ดีเลย,Casual Conversation and General Query,4,out_of_domain,jokes,th
+ฉันควรทำอย่างไรเพื่อลดน้ำหนักได้อย่างรวดเร็วและปลอดภัย,Casual Conversation and General Query,4,out_of_domain,health_tips,th
+ช่วยอธิบายว่าเทคนิคการวิเคราะห์ข้อมูลเชิงลึกในด้าน digital signal processing ช่วยปรับปรุงระบบตรวจจับเสียงพูดได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+วันนี้คุณกินข้าวเที่ยงไปที่ไหนมา,Casual Conversation and General Query,4,out_of_domain,small_talk,th
+What's the latest developer feedback on using transformer architecture for NLP tasks?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+How is discrete optimization used in real-world applications like network security and video understanding?,Hybrid Research Query,3,hybrid_intent,search_request,en
+What are the best practices for evaluating the fairness of machine translation models?,Academic Research Query,1,academic_intent,methodology_query,en
+What's the latest on Meta's approach to embodied AI and its real-world applications?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+How are recent breakthroughs in named entity recognition being used to improve chatbots in customer service?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+การวิเคราะห์เครือข่ายความสัมพันธ์ในกราฟความรู้ของภาษาไทยสามารถเปิดเผยรูปแบบการเชื่อมโยงความหมายที่ซับซ้อนได้หรือไม่?,Academic Research Query,1,academic_intent,data_analysis,th
+What are the best practices for evaluating the performance of spiking neural networks in robot learning tasks?,Academic Research Query,1,academic_intent,methodology_query,en
+"My friend's birthday is coming up, any gift ideas?",Casual Conversation and General Query,4,out_of_domain,personal_advice,en
+"What are the most effective statistical methods for analyzing causal relationships in high-energy physics experiments, and what are their limitations?",Academic Research Query,1,academic_intent,statistical_query,en
+Any tips for starting a vegetable garden?,Casual Conversation and General Query,4,out_of_domain,hobby_advice,en
+"Thanks for being here, I really appreciate having someone to chat with!",Casual Conversation and General Query,4,out_of_domain,thanks,en
+การเปรียบเทียบประสิทธิภาพของโครงข่ายประสาทเทียมแบบ Recurrent Neural Network (RNN) และ Long Short-Term Memory (LSTM) ในการวิเคราะห์ข้อมูลอนุกรมเวลา,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are experts saying about the future of quantum annealing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the applications of topological data analysis in materials science for predicting crystal structures and phase transitions?,Academic Research Query,1,academic_intent,academic_query,en
+"What's the correlation between research papers on visual transformers and their adoption in industry applications, such as facial recognition and image processing?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+What are experts saying about the Log4j vulnerability's long-term impact?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"How can I apply variational autoencoders to improve data compression in industrial IoT devices, while balancing energy efficiency and data accuracy?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"Analyze the application of bandit algorithms in recommendation systems, from research papers to real-world use cases in e-commerce and online advertising.",Hybrid Research Query,3,hybrid_intent,case_study,en
+Quantum machine learning กำลังบูมในอุตสาหกรรมไหนบ้าง? มีงานวิจัยอะไรที่น่าสนใจ?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+Could you please recommend influential papers exploring the application of attention mechanisms in sentiment mining?,Academic Research Query,1,academic_intent,source_request,en
+Let me know if you'd like more examples tailored to a specific domain!,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วันนี้ดูละครเรื่องไหน ?,Casual Conversation and General Query,4,out_of_domain,small_talk,th
+What's the latest expert take on using transformer architecture for real-time object recognition?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+งานวิจัยใหม่ๆ เกี่ยวกับ Large Language Models (LLMs) ในการวิเคราะห์ข้อมูลภาพมีแนวโน้มในการนำไปใช้ในอุตสาหกรรมไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+What's the latest expert take on using reinforcement learning for robot control systems?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+นาฬิกาอะไรที่คุณแนะนำให้ซื้อใช้,Casual Conversation and General Query,4,out_of_domain,product_recommendations,th
+"Does embodied AI enhance robotic tactile sensing capabilities, and what statistical methods can test this hypothesis in controlled experiments?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+AI ในการควบคุมโดรนพัฒนาไปถึงไหนแล้ว? มีใครใช้จริงมั้ย?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"Hey, what's a good pair of sneakers for a casual, everyday wear?",Casual Conversation and General Query,4,out_of_domain,product_recommendations,en
+What are the latest breakthroughs in novel view synthesis?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"What are the latest advancements in anomaly detection using Gaussian processes, and how are they applied in industry cybersecurity systems?",Hybrid Research Query,3,hybrid_intent,help_request,en
+Can transformer-based language models like BERT be used for multimodal sentiment analysis?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+ในงานวิจัยนี้ ผู้เขียนใช้เทคนิค dimensionality reduction แบบใดในการลดมิติข้อมูล และเหตุผลในการเลือกเทคนิคดังกล่าวคืออะไร?,Academic Research Query,1,academic_intent,explanation_request,th
+การวิจัย swarm robotics ในปัจจุบันมีแนวโน้มไปทางไหน และมันจะเปลี่ยนแปลงอุตสาหกรรมการผลิตยังไง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+Remember to tailor the query to your specific needs and the type of feedback you're looking for.,Web Search and Current Information Query,2,web_intent,feedback_request,en
+จะหาข้อมูลเกี่ยวกับวิธีการออกแบบการทดลองเพื่อทดสอบประสิทธิภาพของ neural network ในการสรุปข้อมูลได้อย่างไร?,Academic Research Query,1,academic_intent,source_request,th
+"ด้วยความก้าวหน้าของ self-supervised learning, เราจะใช้มันปรับปรุง panoptic segmentation ใน mixed reality ได้ยังไง?",Hybrid Research Query,3,hybrid_intent,case_study,th
+นักวิจัยสามารถใช้เทคนิคการเรียนรู้ของเครื่องอย่างไรเพื่อปรับปรุงประสิทธิภาพของระบบตรวจสอบความปลอดภัยของเครือข่าย?,Academic Research Query,1,academic_intent,explanation_request,th
+What are the latest advancements in decentralized identity?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+การวิเคราะห์อัลกอริทึม Genetique สำหรับการแก้ปัญหา Simultaneous Localization and Mapping มีแนวโน้มในการพัฒนาอย่างไรใน 5 ปีข้างหน้า?,Academic Research Query,1,academic_intent,statistical_query,th
+"What's the latest on object detection research and its applications in satellite imagery for business use cases, particularly in the context of edge computing?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+ทำไมโมเดลภาษาเชิงลึกถึงต้องการปรับปรุงอย่างต่อเนื่องเพื่อรักษาความแม่นยำ?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+มีวิธีการใดบ้างที่ใช้ geometric deep learning เพื่อปรับปรุงประสิทธิภาพการทำงานของระบบ computer vision ในการนำไปใช้จริง?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+ผู้เชี่ยวชาญมีความเห็นอย่างไรเกี่ยวกับการใช้ Transformer ในการประมวลผลภาษาไทย?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the hottest trends in machine learning right now?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+How is chaos theory being applied in real-world applications like IoT and grasping robots?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+จริงไหมที่ AI สามารถสร้างวิดีโอที่ดูจริงได้แล้ว และมีใครใช้เทคโนโลยีนี้บ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are the theoretical foundations and limitations of using graphical models for unsupervised learning in network topology analysis?,Academic Research Query,1,academic_intent,academic_query,en
+วิธีการนำ machine learning ไปใช้เพื่อแก้ปัญหาการใช้พลังงานอย่างมีประสิทธิภาพในอุตสาหกรรมต่างๆ มีการพัฒนาไปอย่างไรบ้าง,Hybrid Research Query,3,hybrid_intent,search_request,th
+งานวิจัย tactile sensing ใน legged locomotion มีแนวโน้มไปทางไหนในอุตสาหกรรมหุ่นยนต์ปัจจุบัน?,Hybrid Research Query,3,hybrid_intent,help_request,th
+"What are the practical applications of game theory in metaverse development, and how do they align with academic research on human-robot interaction?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"Hey, any good pizza places around here?",Casual Conversation and General Query,4,out_of_domain,food_recommendations,en
+How are foundation models used in real-world coding applications compared to academic research?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+มีวิธีแก้ปัญหาจอโทรศัพท์แตกได้ไหม,Casual Conversation and General Query,4,out_of_domain,device_troubleshooting,th
+edge computing กำลังบูม! หาตัวอย่างที่ บริษัท BIG4 นำไปใช้จริงได้ยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+How is academic research on bias detection in AI being used to build fairer algorithms in real-world applications?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+คุณจะขอโทษเพื่อนเก่าๆ ที่คุณเคยทำอะไรไม่ดีกับเขาได้อย่างไร,Casual Conversation and General Query,4,out_of_domain,apology,th
+เราควรสอนเด็กให้เรียนรู้จากการลองผิดลองถูก หรือให้คำแนะนำอย่างไร,Casual Conversation and General Query,4,out_of_domain,parenting_advice,th
+วิธีการปรับแต่ง hyperparameter ของโมเดลการเรียนรู้ของเครื่องในอุตสาหกรรมแตกต่างจากการวิจัยเชิงวิชาการอย่างไร?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are the underlying mechanisms that enable self-supervised learning models to learn effective representations without explicit labels?,Academic Research Query,1,academic_intent,explanation_request,en
+การวิเคราะห์แนวโน้มการประยุกต์ใช้ attention mechanisms ในงานวิจัยด้าน optical flow มีทิศทางอย่างไรในช่วง 5 ปีที่ผ่านมา?,Academic Research Query,1,academic_intent,academic_query,th
+การวิจัยเกี่ยวกับ Legged Locomotion ในหุ่นยนต์ มีแนวโน้มไปทางไหนในอุตสาหกรรมบริการ?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+"What are the theoretical foundations and applications of variational autoencoders in generative modeling, and how do they compare to traditional probabilistic models?",Academic Research Query,1,academic_intent,academic_query,en
+การออกกำลังกายแบบไหนที่ช่วยให้น้ำหนักลดเร็วที่สุด?,Casual Conversation and General Query,4,out_of_domain,fitness_tips,th
+How is meta-learning being used in real-world applications like dialogue systems or action recognition?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+วันนี้ทำกับข้าวอะไรกินดี?,Casual Conversation and General Query,4,out_of_domain,cooking_recipes,th
+"Hey, what's a good way to spend a lazy Sunday afternoon?",Casual Conversation and General Query,4,out_of_domain,small_talk,en
+วิธีการใดที่เหมาะสมที่สุดในการประเมินประสิทธิภาพของโมเดลปัญญาประดิษฐ์สำหรับการจัดอันดับข้อมูลตามบริบทของการค้นหา?,Academic Research Query,1,academic_intent,academic_query,th
+What are the hottest trends in embedded systems right now?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+วิธีการออกแบบการทดลองที่เหมาะสมในการทดสอบประสิทธิภาพของ neural network สำหรับการเรียนรู้เชิงลึกในโดเมนเฉพาะของการวิเคราะห์ข้อมูลชีวภาพคืออะไร?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+What's the latest on using reinforcement learning for image restoration in computer vision?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What is the correlation between sentiment polarity scores and cryptocurrency price fluctuations?,Academic Research Query,1,academic_intent,statistical_query,en
+ท่านทราบงานวิจัยใดบ้างที่ใช้ evolutionary algorithms ในการปรับปรุงประสิทธิภาพของ collaborative filtering ?,Academic Research Query,1,academic_intent,source_request,th
+ขอแหล่งอ้างอิงสำหรับบทความวิจัยเกี่ยวกับการใช้ deep learning ในการวิเคราะห์ข้อมูลชีวภาพ เพื่อประยุกต์ใช้ในการวิจัยโรคมะเร็ง,Academic Research Query,1,academic_intent,source_request,th
+การเรียนรู้แบบเสริมแรง,Academic Research Query,1,academic_intent,definition_request,th
+งานวิจัยเกี่ยวกับ Gaussian Processes ในด้าน recommender systems มีแนวโน้มไปทางไหนในปีนี้?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+"What are the recent advances in multimodal learning for medical imaging, and how do they improve diagnostic accuracy in clinical settings?",Academic Research Query,1,academic_intent,literature_review,en
+ใครคือผู้เล่นที่ทำประตูมากที่สุดในประวัติศาสตร์บอลโลก?,Casual Conversation and General Query,4,out_of_domain,sports_news,th
+"Hey, can you help me understand how graph neural networks are being used in industry for anomaly detection, and what are the latest research findings?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What are the latest trends in reinforcement learning?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+มีนิยายรักโรแมนติกเรื่องไหนที่เธอกำลังอ่านอยู่มั้ย?,Casual Conversation and General Query,4,out_of_domain,book_recommendations,th
+ข้อใดคือแนวทางหลักในการสร้างตัวแบบการเรียนรู้ที่ดีที่สุดสำหรับข้อมูลอนุกรมเวลา (time series) ที่มีความซับซ้อน?,Academic Research Query,1,academic_intent,literature_review,th
+What are the hottest trends in malware detection right now?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+คุณสามารถแนะนำแหล่งข้อมูลทางวิชาการที่เกี่ยวข้องกับการปรับปรุงประสิทธิภาพของระบบปัญญาประดิษฐ์โดยใช้เทคนิคการเรียนรู้ด้วยตัวเองได้หรือไม่?,Academic Research Query,1,academic_intent,source_request,th
+มีใครใช้เครื่องมือ LLaMA ของ Meta AI ในการสร้างโมเดลภาษาไทยบ้างไหม?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+คือแบบ... เอา research เกี่ยวกับ anomaly detection ใน social networks มาใช้จริงได้ยังไงบ้างวะ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What's the developer community's take on the new PyTorch 2.0 release?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+วิธีการวิเคราะห์ข้อมูลใดที่เหมาะสมที่สุดสำหรับการศึกษาการแพร่กระจายของข้อมูลเท็จในโซเชียลมีเดีย?,Academic Research Query,1,academic_intent,methodology_query,th
+LLM เริ่มเขียนโค้ดได้ดีแล้วจริงไหม? แชร์ตัวอย่างหน่อยได้มั้ย?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+object detection,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+อะไรคือผลกระทบของการใช้เทคนิค ensemble learning ในการปรับปรุงความแม่นยำของโมเดล machine learning สำหรับการวิเคราะห์ข้อมูลขนาดใหญ่?,Academic Research Query,1,academic_intent,statistical_query,th
+effective evaluation metrics,Academic Research Query,1,academic_intent,methodology_query,en
+งานวิจัยเรื่อง continual learning ใน image classification มีแนวโน้มจะถูกนำไปใช้ในอุตสาหกรรมอย่างไร?,Hybrid Research Query,3,hybrid_intent,case_study,th
+What are the latest advancements in RLVR for fog computing?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What do experts think about Google's recent advancements in multimodal learning for AI?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+What are the underlying mechanisms that enable self-supervised learning models to learn effective representations from unlabeled data in computer vision tasks?,Academic Research Query,1,academic_intent,explanation_request,en
+ผู้เชี่ยวชาญมีความเห็นอย่างไรเกี่ยวกับการใช้เทคนิค Explainable AI ในโมเดลการเรียนรู้ของเครื่องในปัจจุบัน?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the underlying mathematical principles that enable Gaussian splatting to effectively model complex fluid dynamics simulations in computational physics?,Academic Research Query,1,academic_intent,explanation_request,en
+Do Bayesian optimization techniques improve trajectory optimization performance in quantum neural networks compared to gradient descent methods?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+การประยุกต์ใช้ variational autoencoders ในการตรวจจับการบุกรุกเครือข่ายมีข้อจำกัดอะไรบ้าง?,Academic Research Query,1,academic_intent,academic_query,th
+การตรวจจับปัญหาการเรียนรู้ด้วยเครื่องจักร,Academic Research Query,1,academic_intent,methodology_query,th
+"What are the theoretical foundations of attention mechanisms in deep learning models for natural language processing, and how do they impact performance?",Academic Research Query,1,academic_intent,academic_query,en
+เธอทำอาหารได้อร่อยมากเลย ทำได้ดีมากๆ เลย,Casual Conversation and General Query,4,out_of_domain,compliment,th
+เทคนิคการเรียนรู้ของเครื่องแบบลึก (Deep Learning) มีการปรับปรุงอย่างไรในปี 2024?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How do diffusion models address the problem of mode collapse in generative tasks?,Academic Research Query,1,academic_intent,explanation_request,en
+What do AI experts think about the ethics of facial recognition technology?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+เข้าใจถูกไหมว่าโมเดล AI ที่ใช้ deep learning มีความเสี่ยงต่อการถูกโจมตีทางไซเบอร์มากขึ้น?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ออกกำลังกายแบบไหนที่ไม่เบื่อดีอ่ะ?,Casual Conversation and General Query,4,out_of_domain,fitness_tips,th
+วันนี้กินอะไรดีอ่ะ เริ่มคิดไม่ออกแล้ว,Casual Conversation and General Query,4,out_of_domain,casual_chat,th
+ปัจจุบันมีงานวิจัยเกี่ยวกับการใช้ unsupervised learning กับ satellite imagery เพื่อวิเคราะห์อารมณ์ของประชาชนในพื้นที่ภัยพิบัติ มีแนวทางไหนที่สามารถนำไปใช้จริงได้บ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+มีงานวิจัยใดบ้างที่สำรวจวิธีการประยุกต์ใช้ optical flow ในการพัฒนาโมเดล forecasting ของราคาหุ้น?,Academic Research Query,1,academic_intent,source_request,th
+How are quantum neural networks being used in real-world applications like object recognition?,Hybrid Research Query,3,hybrid_intent,search_request,en
+พี่แนะนำร้านอาหารอร่อยแถวนี้หน่อยดิ,Casual Conversation and General Query,4,out_of_domain,product_recommendations,th
+What's the latest industry take on Google's new federated learning approach for AI models?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+Google Bard ใช้เทคนิคการเรียนรู้แบบไหนเพื่อปรับปรุงความแม่นยำในการตอบคำถาม,Web Search and Current Information Query,2,web_intent,understanding_check,th
+Anyone using RRT* for robot navigation lately? Tips?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ใครพอจะอธิบายได้มั้ยว่า Blockchain กับ peer-to-peer network มัน connect กันยังไงในทางปฏิบัติ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+differential privacy,Academic Research Query,1,academic_intent,definition_request,en
+มีอะไรใหม่เกี่ยวกับเทคโนโลยี AI ในปีนี้ที่ผมควรรู้บ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+ขอแนะนำแหล่งข้อมูลวิจัยที่มีความน่าเชื่อถือเกี่ยวกับเทคนิคการปรับปรุงประสิทธิภาพของโมเดล deep learning สำหรับการประยุกต์ใช้ในด้านการแพทย์,Academic Research Query,1,academic_intent,source_request,th
+มีงานวิจัยใดบ้างที่สำรวจการประยุกต์ใช้ bandit algorithms ในการเพิ่มประสิทธิภาพ depth estimation ในภาพถ่าย?,Academic Research Query,1,academic_intent,source_request,th
+vision,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"What statistical methods can be employed to analyze the robustness of 3D reconstruction algorithms in computer vision, and what are their limitations?",Academic Research Query,1,academic_intent,statistical_query,en
+How do foundation models' theoretical advancements in 3D vision translate to real-world applications in quadrupedal robot navigation and visual localization?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+How are foundation models being used in industry compared to what's being researched academically?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+"I'm looking for primary sources on the application of convolutional neural networks in image recognition tasks, specifically in the context of robotics perception.",Academic Research Query,1,academic_intent,source_request,en
+"Hey, how do I get my toddler to stop throwing tantrums in public?",Casual Conversation and General Query,4,out_of_domain,parenting_advice,en
+ข้อดีและข้อเสียของการใช้ Style Transfer ในการสร้างโมเดล Generative ในงานวิจัยปัจจุบันคืออะไร?,Academic Research Query,1,academic_intent,academic_query,th
+big data analytics,Academic Research Query,1,academic_intent,definition_request,th
+What's the industry verdict on Google's latest neural rendering approach for real-time graphics?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วิธีการวิเคราะห์ข้อมูลแบบไม่มีผู้กำกับสามารถนำมาใช้เพื่อปรับปรุงประสิทธิภาพของระบบ AI ได้อย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+สีทาบ้านยี่ห้อไหนทาแล้วไม่เหม็นสีอ่ะ?,Casual Conversation and General Query,4,out_of_domain,home_improvement,th
+"What are the latest advancements in edge computing for robotic vision, and how are they being applied in industries like manufacturing and logistics?",Hybrid Research Query,3,hybrid_intent,case_study,en
+How does bagging improve the generalization performance of image classification models?,Academic Research Query,1,academic_intent,academic_query,en
+การประยุกต์ใช้เทคนิค causal machine learning ในการวิเคราะห์ผลกระทบของการเปลี่ยนแปลงสภาพภูมิอากาศต่อการผลิตทางการเกษตรในประเทศไทย,Academic Research Query,1,academic_intent,hypothesis_testing,th
+การประยุกต์ใช้ attention mechanism ใน transformer models มีผลต่อประสิทธิภาพของงานแปลภาษาไทยอย่างไร?,Academic Research Query,1,academic_intent,academic_query,th
+What are the key findings and methodologies in recent studies on domain adaptation techniques for sentiment analysis in natural language processing?,Academic Research Query,1,academic_intent,literature_review,en
+How can I apply 3D reconstruction techniques from academic research to real-world UAV applications using stochastic optimization and geometric deep learning?,Hybrid Research Query,3,hybrid_intent,help_request,en
+ที่เที่ยวใกล้กรุงเทพฯ ที่มีทะเลสวยๆ มีตรงไหนบ้าง,Casual Conversation and General Query,4,out_of_domain,travel_recommendations,th
+วิธีการที่ใช้ในการสร้างแบบจำลอง text-to-speech ในงานวิจัยนี้มีรายละเอียดอย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+What are the most effective techniques for validating the robustness of genetic algorithms in dynamic environments?,Academic Research Query,1,academic_intent,methodology_query,en
+What are experts saying about the future of LLMs?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+มีอะไรใหม่เกี่ยวกับเทคโนโลยี AI ที่ Google พัฒนาในปีนี้บ้าง,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ผมอยากรู้ว่างานวิจัย về speech-to-text มีแนวโน้มไปทางไหนในอุตสาหกรรมการเงินบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+ผมอยากรู้ว่างานวิจัย về Bayesian statistics ในด้านการเงิน มีแนวทางไหนที่นำมาใช้จริงใน BIG4 บ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+การวิเคราะห์เปรียบเทียบประสิทธิภาพของอัลกอริทึม Reinforcement Learning ในการฝึกอบรม Voice Assistants มีแนวโน้มอย่างไรใน 5 ปีที่ผ่านมา?,Academic Research Query,1,academic_intent,statistical_query,th
+"How has research on explainable AI evolved into industry applications, and what are the current market trends and best practices?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+cross-modal learning,Hybrid Research Query,3,hybrid_intent,case_study,th
+What's the latest on using reinforcement learning for drone control systems?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are the primary datasets used to evaluate the performance of zero-shot learning models in natural language processing tasks?,Academic Research Query,1,academic_intent,source_request,en
+เอกสารวิจัยฉบับนี้เสนอวิธีการใดในการอธิบายการตัดสินใจของแบบจำลองเรียนรู้เชิงลึกที่ใช้ในงานวิเคราะห์อารมณ์ของข้อความ?,Academic Research Query,1,academic_intent,explanation_request,th
+การวิเคราะห์ข้อมูลเชิงพื้นที่จากเทคนิค Structure from Motion มีบทบาทอย่างไรในการสร้างแบบจำลอง 3 มิติของวัตถุที่ซับซ้อน?,Academic Research Query,1,academic_intent,data_analysis,th
+การนำเทคนิค Active Learning ไปใช้เพื่อปรับปรุงประสิทธิภาพของระบบตรวจจับข้อผิดพลาดในข้อมูลสำหรับธุรกิจขนาดใหญ่ในประเทศไทยจะสามารถทำได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+Transformer ใน NLP เริ่มบูมแล้ว แต่ทำไมการนำไปใช้กับการควบคุมหุ่นยนต์สี่ขาถึงยังไม่แพร่หลาย?,Hybrid Research Query,3,hybrid_intent,case_study,th
+มีใครรู้บ้างว่าโมเดล LLM ล่าสุดของ Google ใช้เทคนิคการเรียนรู้แบบไหน?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How is chain-of-thought reasoning used in real-world applications like chatbots or coding assistants?,Hybrid Research Query,3,hybrid_intent,search_request,en
+เข้าใจถูกไหมว่าโมเดล AI ล่าสุดสามารถปรับปรุงประสิทธิภาพการทำงานของระบบเครือข่ายได้อย่างไร?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การวิเคราะห์ภาพดาวเทียมแบบ real-time มีศักยภาพในการทำนายราคาคริปโตฯ หรือไม่?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+Could you recommend seminal papers on contrastive learning for image classification tasks?,Academic Research Query,1,academic_intent,source_request,en
+"What are the limitations of using ensemble learning methods for text classification tasks, and how do they impact model interpretability?",Academic Research Query,1,academic_intent,data_analysis,en
+"How are convolutional neural networks used in real-world 3D reconstruction applications, and what are the latest research advancements?",Hybrid Research Query,3,hybrid_intent,search_request,en
+การวิจัยในปัจจุบันได้นำเทคนิคการเรียนรู้เชิงลึกมาประยุกต์ใช้กับการสร้างภาพ (image synthesis) อย่างไรบ้าง?,Academic Research Query,1,academic_intent,literature_review,th
+What are the most effective topological data analysis techniques for studying complex networks in the context of neural machine translation?,Academic Research Query,1,academic_intent,source_request,en
+What are experts saying about the future of quantum computing?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+ขอแหล่งข้อมูลวิชาการเกี่ยวกับวิธีการออกแบบโปรโตคอลที่ยั่งยืนสำหรับการเรียนรู้ของเครื่องแบบกระจายศูนย์,Academic Research Query,1,academic_intent,source_request,th
+What methodologies can be employed to evaluate the effectiveness of knowledge graph embeddings in question answering systems for scientific texts?,Academic Research Query,1,academic_intent,methodology_query,en
+What's the latest expert take on the ethics of using LLMs in decision-making systems?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วิเคราะห์ความแตกต่างระหว่างการใช้เทคนิค Quadratic Programming กับ Convex Optimization ในระบบการวางแผนและตัดสินใจอัตโนมัติในอุตสาหกรรมปัจจุบัน,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+neuromorphic computing กับ AI ปกติต่างกันยังไงเหรอ?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+RLVR กำลังจะเปลี่ยนแปลงวิธีที่เราเรียนรู้ AI หรือเปล่า?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"How do advancements in self-supervised learning influence the development of quadrupedal robots in industry, and what are the key startup funding trends?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+How is academic research on multi-task learning impacting the development of real-world AI applications?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+กลไกการทำงานของ neural architecture search บน quantum computing ในการวิเคราะห์ข้อมูลที่ซับซ้อนมีประสิทธิภาพอย่างไร?,Academic Research Query,1,academic_intent,academic_query,th
+tactile sensing ในหุ่นยนต์เคลื่อนที่ มีแนวโน้มไปทางไหนในอนาคต?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+performance improvement,Academic Research Query,1,academic_intent,statistical_query,en
+ข้อใดเป็นปัจจัยที่ส่งผลต่อความแม่นยำของโมเดล machine learning ในการทำนายผลลัพธ์ของข้อมูลที่มีความซับซ้อน?,Academic Research Query,1,academic_intent,statistical_query,th
+Does the incorporation of convex optimization techniques improve the robustness of bipedal walking gaits in dynamic environments?,Academic Research Query,1,academic_intent,hypothesis_testing,en
+ไปดูหนังเรื่องไหนกันดีวันนี้?,Casual Conversation and General Query,4,out_of_domain,casual_chat,th
+"advancements,",Academic Research Query,1,academic_intent,literature_review,en
+การใช้ Random Forests ในการทำนายประสิทธิภาพการเดินสองขาของหุ่นยนต์มีประสิทธิภาพสูงกว่าอัลกอริทึม Machine Learning อื่นๆ หรือไม่?,Academic Research Query,1,academic_intent,statistical_query,th
+What's a good birthday gift for a coffee lover?,Casual Conversation and General Query,4,out_of_domain,shopping_advice,en
+GPT-4 มีความสามารถในการมองเห็นได้ดีขึ้นจริงไหม?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Yo, any good new songs you've been listening to lately?",Casual Conversation and General Query,4,out_of_domain,music_recommendations,en
+ผู้เชี่ยวชาญคิดยังไงบ้างกับการใช้ RLVR ใน motion estimation?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Instance segmentation ในภาพความละเอียดสูงจากกล้องวงจรปิด มีเทคนิคไหนที่เหมาะกับการนำไปใช้ในระบบรักษาความปลอดภัยจริง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+หนังแนวโรแมนติกคอมเมดี้ที่น่าดู มีเรื่องไหนแนะนำบ้าง?,Casual Conversation and General Query,4,out_of_domain,movie_recommendations,th
+"What are the underlying mechanisms that enable multilingual models to generalize across languages, and how do they mitigate language bias?",Academic Research Query,1,academic_intent,explanation_request,en
+กินอะไรดีตอนอยากของหวานแต่ไม่อยากอ้วน?,Casual Conversation and General Query,4,out_of_domain,health_tips,th
+ผมอยากรู้ว่า neuromorphic computing มีแนวโน้มจะถูกนำมาใช้จริงในอุตสาหกรรมไหนบ้าง และมีงานวิจัยอะไรที่น่าสนใจ ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+ข้อใดที่เป็นปัจจัยหลักในการเลือกโมเดลการสรุปข้อความที่เหมาะสมสำหรับงานวิจัยทางวิชาการ?,Academic Research Query,1,academic_intent,data_analysis,th
+มีวิธีการใดบ้างที่ใช้เทคนิคการเรียนรู้ของเครื่องจักรเพื่อปรับปรุงประสิทธิภาพของระบบตรวจจับและป้องกันการโจมตีเครือข่าย?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"What are the limitations of transfer learning in convolutional neural networks for image classification tasks, and what are the implications for autonomous driving applications?",Academic Research Query,1,academic_intent,academic_query,en
+"How does research on quantum annealing influence optimization techniques in computer engineering, and what are its current industry applications?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+ขอโทษที่เผลอเหยียบเท้าคุณ,Casual Conversation and General Query,4,out_of_domain,apology,th
+RLVR vs LLMs: ผู้เชี่ยวชาญคิดว่าเทคโนโลยีไหนน่าลงทุนกว่ากันตอนนี้?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+ผู้เชี่ยวชาญด้าน AI คิดอย่างไรเกี่ยวกับผลกระทบของ ChatGPT ต่อการเรียนรู้ของมนุษย์?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+ช่วยแนะนำหน่อยได้มั้ยว่างานวิจัยเกี่ยวกับ Quantum Annealing ใน Genomics นี่ มีการนำไปใช้จริงในอุตสาหกรรมยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+งานวิจัย về video understanding ก้าวหน้าไปมาก แต่การนำไปใช้จริงในระบบรักษาความปลอดภัยยังห่างชั้น ทำไมนะ?,Hybrid Research Query,3,hybrid_intent,case_study,th
+How are advances in nanotechnology for image classification being used in real-world facial analysis applications?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+มีความเห็นอย่างไรเกี่ยวกับการใช้ Quantum Simulation ในการแก้ปัญหาความปลอดภัยของเครือข่ายในปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What's the latest on using transformer architecture for real-time scene understanding in computer vision?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+การวิเคราะห์สถิติของอัลกอริทึม Bagging ในการจำแนกประเภทภาพใบหน้ามีประสิทธิภาพเพียงใดเมื่อเทียบกับวิธีการอื่นๆ?,Academic Research Query,1,academic_intent,statistical_query,th
+Deep learning models กำลังถูกใช้ใน panoptic segmentation มากแค่ไหนแล้ว?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+การใช้เทคนิค meta learning ช่วยปรับปรุงความแม่นยำของโมเดล machine learning สำหรับการตรวจจับข้อมูลที่ไม่ถูกต้องได้หรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+วิธีการวิเคราะห์ประสิทธิภาพของโมเดลการเรียนรู้ของเครื่องสำหรับการทำนายผลลัพธ์ทางดาราศาสตร์?,Academic Research Query,1,academic_intent,methodology_query,th
+AI แบบไหนที่เหมาะสมที่สุดสำหรับแพลตฟอร์มนี้ และ mixed reality จะช่วยเพิ่มประสิทธิภาพการลงทุนอย่างไร?,Hybrid Research Query,3,hybrid_intent,case_study,th
+RLVR กับ LLMs ต่างกันยังไงวะ?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What's the latest on using transformer architecture for natural language processing tasks?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"Analyze the application of graph neural networks in social robotics, comparing theoretical research with industry implementation challenges and real-world use cases.",Hybrid Research Query,3,hybrid_intent,case_study,en
+การวิเคราะห์ข้อมูลภาพจากเซ็นเซอร์ออปติคอลแบบกระจายตัวสามารถใช้ประเมินประสิทธิภาพของระบบหุ่นยนต์อ่อนนุ่มได้อย่างไร?,Academic Research Query,1,academic_intent,data_analysis,th
+Any cool spots for a quick trip this fall?,Casual Conversation and General Query,4,out_of_domain,travel_recommendations,en
+How has research on **instance segmentation** impacted self-driving car development in the past 5 years?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+Can you help me understand how to apply academic research on optimization techniques to improve the performance of mobile robots in industry settings?,Hybrid Research Query,3,hybrid_intent,help_request,en
+Transformer models เริ่มถูกนำมาใช้ในระบบฝังตัว (embedded systems) มากขึ้น มีงานวิจัยไหนที่น่าสนใจเกี่ยวกับการประยุกต์ใช้แบบนี้ในอุตสาหกรรม,Hybrid Research Query,3,hybrid_intent,case_study,th
+โมเดลการเรียนรู้ของเครื่องแบบไหนเหมาะสมที่สุดในการจำแนกประเภทข้อมูลส่วนบุคคลในระบบเครือข่ายสังคมออนไลน์?,Academic Research Query,1,academic_intent,academic_query,th
+What is the correlation between the number of hidden layers and the performance of neural networks in image classification tasks?,Academic Research Query,1,academic_intent,statistical_query,en
+"What are the latest advancements in brain-inspired computing for drone control, and how are they being implemented in industry applications?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+เข้าใจถูกไหมว่าปัจจุบัน AI สามารถสร้างภาพที่มีลักษณะคล้ายจริงได้ดีแค่ไหนแล้ว,Web Search and Current Information Query,2,web_intent,understanding_check,th
+How are reinforcement learning techniques from academic papers being used in real-world robotics applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+"What are the recent advances in applying Bayesian methods to improve robustness in bipedal walking robots, and what are the key findings?",Academic Research Query,1,academic_intent,source_request,en
+What are the latest trends in defending against ransomware?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Transfer Learning,Hybrid Research Query,3,hybrid_intent,summary_request,th
+วิเคราะห์ความสัมพันธ์ระหว่างเทคนิคการเรียนรู้ของเครื่องกับวิวัฒนาการของ AI ในการนำไปใช้จริงในอุตสาหกรรมต่างๆ อย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"What's the latest on multilingual models in academia, and how are they being applied in industry for real-world language translation tasks?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+"What are the latest industry uses of diffusion models, and how do they compare to academic research on the topic?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+ต้องทำอย่างไรจึงจะทำให้บ้านเก่าดูใหม่และสวยงามขึ้น?,Casual Conversation and General Query,4,out_of_domain,home_improvement,th
+Transformer ใน NLP กำลังไปได้สวย แต่ทำไมการนำไปใช้ใน embedded systems ถึงยังติดขัด?,Hybrid Research Query,3,hybrid_intent,case_study,th
+การใช้แบบจำลองทางคณิตศาสตร์สามารถทดสอบสมมติฐานความสัมพันธ์ระหว่างตัวแปรในระบบได้อย่างไร?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+Thoughts on the latest advancements in sensor fusion for self-driving cars?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are developers saying about the new PyTorch update?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"How do recent advances in neural architecture search, inspired by game theory, impact real-world applications like visual navigation?",Hybrid Research Query,3,hybrid_intent,comparison_request,en
+วิธีการที่เหมาะสมที่สุดในการประเมินประสิทธิภาพของอัลกอริทึม path planning สำหรับหุ่นยนต์สี่ขาในสภาพแวดล้อมที่ไม่แน่นอนคืออะไร?,Academic Research Query,1,academic_intent,methodology_query,th
+"What are the latest research findings on explainable AI and their practical applications in the finance industry, including real-world implementation challenges?",Hybrid Research Query,3,hybrid_intent,case_study,en
+What are the latest research papers and industry applications of semi-supervised learning for uncertainty quantification in time series analysis?,Hybrid Research Query,3,hybrid_intent,help_request,en
+What's the latest on using federated learning for edge AI applications?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+การใช้เทคนิค graph mining ในการเพิ่มประสิทธิภาพของ algorithm สำหรับ image classification มีผลต่อความแม่นยำของการจำแนกประเภทภาพเท่าใด?,Academic Research Query,1,academic_intent,statistical_query,th
+What statistical methods can be employed to investigate the impact of dataset size on the performance of automatic speech recognition systems?,Academic Research Query,1,academic_intent,data_analysis,en
+อยากรู้ว่าเทคนิค Simulated Annealing ใช้ปรับปรุงระบบ ในแพลตฟอร์ม E-commerce ได้ยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,case_study,th
+RLVR ในปัจจุบัน มีการพัฒนาอะไรใหม่ๆ บ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+วิธีการใดที่เหมาะสมที่สุดในการประเมินความเที่ยงธรรมของโมเดล machine learning ในการประมวลผลภาษาไทย?,Academic Research Query,1,academic_intent,methodology_query,th
+topological persistence,Academic Research Query,1,academic_intent,definition_request,en
+"What are the best practices for analyzing longitudinal data in medical informatics research, considering patient privacy concerns?",Academic Research Query,1,academic_intent,data_analysis,en
+ผู้เชี่ยวชาญด้าน AI คิดอย่างไรเกี่ยวกับการใช้ transformer models ในการวิเคราะห์ข้อมูลขนาดใหญ่?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+ผมกำลังศึกษา adversarial robustness ใน robot perception อยากรู้ว่ามีงานวิจัยไหนที่นำไปใช้ในระบบรักษาความปลอดภัยจริง ๆ บ้างไหม?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What's the latest expert take on transformer architecture for natural language processing tasks?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+เครื่องมือ AI ใหม่ๆ เช่น ChatGPT มีผลกระทบต่อการเขียนโค้ดอย่างไร?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+multi-task learning,Academic Research Query,1,academic_intent,definition_request,en
+"Hey, any tips for getting motivated to work out?",Casual Conversation and General Query,4,out_of_domain,fitness_tips,en
+การออกแบบโครงข่ายประสาทเทียมแบบจำแนกประเภทข้อมูลขนาดใหญ่สำหรับการรู้จำภาพทำงานอย่างไร?,Academic Research Query,1,academic_intent,explanation_request,th
+Can you explain how multimodal learning approaches in academic research are being applied to real-world robotic vision systems in industry?,Hybrid Research Query,3,hybrid_intent,help_request,en
+นักพัฒนาคิดอย่างไรเกี่ยวกับการใช้โมเดล LLM ในการพัฒนาซอฟต์แวร์ปัจจุบัน,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What's the latest on transformer architecture updates for natural language processing tasks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+How is academic research on causal machine learning impacting real-world applications like malware detection?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+RLVR ในการเขียนโค้ด มีประโยชน์จริงไหม?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Hey, what's a simple trick to boost my energy levels after a long day?",Casual Conversation and General Query,4,out_of_domain,health_tips,en
+What are the ethical implications of deploying bandit algorithms in personalized healthcare?,Academic Research Query,1,academic_intent,academic_query,en
+สถิติการประเมินท่าทางมนุษย์ในงานวิจัยล่าสุดแสดงแนวโน้มอย่างไร?,Academic Research Query,1,academic_intent,statistical_query,th
+What are developers saying about the new React framework?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+การประยุกต์ใช้เทคนิค **representation learning** แบบใด มีประสิทธิภาพสูงสุดในการ **จัดหมวดหมู่ข้อความ** ภาษาไทย?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+What do experts think about the latest advancements in quantum machine learning frameworks?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+สัตว์เลี้ยงลูกด้วยนมอะไรบ้างที่สามารถบินได้,Casual Conversation and General Query,4,out_of_domain,trivia,th
+Let me know if you'd like me to generate more queries focusing on specific knowledge domains!,Web Search and Current Information Query,2,web_intent,feedback_request,en
+Hey there! What's up?,Casual Conversation and General Query,4,out_of_domain,greeting,en
+What are the ethical considerations of deploying quantum optimization algorithms in real-time analytics systems?,Academic Research Query,1,academic_intent,academic_query,en
+มีวิธีใดที่จะนำหลักการของ Quantum Machine Learning ไปใช้เพื่อปรับปรุงประสิทธิภาพของระบบคอมพิวเตอร์สำหรับการประมวลผลข้อมูลขนาดใหญ่ในองค์กรได้บ้าง?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+ข้อใดที่เป็นปัจจัยหลักของการใช้ Gaussian Splatting ในการวิเคราะห์ข้อมูลขนาดใหญ่ในด้านวิทยาศาสตร์ข้อมูล?,Academic Research Query,1,academic_intent,literature_review,th
+มีร้านอาหารที่แนะนำในย่านนี้มั้ย?,Casual Conversation and General Query,4,out_of_domain,restaurant_recommendations,th
+ขอแนะนำวิธีการประเมินประสิทธิภาพของโมเดลการเรียนรู้ของเครื่องสำหรับการวิเคราะห์ข้อมูลขนาดใหญ่,Academic Research Query,1,academic_intent,academic_query,th
+วิธีการนำเทคนิคการวิเคราะห์อารมณ์ (emotion analysis) ไปใช้เพื่อปรับปรุงระบบการบริการลูกค้าในอุตสาหกรรมบริการ?,Hybrid Research Query,3,hybrid_intent,search_request,th
+เข้าใจถูกไหมว่าโมเดล AI ที่ใช้เครือข่ายประสาทเทียมสามารถเรียนรู้ได้ด้วยตัวเองโดยไม่ต้องการข้อมูลกำกับ?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are the latest breakthroughs in text-to-speech AI?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+ผมอยากรู้ว่ามีงานวิจัยอะไรที่ใช้ Reasoning ใน Knowledge Graph บ้าง แล้วเอามาใช้จริงในธุรกิจได้ยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What are the latest breakthroughs in few-shot learning?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+จากกระแสการใช้ SNN ในการควบคุมโดรน งานวิจัยไหนที่น่าสนใจและมีโอกาสนำไปใช้จริงในอุตสาหกรรมได้เร็วที่สุด?,Hybrid Research Query,3,hybrid_intent,case_study,th
+ลาก่อนนะ แล้วเจอกันใหม่ทุกคน!,Casual Conversation and General Query,4,out_of_domain,goodbye,th
+What are the most effective methods for evaluating the robustness of semi-supervised learning algorithms in handling noisy or missing data?,Academic Research Query,1,academic_intent,methodology_query,en
+Photonics กับ 5G มันเกี่ยวข้องกันยังไงอ่ะ?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are the latest advancements in diffusion models for image generation?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"Hey, it was great chatting with you, catch you later, have a fantastic day!",Casual Conversation and General Query,4,out_of_domain,goodbye,en
+What are data scientists saying about the future of LLMs?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+ในบริบทของหุ่นยนต์อ่อนนุ่ม การทบทวนวรรณกรรมใดที่วิเคราะห์วิธีการจำลองและควบคุมการเคลื่อนไหวที่คล้ายคลึงกับสิ่งมีชีวิต?,Academic Research Query,1,academic_intent,literature_review,th
+What's the latest industry take on Google's new framework for explainable AI models?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Thoughts on the future of differential privacy in machine learning?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"What's the latest research on using quantum annealing for motion planning, and are there any startups or companies already implementing this tech?",Hybrid Research Query,3,hybrid_intent,help_request,en
+"How do soft robotics research advancements influence industry adoption in manufacturing, and what are the current market trends and implementations?",Hybrid Research Query,3,hybrid_intent,help_request,en
+ผู้เชี่ยวชาญคิดว่า Differential Privacy จะมีผลกระทบต่อการพัฒนา AI อย่างไรบ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Hey, I need help applying genetic algorithms to real-world mobile robot navigation. What are the key challenges and industry best practices?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What are the current trends and challenges in applying in-context learning to panoptic segmentation tasks?,Academic Research Query,1,academic_intent,literature_review,en
+Let me know if you'd like me to generate more queries focused on a specific domain!,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+Let me know if you'd like me to generate more queries tailored to a specific domain!,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+"What statistical methods are most effective for analyzing temporal patterns in IoT sensor data, and how do they impact predictive model performance?",Academic Research Query,1,academic_intent,data_analysis,en
+## คำถาม Understanding Check:,Web Search and Current Information Query,2,web_intent,understanding_check,th
+Remote sensing กับ object detection ในการเกษตร มีเทคนิคใหม่ๆ ไหม?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+RLVR กำลังเป็นที่นิยมในวงการ AI หรือเปล่า?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+การนำเทคนิคการเรียนรู้ของเครื่องแบบ transfer learning ไปประยุกต์ใช้ในการวิเคราะห์ข้อมูลชีวภาพในด้านการแพทย์สามารถปรับปรุงผลลัพธ์การวินิจฉัยได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+วิเคราะห์บทบาทของการเรียนรู้เชิงลึก (Deep Learning) ในการพัฒนาระบบสนทนาอัตโนมัติ (Conversational AI) และการประยุกต์ใช้จริงในอุตสาหกรรมบริการลูกค้า,Hybrid Research Query,3,hybrid_intent,summary_request,th
+My kid refuses to eat veggies. Any tips?,Casual Conversation and General Query,4,out_of_domain,parenting_advice,en
+What are the most robust statistical methods for evaluating the performance of quantum algorithms in combinatorial optimization problems?,Academic Research Query,1,academic_intent,methodology_query,en
+unsupervised learning,Academic Research Query,1,academic_intent,hypothesis_testing,th
+ข้อใดคือวิธีการที่เหมาะสมในการประเมินประสิทธิภาพของโมเดล Collaborative Filtering ในระบบแนะนำภาพยนตร์?,Academic Research Query,1,academic_intent,methodology_query,th
+เทคโนโลยี Quantum Annealing ล่าสุดสามารถนำไปใช้ในด้าน Cybersecurity ได้อย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How do swarm robotics research findings translate to real-world autonomous navigation applications in industries like logistics and transportation?,Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+"What are the most effective adversarial training methods for enhancing the robustness of quantum neural networks, and what are their theoretical foundations?",Academic Research Query,1,academic_intent,source_request,en
+การวิเคราะห์วิธีการใดบ้างที่ใช้ในการปรับปรุงประสิทธิภาพของขั้นตอนการเรียนรู้ meta-learning ในงาน action recognition?,Academic Research Query,1,academic_intent,literature_review,th
+What's the latest on using transformers for image classification tasks in computer vision?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+"คำถามวิจัย:** **เทคนิคการเรียนรู้แบบต่อเนื่อง (continual learning) ในเครือข่ายประสาทเทียมแบบไหนที่เหมาะสมที่สุดสำหรับการประยุกต์ใช้ในระบบ распознаваниеกิจกรรม (activity recognition) บนอุปกรณ์เคลื่อนที่ที่มีทรัพยากรจำกัด?** คำถามนี้: * **แสดงเจตนาทางวิชาการ:** ใช้ภาษาที่ชัดเจนและเป็นทางการ * **เกี่ยวข้องกับบริบทการวิจัย:** เน้นเทคนิค continual learning, เครือข่ายประสาทเทียม, activity recognition และอุปกรณ์เคลื่อนที่ * **แสดงประเภทย่อยที่เฉพาะเจาะจง:** มุ่งเน้นไปที่เทคนิค continual learning ที่เหมาะสม * **ต้องการแหล่งข้อมูลวิชาการ:** ต้องการการวิเคราะห์และเปรียบเทียบเทคนิคต่างๆ จากงานวิจัย * **ใช้ภาษาไทยในระดับ conversation:** ใช้ภาษาที่เข้าใจง่าย * **ใช้โครงสร้างประโยคที่หลากหลาย:** ใช้ประโยคคำถามเชิงวิ",Academic Research Query,1,academic_intent,literature_review,th
+"Can Bayesian neural networks outperform traditional neural networks in object recognition tasks, considering dataset size and model complexity as variables?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+"How do embodied AI and computer vision intersect in soft robotics, and what are the current industry applications and challenges?",Hybrid Research Query,3,hybrid_intent,case_study,en
+นักพัฒนาตอบสนองอย่างไรต่อการอัปเดต TensorFlow ล่าสุด,Web Search and Current Information Query,2,web_intent,clarification_request,th
+คำนิยามของ Overfitting ในบริบท Machine Learning คืออะไร?,Academic Research Query,1,academic_intent,definition_request,th
+Thoughts on using GPT-3 for code generation?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+เข้าใจถูกไหมว่าโมเดล Transformer มีผลกระทบต่อการพัฒนาของโมเดลภาษาในขณะนี้อย่างไร?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+"Hey, I just got a puppy, what are some essential things I should buy?",Casual Conversation and General Query,4,out_of_domain,pet_advice,en
+## คำถามวิจัย:,Academic Research Query,1,academic_intent,explanation_request,th
+คำถามวิจัย:** **การวิเคราะห์ข้อมูลแบบใดที่เหมาะสมที่สุดในการประเมินประสิทธิภาพของอัลกอริทึม Drone control ในสภาพแวดล้อมที่ซับซ้อน?** **Reasoning:** * **เจตนาทางวิชาการ:** คำถามนี้ชี้ให้เห็นถึงความต้องการในการวิเคราะห์ข้อมูลเพื่อประเมินประสิทธิภาพของอัลกอริทึม * **บริบทการวิจัย:** คำถามนี้เกี่ยวข้องโดยตรงกับโดเมน Drone control * **ประเภทย่อยที่เฉพาะเจาะจง:** คำถามนี้เน้นไปที่การวิเคราะห์ข้อมูล * **แหล่งข้อมูลวิชาการ:** การตอบคำถามนี้ต้องการการอ้างอิงถึงงานวิจัยและวิธีการวิเคราะห์ข้อมูลที่เกี่ยวข้อง * **ภาษาไทยในระดับ conversation:** คำถามนี้ใช้ภาษาไทยที่เข้าใจง่าย * **โครงสร้างประโยคที่หลากหลาย:** คำถามนี้ใช้โครงสร้างประโยคที่หลากหลายและไม่ซ้ำซ้อน,Academic Research Query,1,academic_intent,data_analysis,th
+ผมอยากรู้ว่างานวิจัยเกี่ยวกับ active learning กับ social media analytics มีอะไรที่น่าสนใจบ้างในตอนนี้?,Hybrid Research Query,3,hybrid_intent,help_request,th
+Digital Twin,Academic Research Query,1,academic_intent,definition_request,th
+"Hey, I love your sense of humor, you always make me laugh!",Casual Conversation and General Query,4,out_of_domain,compliment,en
+"What constitutes 'explainability' in the context of human-AI collaboration, and how is it formally defined in the field of artificial intelligence?",Academic Research Query,1,academic_intent,definition_request,en
+ไปแล้วนะ สวัสดี,Casual Conversation and General Query,4,out_of_domain,goodbye,th
+Could you provide me with key research articles on the application of particle swarm optimization in autonomous driving path planning algorithms?,Academic Research Query,1,academic_intent,source_request,en
+ฉันควรเปลี่ยนน้ำมันเครื่องรถยนต์ทุกกี่กิโลเมตร?,Casual Conversation and General Query,4,out_of_domain,car_maintenance,th
+Rerankers ทำงานยังไงในระบบค้นหาข้อมูลปัจจุบัน?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+CNNs ใน facial analysis พัฒนามาไกลแค่ไหนแล้ว,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+What are the latest research advancements in uncertainty quantification and their practical applications in recommender systems for e-commerce?,Hybrid Research Query,3,hybrid_intent,help_request,en
+What's the latest expert take on the ethics of federated learning in healthcare?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+Any thoughts on the latest emotion recognition benchmarks?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+สมมติว่าเราใช้ Swarm Robotics ในการจัดการคลังสินค้าของ BIG4 จะต้องมีการปรับปรุงอะไรบ้างในแง่ของ Non-convex Optimization?,Hybrid Research Query,3,hybrid_intent,case_study,th
+การใช้เทคนิคการวิเคราะห์ข้อมูลแบบไม่มีการควบคุม (Unsupervised learning) สามารถช่วยเพิ่มประสิทธิภาพในการค้นหาคำตอบที่ถูกต้องในระบบตรวจจับข้อมูลเท็จ (Misinformation detection) ได้หรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+What are the hottest new trends in anomaly detection research?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+RLVR มันคืออะไรอ่ะ? มีประโยชน์ยังไงบ้าง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+How does academic research on style transfer in images compare to its use in real-world apps?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+การวิเคราะห์ความสัมพันธ์ระหว่างตัวแปรในโมเดลสมการโครงสร้างสามารถทำได้ด้วยวิธีการทางสถิติใด?,Academic Research Query,1,academic_intent,statistical_query,th
+How are evolutionary algorithms used in real-world data integration for speech-to-text applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+force control,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+What are the most effective methods for evaluating the interpretability of convolutional neural networks in image classification tasks?,Academic Research Query,1,academic_intent,source_request,en
+"What are the theoretical underpinnings of normalizing flows in generative modeling, and how do they compare to variational autoencoders?",Academic Research Query,1,academic_intent,explanation_request,en
+นักพัฒนาตอบสนองอย่างไรต่อการอัปเดต PyTorch ล่าสุด,Web Search and Current Information Query,2,web_intent,understanding_check,th
+สามารถใช้เทคนิคการวิเคราะห์ข้อมูลแบบใดเพื่อตรวจสอบความถูกต้องของโมเดลการพยากรณ์ทางสถิติในด้านการเงิน?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+การใช้ evolutionary algorithms ใน computational biology มีแนวโน้มไปทางไหนในอุตสาหกรรมชีวเภท?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+RLVR กำลังเป็นที่นิยมใน VR หรือเปล่า มีอะไรใหม่ๆ บ้าง?,Web Search and Current Information Query,2,web_intent,understanding_check,th
+What are the implications of Google's latest advancements in Federated Learning for AI developers?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+คอมพิวเตอร์ควอนตัมจะเปลี่ยนโมเดล AI ที่ใช้การเรียนรู้ของเครื่องในอนาคตอย่างไร?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+อยากรู้ว่า Federated Learning กับ Quantum Computing มีแนวโน้มจะถูกนำมาใช้ร่วมกันในระบบ Network Security ยังไงบ้าง ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+วิเคราะห์ความสัมพันธ์ระหว่างเทคนิคการเรียนรู้ของเครื่องกับการประยุกต์ใช้จริงในอุตสาหกรรมเทคโนโลยีในปัจจุบันอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+หวัดดี! วันนี้สบายดีมั้ย?,Casual Conversation and General Query,4,out_of_domain,introduction,th
+ความแตกต่างระหว่างการใช้เทคนิคการประมวลผลภาษาธรรมชาติ (NLP) ในการวิจัยและในอุตสาหกรรมคืออะไร?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+## คำถาม literature review:,Academic Research Query,1,academic_intent,literature_review,th
+How does academic research on explainable AI compare to its actual use in industry tools?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+อยากรู้ว่างานวิจัย về topological data analysis มีการนำไปใช้จริงใน edge computing บ้างไหม?,Hybrid Research Query,3,hybrid_intent,help_request,th
+How does research on domain adaptation in computer vision translate to real-world applications in self-driving cars and facial recognition technology?,Hybrid Research Query,3,hybrid_intent,case_study,en
+Let me know if you'd like to explore queries for a specific domain!,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+วิธีการวิเคราะห์ข้อมูลสื่อสังคมออนไลน์สำหรับการตรวจจับข้อมูลเท็จโดยใช้เทคนิคการเรียนรู้ของเครื่องอย่างไร?,Academic Research Query,1,academic_intent,methodology_query,th
+ในบริบทของการเรียนรู้แบบมีผู้สอน (supervised learning) โปรดอธิบายความแตกต่างระหว่าง,Academic Research Query,1,academic_intent,definition_request,th
+What are the latest research advancements and industry applications of computer vision in detecting misinformation on social media platforms?,Hybrid Research Query,3,hybrid_intent,case_study,en
+"Can Bayesian methods effectively mitigate overfitting in transformer models for natural language processing tasks, and what empirical evidence supports this hypothesis?",Academic Research Query,1,academic_intent,hypothesis_testing,en
+สรุปผลการวิจัยและกรณีศึกษาของการใช้เทคนิค Semi-supervised Learning ในด้าน Computer Vision สำหรับการประยุกต์ใช้จริงในอุตสาหกรรม,Hybrid Research Query,3,hybrid_intent,summary_request,th
+"Hey, can you explain how bandit algorithms are used in social networks for personalized recommendations, and what are the latest industry applications?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What are the statistically significant correlations between environmental factors and student performance in online learning environments?,Academic Research Query,1,academic_intent,statistical_query,en
+ขอแนะนำการใช้เทคนิคการเรียนรู้เชิงลึกเพื่อปรับปรุงระบบคาดการณ์อากาศในประเทศไทย โดยใช้ข้อมูลสภาพอากาศในอดีตและปัจจุบันเพื่อเพิ่มความแม่นยำของการคาดการณ์,Hybrid Research Query,3,hybrid_intent,search_request,th
+How does Tesla's use of computer vision and machine learning in Autopilot systems relate to academic research on robust control and anomaly detection?,Hybrid Research Query,3,hybrid_intent,case_study,en
+การประยุกต์ใช้เทคนิคการเรียนรู้ของเครื่องในด้านวิศวกรรมคอมพิวเตอร์ในปัจจุบันมีแนวโน้มอย่างไร และมีผลกระทบต่ออุตสาหกรรมอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+ตอนนี้ฮิตใช้ Transformer ใน stream processing แต่เจอปัญหาอะไรบ้างวะ?,Hybrid Research Query,3,hybrid_intent,help_request,th
+What are people saying about the latest advancements in LLMs?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+What are experts saying about the use of LLMs in medical diagnosis?,Web Search and Current Information Query,2,web_intent,expert_opinion,en
+การเปรียบเทียบประสิทธิภาพของโมเดลการเรียนรู้ของเครื่องโดยใช้เทคนิคการเรียนรู้แบบถ่ายโอนและการเรียนรู้เชิงลึกเพื่อปรับปรุงความแม่นยำในการรับรู้คำพูดอัตโนมัติ,Academic Research Query,1,academic_intent,literature_review,th
+"How do graph neural networks in academic research translate to real-world malware detection, and what are the industry implementation challenges?",Hybrid Research Query,3,hybrid_intent,case_study,en
+"Hey, what's been keeping you busy lately?",Casual Conversation and General Query,4,out_of_domain,small_talk,en
+รูปแบบการใช้ quantum algorithms ในการวิเคราะห์ข้อมูลขนาดใหญ่ของบริษัทในอุตสาหกรรมเทคโนโลยีในปัจจุบันเป็นอย่างไร?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+วิธีการทบทวนวรรณกรรมแบบไหนที่เหมาะสมสำหรับการศึกษาความสัมพันธ์ระหว่าง quantum annealing และ graph theory ในระบบเครือข่ายเซ็นเซอร์แบบกระจายศูนย์?,Academic Research Query,1,academic_intent,literature_review,th
+งานวิจัยเกี่ยวกับ Meta Learning ในด้าน Business Intelligence มีแนวโน้มไปทางไหนบ้าง?,Hybrid Research Query,3,hybrid_intent,help_request,th
+"Hey, can you help me understand how to apply causal inference techniques from research papers to real-world video analysis tasks using computer vision?",Hybrid Research Query,3,hybrid_intent,help_request,en
+What statistical methods are most effective for analyzing the impact of hyperparameter tuning on neural network performance in computer vision tasks?,Academic Research Query,1,academic_intent,statistical_query,en
+"What are the best practices for evaluating the robustness of ranking algorithms in complex networks, and how can I apply them to my dataset?",Academic Research Query,1,academic_intent,methodology_query,en
+How are transformer models being used in real-world bioinformatics applications?,Hybrid Research Query,3,hybrid_intent,search_request,en
+Thoughts on the latest advancements in Few-Shot Learning?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+มีวิธีการใดบ้างที่ใช้เทคนิค Instance Segmentation ในการวิเคราะห์ภาพทางการแพทย์เพื่อปรับปรุงการวินิจฉัยโรคได้อย่างไร?,Hybrid Research Query,3,hybrid_intent,search_request,th
+โมเดลภาษาล่าสุดของ Google มีความสามารถในการประมวลผลภาพได้หรือไม่?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+What are the statistically significant performance differences between quantum annealing and classical optimization algorithms for solving combinatorial problems?,Academic Research Query,1,academic_intent,statistical_query,en
+นิยามของ robustness ในบริบทของ machine learning คืออะไร และมีวิธีการวัดระดับความทนทานต่อการรบกวนอย่างไร?,Academic Research Query,1,academic_intent,definition_request,th
+ช่วยอธิบายการทำงานของ Convolutional Neural Networks ในการประมวลผลภาพล่าสุดหน่อย,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"What are the latest research advancements and industry applications of representation learning in computer vision, and how are they impacting augmented reality developments?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+RLVR กับ LLMs ต่างกันยังไงในแง่การประยุกต์ใช้จริง?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+Transformer ใน NLP เริ่มบูมตั้งแต่เมื่อไหร่ และตอนนี้มีการนำไปใช้จริงในอุตสาหกรรมยังไงบ้าง?,Hybrid Research Query,3,hybrid_intent,trend_analysis,th
+วันนี้ฝนตกไหม,Casual Conversation and General Query,4,out_of_domain,weather_queries,th
+ความแตกต่างระหว่างการใช้กราฟทฤษฎีกับกราฟเชิงการประยุกต์ในการวิเคราะห์ข้อมูลเครือข่ายคืออะไร?,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+What are the most effective statistical methods for analyzing human-robot interaction data in collaborative tasks?,Academic Research Query,1,academic_intent,data_analysis,en
+"What are the underlying mechanisms that enable neural rendering to effectively generate photorealistic images, and how do they relate to optical flow estimation?",Academic Research Query,1,academic_intent,explanation_request,en
+"Hey, can you explain how force control theories are applied in robotics grasping, and what are the current industry challenges and solutions?",Hybrid Research Query,3,hybrid_intent,help_request,en
+state-of-the-art,Academic Research Query,1,academic_intent,literature_review,en
+How are recent breakthroughs in quantum information being applied in real-world IoT development?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+"How does academic research on zero-shot learning translate to real-world applications in computer vision, and what are the current industry trends and challenges?",Hybrid Research Query,3,hybrid_intent,trend_analysis,en
+วิเคราะห์ความแตกต่างระหว่างการใช้เทคนิคการเรียนรู้ของเครื่องแบบ unsupervised และ supervised ในระบบแนะนำสินค้า และกรณีศึกษาในธุรกิจอีคอมเมิร์ซ,Hybrid Research Query,3,hybrid_intent,comparison_request,th
+ในงานวิจัยนี้ ผู้เขียนอธิบายกลไกการทำงานของอัลกอริทึมในการวิเคราะห์สตรีมข้อมูลอย่างไร?,Academic Research Query,1,academic_intent,explanation_request,th
+How is topological data analysis used in real-world wireless network optimization?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+มีเพลงอะไรที่เหมาะกับการเดินทางไหม,Casual Conversation and General Query,4,out_of_domain,music_recommendations,th
+ช่วยสรุปผลการวิจัยวิชาการและแนวโน้มปัจจุบันเกี่ยวกับการใช้ AI ในการวิเคราะห์ข้อมูลสุขภาพเพื่อปรับปรุงการดูแลผู้ป่วยได้หรือไม่?,Hybrid Research Query,3,hybrid_intent,summary_request,th
+วิธีแก้ปัญหามือถือแบตหมดเร็วทำอย่างไร,Casual Conversation and General Query,4,out_of_domain,tech_support,th
+การใช้เทคนิค Domain Adaptation ช่วยเพิ่มประสิทธิภาพของการจำแนกภาพจากภาพดาวเทียมในประเทศไทยหรือไม่?,Academic Research Query,1,academic_intent,hypothesis_testing,th
+How has research on self-supervised learning in computer vision translated into real-world applications like autonomous driving?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+เน็ตบ้านช้าจังเลย มีเบอร์ช่างให้หน่อยได้ไหม?,Casual Conversation and General Query,4,out_of_domain,tech_support,th
+How are foundation models being used in real-time business intelligence dashboards?,Hybrid Research Query,3,hybrid_intent,search_request,en
+How does academic research on contrastive learning for visual transformers translate to real-world business intelligence applications?,Hybrid Research Query,3,hybrid_intent,comparison_request,en
+"What is the formal definition of epistemic uncertainty in the context of Bayesian neural networks, and how is it quantified?",Academic Research Query,1,academic_intent,definition_request,en
+What is the formal definition of 'adversarial robustness' in the context of deep learning and AI safety research?,Academic Research Query,1,academic_intent,definition_request,en
+"What's the latest on Google's AI-powered content moderation, and is it effective?",Web Search and Current Information Query,2,web_intent,feedback_request,en
+ขอทราบข้อมูลเกี่ยวกับวิธีการใช้เทคนิค Gradient Descent ในกระบวนการการเรียนรู้ของเครื่องจักร (Machine Learning),Academic Research Query,1,academic_intent,academic_query,th
+นักพัฒนาควรใช้เครื่องมือวิเคราะห์โค้ดแบบไหนเพื่อปรับปรุงประสิทธิภาพการเขียนโค้ดสำหรับโปรเจคต์ใหม่?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+แถวนี้มีร้านอาหารอร่อยๆ บ้างมั้ย?,Casual Conversation and General Query,4,out_of_domain,food_recommendations,th
+นักวิเคราะห์คาดการณ์ยังไงบ้างกับอนาคตของตลาด P2P Lending?,Web Search and Current Information Query,2,web_intent,clarification_request,th
+"Dude, any tips for keeping my car clean inside?",Casual Conversation and General Query,4,out_of_domain,car_maintenance,en
+"What are the latest advancements in sentiment mining and their applications in customer service chatbots, including research papers and industry success stories?",Hybrid Research Query,3,hybrid_intent,case_study,en
+ด้วยความก้าวหน้าของ Large Language Models เราจะใช้โมเดลนี้ยังไงให้มีประโยชน์จริงใน Metaverse?,Hybrid Research Query,3,hybrid_intent,case_study,th
+"What's the latest on using transformers for neural machine translation, any expert insights?",Web Search and Current Information Query,2,web_intent,feedback_request,en
+"What is the underlying mechanism of normalizing flows in deep learning, and how does it enable efficient probability density estimation?",Academic Research Query,1,academic_intent,explanation_request,en
+How is brain-inspired computing used in real-world applications like visual navigation and action recognition?,Hybrid Research Query,3,hybrid_intent,summary_request,en
+"What are the latest breakthroughs in multilingual models, and how are they being used in real-world applications?",Hybrid Research Query,3,hybrid_intent,summary_request,en
+เอกสารวิจัยไหนบ้างที่ศึกษาถึงการประยุกต์ใช้ variational autoencoders ในการตรวจจับ malware?,Academic Research Query,1,academic_intent,source_request,th
+จะวิเคราะห์ประสิทธิภาพของอัลกอริทึมการเรียนรู้ของเครื่องจักรในด้านการพยากรณ์อากาศได้อย่างไร โดยการเปรียบเทียบกับ baseline ที่มีอยู่?,Academic Research Query,1,academic_intent,explanation_request,th
+พี่ๆ ช่วยขุดข้อมูลหน่อยได้มั้ย? กำลังศึกษา quantum cryptography ว่ามันจะ disrupt ธุรกิจ cybersecurity ยังไงดี,Hybrid Research Query,3,hybrid_intent,help_request,th
+เกมเมื่อคืนมันส์มากเลยไหม?,Casual Conversation and General Query,4,out_of_domain,sports_news,th
+อาหารที่เหมาะกับเด็กวัย 3-5 ขวบ ควรให้อะไรที่มีประโยชน์?,Casual Conversation and General Query,4,out_of_domain,food_recommendations,th
+วันนี้สบายดีไหม,Casual Conversation and General Query,4,out_of_domain,greeting,th
+What are the latest trends in edge computing for AI?,Web Search and Current Information Query,2,web_intent,feedback_request,en
+อัลกอริทึมการจัดตารางงาน,Academic Research Query,1,academic_intent,definition_request,th
+ช่วยหาข้อมูลวิจัยใหม่ๆ เกี่ยวกับการใช้ SLAM ในหุ่นยนต์บริการที่บ้านหน่อยครับ,Hybrid Research Query,3,hybrid_intent,help_request,th
+"What's the latest research on emotion analysis in human-robot interaction, and how is it being applied in the metaverse and industry?",Hybrid Research Query,3,hybrid_intent,help_request,en
