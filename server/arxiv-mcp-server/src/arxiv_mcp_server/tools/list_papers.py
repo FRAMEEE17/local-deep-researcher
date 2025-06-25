@@ -1,5 +1,3 @@
-"""List functionality for the arXiv MCP server."""
-
 import json
 from pathlib import Path
 import arxiv

@@ -1,5 +1,3 @@
-"""Read functionality for the arXiv MCP server."""
-
 import json
 from pathlib import Path
 from typing import Dict, Any, List

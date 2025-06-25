@@ -1,5 +1,3 @@
-"""LMStudio integration for the research assistant."""
-
 import json
 import logging
 from typing import Any, List, Optional

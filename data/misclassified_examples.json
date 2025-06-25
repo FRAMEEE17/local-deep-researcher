@@ -1,8 +1,8 @@
 [
     {
         "text": "\u0e2a\u0e33\u0e23\u0e27\u0e08\u0e27\u0e23\u0e23\u0e13\u0e01\u0e23\u0e23\u0e21",
-        "true_label": "academic_query",
-        "predicted_label": "literature_review"
+        "true_label": "literature_review",
+        "predicted_label": "academic_query"
     },
     {
         "text": "\u0e2a\u0e27\u0e31\u0e2a\u0e14\u0e35",

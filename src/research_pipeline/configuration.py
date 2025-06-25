@@ -6,10 +6,11 @@ from typing import Any, Optional, Literal
 from langchain_core.runnables import RunnableConfig
 
 class SearchAPI(Enum):
-    PERPLEXITY = "perplexity"
-    TAVILY = "tavily"
-    DUCKDUCKGO = "duckduckgo"
-    SEARXNG = "searxng"
+    SEARXNG = "searxng"  # Primary web search
+    ARXIV_MCP = "arxiv_mcp"  # ArXiv MCP server
+    SEARCHTHEARXIV = "searchthearxiv"  # Semantic ArXiv search
+    HYBRID = "hybrid"  # Combined approach
+    JINA = "jina"  # Content extraction
 
 class Configuration(BaseModel):
     """The configurable fields for the research assistant."""
@@ -29,10 +30,10 @@ class Configuration(BaseModel):
         title="LLM Provider",
         description="Provider for the LLM (Ollama or LMStudio)"
     )
-    search_api: Literal["perplexity", "tavily", "duckduckgo", "searxng"] = Field(
+    search_api: Literal["perplexity", "tavily", "duckduckgo", "searxng", "arxiv"] = Field(
         default="duckduckgo",
         title="Search API",
-        description="Web search API to use"
+        description="Search API to use (web search or academic papers)"
     )
     fetch_full_page: bool = Field(
         default=True,
@@ -53,6 +54,79 @@ class Configuration(BaseModel):
         default=True,
         title="Strip Thinking Tokens",
         description="Whether to strip <think> tokens from model responses"
+    )
+
+    # Intent Classification 
+    intent_model_path: str = Field(
+        default="/home/siamai/deepsad/local-deep-researcher/data/intent_classifier_xlm.pth",
+        title="Intent Model Path",
+        description="Path to trained XLM-RoBERTa intent classification model"
+    )
+    tokenizer_path: str = Field(
+        default="/home/siamai/deepsad/local-deep-researcher/data/tokenizer_final",
+        title="Tokenizer Path", 
+        description="Path to XLM-RoBERTa tokenizer"
+    )
+    label_encoder_path: str = Field(
+        default="/home/siamai/deepsad/local-deep-researcher/data/label_encoder_xlm.pkl",
+        title="Label Encoder Path",
+        description="Path to label encoder for intent classification"
+    )
+    
+    # Enhanced Search Configuration
+    searxng_url: str = Field(
+        default="http://localhost:8080",
+        title="SearXNG URL",
+        description="URL for SearXNG search engine"
+    )
+    arxiv_mcp_server_path: str = Field(
+        default="/home/siamai/deepsad/local-deep-researcher/server/arxiv-mcp-server",
+        title="ArXiv MCP Server Path",
+        description="Path to ArXiv MCP server directory"
+    )
+    jina_api_key: Optional[str] = Field(
+        default=None,
+        title="Jina AI API Key",
+        description="API key for Jina AI content extraction"
+    )
+    
+    # Vector storage capabilities are now in ArXiv MCP server
+    # No need for separate Pinecone configuration
+    
+    # Processing Limits
+    max_papers_per_search: int = Field(
+        default=10,
+        title="Max Papers Per Search",
+        description="Maximum papers to retrieve per search"
+    )
+    max_content_extractions: int = Field(
+        default=3,
+        title="Max Content Extractions", 
+        description="Maximum papers to extract full content from"
+    )
+    
+    # Performance Settings
+    enable_async: bool = Field(
+        default=True,
+        title="Enable Async Processing",
+        description="Enable asynchronous concurrent operations"
+    )
+    max_concurrent_requests: int = Field(
+        default=5,
+        title="Max Concurrent Requests",
+        description="Maximum concurrent HTTP requests"
+    )
+    
+    # OpenWebUI/MCPO Integration
+    mcpo_enabled: bool = Field(
+        default=True,
+        title="Enable MCPO",
+        description="Enable Model Context Protocol for OpenWebUI"
+    )
+    arxiv_mcp_server_url: str = Field(
+        default="http://localhost:9937",
+        title="ArXiv MCP Server URL",
+        description="URL for ArXiv MCP server via MCPO gateway"
     )
 
     @classmethod

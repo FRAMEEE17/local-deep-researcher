@@ -9,6 +9,7 @@ from tavily import TavilyClient
 from duckduckgo_search import DDGS
 
 from langchain_community.utilities import SearxSearchWrapper
+from research_pipeline.mcp_client import get_arxiv_client
 
 def get_config_value(value: Any) -> str:
     """
@@ -363,3 +364,108 @@ def perplexity_search(query: str, perplexity_search_loop_count: int = 0) -> Dict
         })
     
     return {"results": results}
+
+
+@traceable
+async def arxiv_search(query: str, max_results: int = 5, date_from: Optional[str] = None, categories: Optional[List[str]] = None) -> Dict[str, Any]:
+    """
+    Search arXiv papers using the MCP server.
+    
+    Args:
+        query (str): Search query for arXiv papers
+        max_results (int): Maximum number of papers to return (default: 5)
+        date_from (str, optional): Start date for search in YYYY-MM-DD format
+        categories (List[str], optional): arXiv categories to filter by (e.g., ['cs.AI', 'cs.LG'])
+    
+    Returns:
+        Dict[str, Any]: Search response containing:
+            - results (list): List of paper dictionaries, each containing:
+                - title (str): Title of the paper
+                - url (str): arXiv URL of the paper
+                - content (str): Abstract and paper details
+                - raw_content (str): Full paper metadata
+                - paper_id (str): arXiv paper ID
+                - authors (list): List of author names
+                - published (str): Publication date
+                - categories (list): arXiv categories
+    
+    Raises:
+        Exception: If the arXiv MCP server fails to respond
+    """
+    try:
+        # Get the arXiv MCP client
+        client = await get_arxiv_client()
+        
+        # Search for papers
+        papers = await client.search_papers(
+            query=query,
+            max_results=max_results,
+            date_from=date_from,
+            categories=categories
+        )
+        
+        # Format results to match the expected structure
+        results = []
+        for i, paper in enumerate(papers, 1):
+            # Extract paper details
+            paper_id = paper.get('id', '').replace('http://arxiv.org/abs/', '')
+            title = paper.get('title', 'Unknown Title').strip()
+            authors = [author.get('name', '') for author in paper.get('authors', [])]
+            abstract = paper.get('summary', '').strip()
+            published = paper.get('published', '')
+            categories = [cat.get('term', '') for cat in paper.get('categories', [])]
+            arxiv_url = f"https://arxiv.org/abs/{paper_id}"
+            
+            # Create content with paper details
+            author_list = ', '.join(authors[:3])  # First 3 authors
+            if len(authors) > 3:
+                author_list += f" et al. ({len(authors)} authors total)"
+            
+            content = f"""**{title}**
+
+**Authors:** {author_list}
+**Published:** {published}
+**Categories:** {', '.join(categories)}
+**arXiv ID:** {paper_id}
+
+**Abstract:**
+{abstract}
+
+**arXiv URL:** {arxiv_url}
+"""
+            
+            # Create raw content with full metadata
+            raw_content = {
+                'paper_id': paper_id,
+                'title': title,
+                'authors': authors,
+                'abstract': abstract,
+                'published': published,
+                'categories': categories,
+                'arxiv_url': arxiv_url,
+                'full_metadata': paper
+            }
+            
+            results.append({
+                'title': f"arXiv Paper {i}: {title}",
+                'url': arxiv_url,
+                'content': content,
+                'raw_content': str(raw_content),
+                'paper_id': paper_id,
+                'authors': authors,
+                'published': published,
+                'categories': categories
+            })
+        
+        return {"results": results}
+        
+    except Exception as e:
+        # Fallback error handling
+        return {
+            "results": [{
+                "title": "arXiv Search Error",
+                "url": "https://arxiv.org",
+                "content": f"Failed to search arXiv: {str(e)}",
+                "raw_content": f"Error: {str(e)}"
+            }]
+        }

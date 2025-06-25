@@ -1,5 +1,3 @@
-"""Search functionality for the arXiv MCP server."""
-
 import arxiv
 import json
 from typing import Dict, Any, List

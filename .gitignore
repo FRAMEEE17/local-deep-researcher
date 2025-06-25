@@ -240,3 +240,6 @@ Thumbs.db
 .wget-hsts
 .sudo_as_admin_successful
 
+/knowledge-repos
+/notebooks
+/ollama_deep_researcher.egg-info
