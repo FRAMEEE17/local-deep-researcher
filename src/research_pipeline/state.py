@@ -5,8 +5,6 @@ from typing import Dict, List, Any, Optional
 
 @dataclass(kw_only=True)
 class ResearchState:
-    """Enhanced research state following the system diagrams"""
-    
     # Input/Query
     research_topic: str = field(default=None)
     search_query: str = field(default=None)
@@ -46,6 +44,10 @@ class ResearchState:
     # Performance Metrics
     search_strategy: str = field(default="hybrid")  # hybrid, academic_only, web_only
     processing_times: Dict[str, float] = field(default_factory=dict)
+    
+    query_optimization_metadata: Dict[str, Any] = field(default_factory=dict)
+    reflection_metadata: Dict[str, Any] = field(default_factory=dict)
+    content_confidence_score: float = field(default=0.0)
 
 @dataclass(kw_only=True)
 class ResearchStateInput:
