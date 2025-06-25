@@ -243,3 +243,8 @@ Thumbs.db
 /knowledge-repos
 /notebooks
 /ollama_deep_researcher.egg-info
+/data
+/~/.arxiv-mcp-server
+/.langgraph_api
+CLAUDE.local.md
+.claude_code_config.json
