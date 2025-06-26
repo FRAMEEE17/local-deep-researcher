@@ -21,17 +21,33 @@ class Configuration(BaseModel):
         description="Number of research iterations to perform"
     )
     local_llm: str = Field(
-        default="llama3.2",
+        default="deepseek-r1:70b",
         title="LLM Model Name",
-        description="Name of the LLM model to use"
+        description="Name of the LLM model to use (provider-specific)"
     )
-    llm_provider: Literal["ollama", "lmstudio"] = Field(
+    # Provider-specific models
+    ollama_model: str = Field(
+        default="deepseek-r1:70b",
+        title="Ollama Model",
+        description="Model name for Ollama provider"
+    )
+    lmstudio_model: str = Field(
+        default="deepseek-r1:70b", 
+        title="LMStudio Model",
+        description="Model name for LMStudio provider"
+    )
+    nvidia_nim_model: str = Field(
+        default="qwen/qwen3-235b-a22b",
+        title="NVIDIA NIM Model", 
+        description="Model name for NVIDIA NIM provider"
+    )
+    llm_provider: Literal["ollama", "lmstudio", "nvidia_nim"] = Field(
         default="ollama",
         title="LLM Provider",
-        description="Provider for the LLM (Ollama or LMStudio)"
+        description="Provider for the LLM (Ollama, LMStudio, or NVIDIA NIM)"
     )
-    search_api: Literal["perplexity", "tavily", "duckduckgo", "searxng", "arxiv"] = Field(
-        default="duckduckgo",
+    search_api: Literal["perplexity", "tavily", "duckduckgo", "searxng", "arxiv", "jina", "hybrid"] = Field(
+        default="searxng",
         title="Search API",
         description="Search API to use (web search or academic papers)"
     )
@@ -49,6 +65,16 @@ class Configuration(BaseModel):
         default="http://localhost:1234/v1",
         title="LMStudio Base URL",
         description="Base URL for LMStudio OpenAI-compatible API"
+    )
+    nvidia_nim_base_url: str = Field(
+        default="https://integrate.api.nvidia.com/v1",
+        title="NVIDIA NIM Base URL",
+        description="Base URL for NVIDIA NIM API"
+    )
+    nvidia_api_key: Optional[str] = Field(
+        default=None,
+        title="NVIDIA API Key",
+        description="API key for NVIDIA NIM (or set NVIDIA_API_KEY env var)"
     )
     strip_thinking_tokens: bool = Field(
         default=True,
@@ -148,3 +174,15 @@ class Configuration(BaseModel):
         values = {k: v for k, v in raw_values.items() if v is not None}
         
         return cls(**values)
+    
+    def get_model_name(self) -> str:
+        """Get the appropriate model name for the current provider."""
+        if self.llm_provider == "nvidia_nim":
+            return self.nvidia_nim_model
+        elif self.llm_provider == "lmstudio":
+            return self.lmstudio_model
+        elif self.llm_provider == "ollama":
+            return self.ollama_model
+        else:
+            # Fallback to local_llm for backward compatibility
+            return self.local_llm

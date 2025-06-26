@@ -12,10 +12,23 @@ Research Topic: {research_topic}
 Intent Classification: {search_intent} (confidence: {intent_confidence:.2f})
 </CONTEXT>
 
+<ARXIV_PATTERN_DETECTION>
+First, detect ArXiv papers in the research topic:
+- ArXiv URLs: https://arxiv.org/abs/XXXX.XXXXX, https://arxiv.org/html/XXXX.XXXXX
+- ArXiv IDs: Pattern XXXX.XXXXX (e.g., 2410.21338, 1706.03762v1)
+
+If ArXiv pattern detected:
+1. Extract paper ID: XXXX.XXXXX
+2. Override intent to "arxiv_search" regardless of classification
+3. Create query: "paper [ID] [extracted title/keywords from original query]"
+4. Example: "explain arxiv.org/html/2410.21338v2 paper" → "paper 2410.21338 FinTeamExperts MOE financial analysis"
+</ARXIV_PATTERN_DETECTION>
+
 <INTENT_OPTIMIZATION_STRATEGY>
-Based on the classified intent, optimize the query using these guidelines:
+Based on the classified intent (after ArXiv override), optimize the query:
 
 **Academic Intent (arxiv_search)**:
+- For ArXiv URLs/IDs: Extract paper ID and relevant keywords
 - Use precise technical terminology and methodology keywords
 - Include field-specific jargon and research concepts
 - Focus on methodological approaches and theoretical frameworks

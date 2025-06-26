@@ -1,11 +1,3 @@
-"""
-HTTP client for calling ArXiv MCP server via MCPO.
-
-This replaces direct MCP connections and redundant ArXiv functionality
-in the research pipeline. All ArXiv operations are delegated to the
-enhanced MCP server.
-"""
-
 import asyncio
 import json
 import time
@@ -35,35 +27,65 @@ class ArxivMCPOClient:
             await self.session.close()
     
     async def _call_mcp_tool(self, tool_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
-        """Call MCP tool via HTTP (MCPO gateway)."""
+        """Call ArXiv MCP server tool via direct REST endpoint."""
         if not self.session:
             raise Exception("HTTP session not initialized. Use async context manager.")
-            
-        # MCPO endpoint for MCP tool calls
-        url = f"{self.base_url}/mcp/call"
         
-        payload = {
-            "tool": tool_name,
-            "arguments": arguments
+        # Map tool names to actual REST endpoints
+        endpoint_map = {
+            "search_papers": "/arxiv-mcp-server/search_papers",
+            "download_paper": "/arxiv-mcp-server/download_paper", 
+            "read_paper": "/arxiv-mcp-server/read_paper",
+            "list_papers": "/arxiv-mcp-server/list_papers",
+            "hybrid_search": "/arxiv-mcp-server/search_papers"  # hybrid_search maps to search_papers
         }
         
+        endpoint = endpoint_map.get(tool_name)
+        if not endpoint:
+            return {
+                "success": False,
+                "error": f"Unknown tool: {tool_name}",
+                "tool": tool_name
+            }
+        
+        url = f"{self.base_url}{endpoint}"
+        
         try:
-            async with self.session.post(url, json=payload) as response:
-                if response.status == 200:
-                    result = await response.json()
-                    return {
-                        "success": True,
-                        "data": result,
-                        "tool": tool_name
-                    }
-                else:
-                    error_text = await response.text()
-                    return {
-                        "success": False,
-                        "error": f"HTTP {response.status}: {error_text}",
-                        "tool": tool_name
-                    }
-                    
+            # For list_papers, use GET with no body
+            if tool_name == "list_papers":
+                async with self.session.post(url) as response:
+                    if response.status == 200:
+                        result = await response.json()
+                        return {
+                            "success": True,
+                            "data": result,
+                            "tool": tool_name
+                        }
+                    else:
+                        error_text = await response.text()
+                        return {
+                            "success": False,
+                            "error": f"HTTP {response.status}: {error_text}",
+                            "tool": tool_name
+                        }
+            else:
+                # For other endpoints, use POST with arguments as body
+                async with self.session.post(url, json=arguments) as response:
+                    if response.status == 200:
+                        result = await response.json()
+                        return {
+                            "success": True,
+                            "data": result,
+                            "tool": tool_name
+                        }
+                    else:
+                        error_text = await response.text()
+                        return {
+                            "success": False,
+                            "error": f"HTTP {response.status}: {error_text}",
+                            "tool": tool_name
+                        }
+                        
         except Exception as e:
             return {
                 "success": False,
@@ -124,21 +146,107 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
     """
     Execute ArXiv search strategy by calling the enhanced MCP server.
     
-    This replaces all ArXiv functionality in search_engines.py
+    For ArXiv papers, performs dual search:
+    1. Direct paper ID search for exact paper
+    2. Complex query search for related papers
     """
+    import re
     start_time = time.time()
     
     async with ArxivMCPOClient(config) as client:
         try:
+            # Detect ArXiv paper ID in query
+            arxiv_id_pattern = r'\b(\d{4}\.\d{4,5}(?:v\d+)?)\b'
+            arxiv_match = re.search(arxiv_id_pattern, query)
+            
             if strategy == "arxiv_search":
-                # Academic research - use enhanced hybrid search with ArXiv focus
-                result = await client.hybrid_search(
-                    query=query,
-                    max_results=config.max_papers_per_search,
-                    search_method="arxiv_only",
-                    include_content=bool(config.jina_api_key),
-                    jina_api_key=config.jina_api_key
-                )
+                all_papers = []
+                search_methods = []
+                
+                if arxiv_match:
+                    # Dual search approach for ArXiv papers
+                    paper_id = arxiv_match.group(1)
+                    
+                    # Search 1: Direct paper ID search
+                    direct_result = await client.search_papers_basic(
+                        query=paper_id,
+                        max_results=1
+                    )
+                    
+                    if direct_result.get("success"):
+                        direct_data = direct_result.get("data", {})
+                        if isinstance(direct_data, str):
+                            try:
+                                direct_data = json.loads(direct_data)
+                            except json.JSONDecodeError:
+                                pass
+                        
+                        direct_papers = []
+                        if isinstance(direct_data, list) and len(direct_data) > 0:
+                            first_content = direct_data[0]
+                            if hasattr(first_content, 'text'):
+                                content_data = json.loads(first_content.text)
+                                direct_papers = content_data.get("papers", [])
+                        elif isinstance(direct_data, dict):
+                            direct_papers = direct_data.get("papers", [])
+                        
+                        all_papers.extend(direct_papers)
+                        search_methods.append(f"direct_id_search:{paper_id}")
+                    
+                    # Search 2: Complex query search for related papers
+                    related_result = await client.hybrid_search(
+                        query=query,
+                        max_results=config.max_papers_per_search - len(all_papers),
+                        search_method="arxiv_only",
+                        include_content=bool(config.jina_api_key),
+                        jina_api_key=config.jina_api_key
+                    )
+                    
+                    if related_result.get("success"):
+                        related_data = related_result.get("data", {})
+                        if isinstance(related_data, str):
+                            try:
+                                related_data = json.loads(related_data)
+                            except json.JSONDecodeError:
+                                pass
+                        
+                        related_papers = []
+                        if isinstance(related_data, list) and len(related_data) > 0:
+                            first_content = related_data[0]
+                            if hasattr(first_content, 'text'):
+                                content_data = json.loads(first_content.text)
+                                related_papers = content_data.get("papers", [])
+                        elif isinstance(related_data, dict):
+                            related_papers = related_data.get("papers", [])
+                        
+                        # Deduplicate by paper ID
+                        seen_ids = {paper.get('id') for paper in all_papers}
+                        for paper in related_papers:
+                            if paper.get('id') not in seen_ids:
+                                all_papers.append(paper)
+                                seen_ids.add(paper.get('id'))
+                        
+                        search_methods.append("complex_query_search")
+                    
+                    # Return combined results
+                    return {
+                        "success": True,
+                        "papers": all_papers,
+                        "content_extractions": [],
+                        "search_methods": search_methods,
+                        "execution_time": time.time() - start_time,
+                        "strategy": strategy,
+                        "source": "arxiv_mcp_server_dual"
+                    }
+                else:
+                    # No ArXiv ID detected - use standard search
+                    result = await client.hybrid_search(
+                        query=query,
+                        max_results=config.max_papers_per_search,
+                        search_method="arxiv_only",
+                        include_content=bool(config.jina_api_key),
+                        jina_api_key=config.jina_api_key
+                    )
                 
             elif strategy == "hybrid_search":
                 # Hybrid research - use full hybrid search

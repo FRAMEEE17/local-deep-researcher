@@ -41,12 +41,21 @@ class IntentClassifier:
         # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_path)
         
-        # Load label encoder (saved with torch.save)
-        self.label_encoder = torch.load(config.label_encoder_path, map_location='cpu')
+        # Load label encoder (saved with torch.save) - use weights_only=False for sklearn objects
+        self.label_encoder = torch.load(config.label_encoder_path, map_location='cpu', weights_only=False)
         
-        # Load model (4 classes from your training)
+        # Load model (4 classes from your training) - use weights_only=True for model weights
         self.model = CustomXLMRobertaModel(num_labels=4)
-        self.model.load_state_dict(torch.load(config.intent_model_path, map_location=self.device))
+        
+        # Load state dict with strict=False to handle transformer version differences
+        state_dict = torch.load(config.intent_model_path, map_location=self.device, weights_only=True)
+        
+        # Remove problematic keys that may exist in older transformer versions
+        keys_to_remove = [k for k in state_dict.keys() if 'position_ids' in k]
+        for key in keys_to_remove:
+            del state_dict[key]
+            
+        self.model.load_state_dict(state_dict, strict=False)
         self.model.to(self.device)
         self.model.eval()
         
@@ -54,12 +63,14 @@ class IntentClassifier:
         print(f"Available intents: {list(self.label_encoder.classes_)}")
     
     def classify_intent(self, text: str) -> Dict[str, Any]:
-        """Classify the intent of input text (following your notebook implementation)"""
         start_time = time.time()
+        
+        # Preprocess: Detect ArXiv patterns and enhance text for better classification
+        processed_text = self._preprocess_for_classification(text)
         
         # Tokenize 
         inputs = self.tokenizer(
-            text,
+            processed_text,
             return_tensors='pt',
             truncation=True,
             padding=True,
@@ -112,12 +123,49 @@ class IntentClassifier:
         }
         
         return intent_mapping.get(intent_class, "hybrid_search")  # Default fallback
+    
+    def _preprocess_for_classification(self, text: str) -> str:
+        """Preprocess text to improve intent classification accuracy.
+        
+        Detects ArXiv patterns and enhances text with academic context clues.
+        """
+        import re
+        
+        processed_text = text
+        
+        # Detect ArXiv URLs and IDs
+        arxiv_url_pattern = r'https?://arxiv\.org/(?:abs|html|pdf)/(\d{4}\.\d{4,5}(?:v\d+)?)'
+        arxiv_id_pattern = r'\b(\d{4}\.\d{4,5}(?:v\d+)?)\b'
+        
+        # Check for ArXiv URL
+        arxiv_url_match = re.search(arxiv_url_pattern, text)
+        if arxiv_url_match:
+            paper_id = arxiv_url_match.group(1)
+            # Replace URL with academic context
+            processed_text = re.sub(arxiv_url_pattern, f'arxiv paper {paper_id}', processed_text)
+            # Add academic research indicators
+            processed_text = f"academic research paper analysis {processed_text}"
+            return processed_text
+        
+        # Check for standalone ArXiv ID
+        arxiv_id_match = re.search(arxiv_id_pattern, text)
+        if arxiv_id_match:
+            # Add academic context clues
+            processed_text = f"academic research paper {processed_text}"
+            return processed_text
+        
+        # Check for other academic indicators
+        academic_keywords = ['paper', 'research', 'study', 'academic', 'journal', 'publication', 'scholar']
+        if any(keyword in text.lower() for keyword in academic_keywords):
+            # Boost academic signals
+            processed_text = f"academic research {processed_text}"
+        
+        return processed_text
 
 # Global classifier instance
 _intent_classifier = None
 
 def get_intent_classifier(config: Configuration) -> IntentClassifier:
-    """Get or create the global intent classifier instance"""
     global _intent_classifier
     
     if _intent_classifier is None:
@@ -126,6 +174,5 @@ def get_intent_classifier(config: Configuration) -> IntentClassifier:
     return _intent_classifier
 
 def classify_query_intent(text: str, config: Configuration) -> Dict[str, Any]:
-    """Convenience function to classify intent"""
     classifier = get_intent_classifier(config)
     return classifier.classify_intent(text)

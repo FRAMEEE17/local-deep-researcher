@@ -9,7 +9,7 @@ from langchain_core.messages import (
 from langchain_core.outputs import ChatResult
 from langchain_openai import ChatOpenAI
 from pydantic import Field
-
+import os
 # Set up logging
 logger = logging.getLogger(__name__)
 
@@ -24,7 +24,7 @@ class ChatLMStudio(ChatOpenAI):
         model: str = "qwen_qwq-32b",
         temperature: float = 0.7,
         format: Optional[str] = None,
-        api_key: str = "not-needed-for-local-models",
+        api_key: str = "",
         **kwargs: Any,
     ):
         """Initialize the ChatLMStudio.

@@ -14,6 +14,7 @@ from research_pipeline.utils import deduplicate_and_format_sources, tavily_searc
 from research_pipeline.state import ResearchState, ResearchStateInput, ResearchStateOutput
 from research_pipeline.prompts import query_writer_instructions, summarizer_instructions, reflection_instructions, get_current_date
 from research_pipeline.lmstudio import ChatLMStudio
+from research_pipeline.nvidia_nim import ChatNVIDIANIM
 
 import logging
 logger = logging.getLogger("research_pipeline")
@@ -136,6 +137,15 @@ def generate_query(state: ResearchState, config: RunnableConfig):
             temperature=0.3, # 0 = very deterministic
             format="json"
         )
+    elif configurable.llm_provider == "nvidia_nim":
+        logger.info("Using NVIDIA NIM LLM for query generation")
+        llm_json_mode = ChatNVIDIANIM(
+            base_url=configurable.nvidia_nim_base_url,
+            model=configurable.get_model_name(),
+            temperature=0.3,
+            nvidia_api_key=configurable.nvidia_api_key,
+            enable_reasoning=False  # Disable for structured JSON output
+        )
     else: # Default to Ollama
         logger.info("Using Ollama LLM for query generation")
         llm_json_mode = ChatOllama(
@@ -183,7 +193,7 @@ def generate_query(state: ResearchState, config: RunnableConfig):
             }
             logger.info(f"Query metadata: {query_metadata}")
             
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
         # JSON parsing failed - try to extract useful content
         logger.warning(f"JSON parsing failed: {e}")
         logger.info("Attempting content extraction from raw response")
@@ -304,15 +314,23 @@ async def execute_search(state: ResearchState, config: RunnableConfig) -> Dict[s
     # Route results based on search strategy
     if state.search_intent == "arxiv_search":
         logger.info("ROUTING TO: ArXiv MCP Server search results")
-        instruction = search_result.get("instruction", "No instruction")
-        logger.info(f"ArXiv search instruction: {instruction}")
+        papers = search_result.get("papers", [])
+        papers_count = len(papers)
+        logger.info(f"ArXiv search found: {papers_count} papers")
+        
+        if papers_count > 0:
+            # Log paper details
+            for i, paper in enumerate(papers[:3]):  # Log first 3
+                title = paper.get('title', 'Unknown title')
+                logger.info(f"  ArXiv {i+1}: {title[:50]}...")
+        
         result = {
-                    "arxiv_results": [{"instruction": instruction, "query": state.search_query}],
-                    "sources_gathered": [f"ArXiv MCP search for: {state.search_query}"],
+                    "arxiv_results": papers,  # Use actual papers, not instruction
+                    "sources_gathered": [f"ArXiv MCP search: {papers_count} papers found"],
                     "processing_times": processing_times,
                     "research_loop_count": state.research_loop_count + 1
                 }
-        logger.info(f"ArXiv results prepared: research_loop_count = {result['research_loop_count']}")
+        logger.info(f"ArXiv results prepared: {papers_count} papers, research_loop_count = {result['research_loop_count']}")
     elif state.search_intent == "web_search":
         logger.info("ROUTING TO: Web search (SearXNG) results")
         results_count = len(search_result.get("results", []))
@@ -326,13 +344,20 @@ async def execute_search(state: ResearchState, config: RunnableConfig) -> Dict[s
         logger.info(f"Web results prepared: {results_count} results, research_loop_count = {result['research_loop_count']}")
     elif state.search_intent == "hybrid_search":
         logger.info("ROUTING TO: Hybrid search (ArXiv + Web) results")
-        papers_count = len(search_result.get("papers", []))
-        instruction = search_result.get("instruction", "No instruction")
-        logger.info(f"Hybrid search - Papers: {papers_count}, Instruction: {instruction}")
+        papers = search_result.get("papers", [])
+        papers_count = len(papers)
+        logger.info(f"Hybrid search found: {papers_count} papers")
+        
+        if papers_count > 0:
+            # Log paper details
+            for i, paper in enumerate(papers[:3]):  # Log first 3
+                title = paper.get('title', 'Unknown title')
+                logger.info(f"  Hybrid {i+1}: {title[:50]}...")
+        
         result = {
-                    "semantic_results": search_result.get("papers", []),
-                    "arxiv_results": [{"instruction": instruction, "query": state.search_query}],
-                    "sources_gathered": [f"Hybrid search: {papers_count} semantic + ArXiv MCP"],
+                    "semantic_results": papers,
+                    "arxiv_results": papers,  # Use actual papers for both semantic and arxiv
+                    "sources_gathered": [f"Hybrid search: {papers_count} papers found"],
                     "processing_times": processing_times,
                     "research_loop_count": state.research_loop_count + 1
                 }
@@ -502,10 +527,29 @@ async def extract_content(state: ResearchState, config: RunnableConfig) -> Dict[
     search_engines = create_search_engines(configurable)
     extracted_content = []
     
-    # Extract from semantic results (ArXiv papers)
+    # Extract from ArXiv and semantic results (ArXiv papers)
+    papers_to_extract = []
+    
+    # Collect papers from both arxiv_results and semantic_results
+    if state.arxiv_results:
+        logger.info(f"Processing ArXiv results: {len(state.arxiv_results)} papers available")
+        papers_to_extract.extend(state.arxiv_results)
+    
     if state.semantic_results:
         logger.info(f"Processing semantic results: {len(state.semantic_results)} papers available")
-        top_papers = state.semantic_results[:configurable.max_content_extractions]
+        papers_to_extract.extend(state.semantic_results)
+    
+    if papers_to_extract:
+        # Deduplicate by paper ID if possible
+        seen_ids = set()
+        unique_papers = []
+        for paper in papers_to_extract:
+            paper_id = paper.get('id') or paper.get('paper_id') or paper.get('url', '')
+            if paper_id not in seen_ids:
+                seen_ids.add(paper_id)
+                unique_papers.append(paper)
+        
+        top_papers = unique_papers[:configurable.max_content_extractions]
         logger.info(f"Selected top {len(top_papers)} papers for content extraction")
             
         extraction_tasks = []
@@ -548,7 +592,7 @@ async def extract_content(state: ResearchState, config: RunnableConfig) -> Dict[
         else:
             logger.info("No PDF extraction tasks to execute")
     else:
-        logger.info("No semantic results available for content extraction")
+        logger.info("No ArXiv or semantic results available for content extraction")
     
     # Extract from web results
     if state.web_results:
@@ -811,6 +855,16 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
                 model=configurable.local_llm, 
                 temperature=0.1 # want fact
             )
+        elif configurable.llm_provider == "nvidia_nim":
+            logger.info(f"Using NVIDIA NIM LLM: {configurable.get_model_name()}")
+            logger.info(f"NVIDIA NIM URL: {configurable.nvidia_nim_base_url}")
+            llm = ChatNVIDIANIM(
+                base_url=configurable.nvidia_nim_base_url,
+                model=configurable.get_model_name(),
+                temperature=0.1,  # want factual responses
+                nvidia_api_key=configurable.nvidia_api_key,
+                enable_reasoning=True  # Enable reasoning for research synthesis
+            )
         else:  # Default to Ollama
             logger.info(f"Using Ollama LLM: {configurable.local_llm}")
             logger.info(f"Ollama URL: {configurable.ollama_base_url}")
@@ -929,6 +983,16 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
                 model=configurable.local_llm, 
                 temperature=0.4,  # a bit more creative
                 format="json"
+            )
+        elif configurable.llm_provider == "nvidia_nim":
+            logger.info(f"Using NVIDIA NIM LLM with JSON mode: {configurable.get_model_name()}")
+            logger.info(f"NVIDIA NIM URL: {configurable.nvidia_nim_base_url}")
+            llm_json_mode = ChatNVIDIANIM(
+                base_url=configurable.nvidia_nim_base_url,
+                model=configurable.get_model_name(),
+                temperature=0.4,  # a bit more creative
+                nvidia_api_key=configurable.nvidia_api_key,
+                enable_reasoning=False  # Disable for structured JSON output
             )
         else: # Default to Ollama
             logger.info(f"Using Ollama LLM with JSON mode: {configurable.local_llm}")
@@ -1348,6 +1412,9 @@ builder.add_edge("finalize_research", END)
 
 # Compile the enhanced graph
 graph = builder.compile()
+
+# Export as app for convenience
+app = graph
 
 # Legacy aliases for backward compatibility
 SummaryState = ResearchState
