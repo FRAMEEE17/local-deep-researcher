@@ -134,7 +134,7 @@ async def generate_query(state: ResearchState, config: RunnableConfig):
         llm_json_mode = ChatLMStudio(
             base_url=configurable.lmstudio_base_url, 
             model=configurable.local_llm, 
-            temperature=0.3, # 0 = very deterministic
+            temperature=0.5, # 0 = very deterministic
             format="json"
         )
     elif configurable.llm_provider == "nvidia_nim":
@@ -142,7 +142,7 @@ async def generate_query(state: ResearchState, config: RunnableConfig):
         llm_json_mode = ChatNVIDIANIM(
             base_url=configurable.nvidia_nim_base_url,
             model=configurable.get_model_name(),
-            temperature=0.3,
+            temperature=0.5,
             nvidia_api_key=configurable.nvidia_api_key,
             enable_reasoning=False  # Disable for structured JSON output
         )
@@ -151,7 +151,7 @@ async def generate_query(state: ResearchState, config: RunnableConfig):
         llm_json_mode = ChatOllama(
             base_url=configurable.ollama_base_url, 
             model=configurable.local_llm, 
-            temperature=0.3, 
+            temperature=0.5, 
             format="json"
         )
     logger.info("Calling LLM to generate search query")
@@ -175,7 +175,17 @@ async def generate_query(state: ResearchState, config: RunnableConfig):
     #     search_query = contents
     # Parse the JSON response and get the query
     try:
-        query = json.loads(contents)
+        # Clean the response - strip whitespace and remove markdown formatting
+        cleaned_contents = contents.strip()
+        
+        # Remove markdown code blocks if present
+        if cleaned_contents.startswith('```') and cleaned_contents.endswith('```'):
+            lines = cleaned_contents.split('\n')
+            if len(lines) > 2:
+                cleaned_contents = '\n'.join(lines[1:-1])
+                
+        # Try direct JSON parsing first
+        query = json.loads(cleaned_contents)
         search_query = query.get('query', '').strip()
         
         # Validate the extracted query
@@ -230,7 +240,7 @@ async def generate_query(state: ResearchState, config: RunnableConfig):
             # Clean up double braces from template formatting
             clean_match = json_match.replace('{{', '{').replace('}}', '}')
             try:
-                parsed_json = json.loads(json_match)
+                parsed_json = json.loads(clean_match)
                 if 'query' in parsed_json and parsed_json['query'].strip():
                     extracted_query = parsed_json.get('query', '').strip()
                     logger.info(f"EXTRACTED QUERY from JSON block: '{extracted_query}'")
@@ -396,19 +406,21 @@ async def execute_search(state: ResearchState, config: RunnableConfig) -> Dict[s
     elif state.search_intent == "hybrid_search":
         logger.info("ROUTING TO: Hybrid search (ArXiv + Web) results")
         papers = search_result.get("papers", [])
+        web_results = search_result.get("results", [])
         papers_count = len(papers)
-        logger.info(f"Hybrid search found: {papers_count} papers")
+        web_count = len(web_results)
+        logger.info(f"Hybrid search found: {papers_count} ArXiv papers, {web_count} web results")
         
         if papers_count > 0:
             # Log paper details
             for i, paper in enumerate(papers[:3]):  # Log first 3
                 title = paper.get('title', 'Unknown title')
-                logger.info(f"  Hybrid {i+1}: {title[:50]}...")
+                logger.info(f"  ArXiv {i+1}: {title[:50]}...")
         
         result = {
-                    "semantic_results": papers,
-                    "arxiv_results": papers,  # Use actual papers for both semantic and arxiv
-                    "sources_gathered": [f"Hybrid search: {papers_count} papers found"],
+                    "arxiv_results": papers,  # ArXiv papers from hybrid search
+                    "web_results": web_results,  # Web results from hybrid search
+                    "sources_gathered": [f"Hybrid search: {papers_count} ArXiv papers, {web_count} web results"],
                     "processing_times": processing_times,
                     "research_loop_count": state.research_loop_count + 1
                 }
@@ -488,7 +500,7 @@ async def legacy_web_research(state: ResearchState, config: RunnableConfig):
             logger.info("Executing SearXNG search with max_results=3")
             search_results = searxng_search(
                 state.search_query, 
-                max_results=3, 
+                max_results=20, 
                 fetch_full_page=configurable.fetch_full_page
             )
             search_str = deduplicate_and_format_sources(
@@ -500,10 +512,10 @@ async def legacy_web_research(state: ResearchState, config: RunnableConfig):
             
         elif search_api == "arxiv":
             logger.info("Executing legacy ArXiv search with max_results=5")
-            search_results = await arxiv_search(state.search_query, max_results=5)
+            search_results = await arxiv_search(state.search_query, max_results=50)
             search_str = deduplicate_and_format_sources(
                 search_results, 
-                max_tokens_per_source=1500, 
+                max_tokens_per_source=5500, 
                 fetch_full_page=True
             )
             logger.info(f"Legacy ArXiv search completed: {len(search_results)} results, {len(search_str)} characters")
@@ -660,9 +672,7 @@ async def extract_content(state: ResearchState, config: RunnableConfig) -> Dict[
             if result.get('url'):
                 logger.info(f"Extracting web content {i+1}: {result.get('url')}")
                 try:
-                    extraction = await asyncio.to_thread(
-                        search_engines.extract_content_jina, result['url']
-                    )
+                    extraction = await search_engines.extract_content_jina(result['url'])
                     if extraction.get('success'):
                         web_successful += 1
                         content_length = len(extraction.get('content', ''))
@@ -906,7 +916,7 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
             llm = ChatLMStudio(
                 base_url=configurable.lmstudio_base_url, 
                 model=configurable.local_llm, 
-                temperature=0.1 # want fact
+                temperature=0.5 # want fact
             )
         elif configurable.llm_provider == "nvidia_nim":
             logger.info(f"Using NVIDIA NIM LLM: {configurable.get_model_name()}")
@@ -914,7 +924,7 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
             llm = ChatNVIDIANIM(
                 base_url=configurable.nvidia_nim_base_url,
                 model=configurable.get_model_name(),
-                temperature=0.1,  # want factual responses
+                temperature=0.5,  # want factual responses
                 nvidia_api_key=configurable.nvidia_api_key,
                 enable_reasoning=False  # Enable reasoning for research synthesis
             )
@@ -924,7 +934,7 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
             llm = ChatOllama(
                 base_url=configurable.ollama_base_url, 
                 model=configurable.local_llm, 
-                temperature=0.1 
+                temperature=0.5 
             )
         
         logger.info("Calling LLM for research synthesis")
@@ -1025,6 +1035,7 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
             search_intent=state.search_intent or "hybrid",
             intent_confidence=state.intent_confidence or 0.6,
             research_loop_count=state.research_loop_count,
+            max_loops=configurable.max_research_loops or 3,
             search_strategy=state.search_strategy or "hybrid"
         )
         # Choose the appropriate LLM based on the provider
@@ -1034,7 +1045,7 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
             llm_json_mode = ChatLMStudio(
                 base_url=configurable.lmstudio_base_url, 
                 model=configurable.local_llm, 
-                temperature=0.4,  # a bit more creative
+                temperature=0.5,  # a bit more creative
                 format="json"
             )
         elif configurable.llm_provider == "nvidia_nim":
@@ -1043,7 +1054,7 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
             llm_json_mode = ChatNVIDIANIM(
                 base_url=configurable.nvidia_nim_base_url,
                 model=configurable.get_model_name(),
-                temperature=0.4,  # a bit more creative
+                temperature=0.5,  # a bit more creative
                 nvidia_api_key=configurable.nvidia_api_key,
                 enable_reasoning=False  # Disable for structured JSON output
             )
@@ -1053,7 +1064,7 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
             llm_json_mode = ChatOllama(
                 base_url=configurable.ollama_base_url, 
                 model=configurable.local_llm, 
-                temperature=0.4, 
+                temperature=0.5, 
                 format="json"
             )
         human_message_content = f"""

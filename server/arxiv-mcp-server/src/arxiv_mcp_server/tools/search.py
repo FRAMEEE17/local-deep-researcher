@@ -63,7 +63,7 @@ async def handle_search(arguments: Dict[str, Any]) -> List[types.TextContent]:
     """
     try:
         client = arxiv.Client()
-        max_results = min(int(arguments.get("max_results", 10)), settings.MAX_RESULTS)
+        max_results = min(int(arguments.get("max_results", 50)), settings.MAX_RESULTS)
 
         # Build search query with category filtering
         query = arguments["query"]

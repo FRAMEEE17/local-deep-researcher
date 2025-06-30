@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Main test script for research pipeline verification.
-Tests the complete search flow: graph.py -> SearchEngines -> execute_arxiv_search_strategy()
-"""
-
 import asyncio
 import time
 import sys

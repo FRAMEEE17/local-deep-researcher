@@ -13,7 +13,6 @@ class SearchAPI(Enum):
     JINA = "jina"  # Content extraction
 
 class Configuration(BaseModel):
-    """The configurable fields for the research assistant."""
 
     max_web_research_loops: int = Field(
         default=3,
@@ -99,9 +98,9 @@ class Configuration(BaseModel):
         description="Path to label encoder for intent classification"
     )
     
-    # Enhanced Search Configuration
+    # Search Configuration
     searxng_url: str = Field(
-        default="http://localhost:8080",
+        default="http://localhost:8001",
         title="SearXNG URL",
         description="URL for SearXNG search engine"
     )
@@ -115,13 +114,28 @@ class Configuration(BaseModel):
         title="Jina AI API Key",
         description="API key for Jina AI content extraction"
     )
+
     
-    # Vector storage capabilities are now in ArXiv MCP server
-    # No need for separate Pinecone configuration
+    # Content extraction settings
+    max_content_length: int = Field(
+        default=5000,
+        title="Max Content Length",
+        description="Maximum characters to extract from each page"
+    )
+    web_timeout: int = Field(
+        default=60,
+        title="Web Request Timeout",
+        description="Timeout for web requests in seconds"
+    )
+    max_file_size: int = Field(
+        default=10 * 1024 * 1024,
+        title="Max File Size",
+        description="Maximum file size to download (10MB default)"
+    )
     
     # Processing Limits
     max_papers_per_search: int = Field(
-        default=15,
+        default=10,
         title="Max Papers Per Search",
         description="Maximum papers to retrieve per search"
     )
@@ -130,7 +144,6 @@ class Configuration(BaseModel):
         title="Max Content Extractions", 
         description="Maximum papers to extract full content from"
     )
-    
     # Performance Settings
     enable_async: bool = Field(
         default=True,

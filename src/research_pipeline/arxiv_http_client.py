@@ -111,12 +111,11 @@ class ArxivMCPOClient:
             
         return await self._call_mcp_tool("search_papers", arguments)
     
-    async def hybrid_search(self, query: str, max_results: int = 10,
+    async def hybrid_search(self, query: str, max_results: int = 50,
                            search_method: str = "hybrid",
                            include_content: bool = False,
                            jina_api_key: Optional[str] = None,
                            categories: Optional[List[str]] = None) -> Dict[str, Any]:
-        """Enhanced hybrid search (ArXiv + SearchTheArxiv + Jina AI)."""
         arguments = {
             "query": query,
             "max_results": max_results,
@@ -182,7 +181,7 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
                     print(f"DEBUG: Executing direct search with query: {paper_id}")
                     direct_result = await client.search_papers_basic(
                         query=clean_paper_id,
-                        max_results=1
+                        max_results=50
                     )
                     print(f"DEBUG: Direct search result: {direct_result.get('success')}")
                     if direct_result.get("success"):

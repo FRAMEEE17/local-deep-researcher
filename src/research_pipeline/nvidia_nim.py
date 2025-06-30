@@ -24,7 +24,7 @@ class ChatNVIDIANIM(ChatOpenAI):
         self,
         base_url: str = "https://integrate.api.nvidia.com/v1",
         model: str = "meta/llama-3.1-8b-instruct",
-        temperature: float = 0.2,
+        temperature: float = 0.5,
         top_p: float = 0.7,
         # max_tokens: int = 8192,
         timeout: float = 60.0,  # Add 60 second timeout

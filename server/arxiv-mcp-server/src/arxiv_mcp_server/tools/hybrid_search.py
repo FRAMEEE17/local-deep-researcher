@@ -31,7 +31,7 @@ hybrid_search_tool = types.Tool(
 )
 
 
-async def search_arxiv_api(query: str, max_results: int = 10, 
+async def search_arxiv_api(query: str, max_results: int = 50, 
                           date_from: Optional[str] = None, 
                           date_to: Optional[str] = None,
                           categories: Optional[List[str]] = None) -> List[Dict[str, Any]]:
@@ -107,7 +107,7 @@ async def search_arxiv_api(query: str, max_results: int = 10,
         raise Exception(f"ArXiv API search failed: {str(e)}")
 
 
-async def search_searchthearxiv_api(query: str, max_results: int = 10) -> List[Dict[str, Any]]:
+async def search_searchthearxiv_api(query: str, max_results: int = 50) -> List[Dict[str, Any]]:
     """Search using SearchTheArxiv API for semantic search."""
     try:
         url = "https://searchthearxiv.com/search"

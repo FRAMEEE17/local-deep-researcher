@@ -36,8 +36,8 @@ class CustomXLMRobertaModel(nn.Module):
 class IntentClassifier:    
     def __init__(self, config: Configuration):
         self.config = config
-        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        
+        # self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cpu")
         # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_path)
         
@@ -48,7 +48,7 @@ class IntentClassifier:
         self.model = CustomXLMRobertaModel(num_labels=4)
         
         # Load state dict with strict=False to handle transformer version differences
-        state_dict = torch.load(config.intent_model_path, map_location=self.device, weights_only=True)
+        state_dict = torch.load(config.intent_model_path, map_location='cpu', weights_only=True)
         
         # Remove problematic keys that may exist in older transformer versions
         keys_to_remove = [k for k in state_dict.keys() if 'position_ids' in k]
