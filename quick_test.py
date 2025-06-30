@@ -93,7 +93,7 @@ async def test_paper_query():
             try:
                 result = await asyncio.wait_for(
                     app.ainvoke(input_data, config=config),
-                    timeout=60  # 60 second timeout
+                    timeout=180  # 60 second timeout
                 )
                 
                 end_time = time.time()
@@ -101,14 +101,28 @@ async def test_paper_query():
                 
                 print(f"   ✅ Pipeline completed in {duration:.2f}s")
                 
-                # Check results
-                if hasattr(result, 'final_summary') and result.final_summary:
-                    summary_length = len(result.final_summary)
-                    print(f"   📄 Generated summary: {summary_length} characters")
-                    print(f"   📊 ArXiv results: {len(getattr(result, 'arxiv_results', []))}")
-                    print(f"   🌐 Web results: {len(getattr(result, 'web_results', []))}")
+                if isinstance(result, dict):
+                    final_summary = result.get('final_summary') or result.get('running_summary')
+                    arxiv_results = result.get('arxiv_results', [])
+                    web_results = result.get('web_results', [])
                 else:
-                    print("   ⚠️ No summary generated")
+                    final_summary = getattr(result, 'final_summary', None) or getattr(result, 'running_summary', None)
+                    arxiv_results = getattr(result, 'arxiv_results', [])
+                    web_results = getattr(result, 'web_results', [])
+
+                if final_summary:
+                    summary_length = len(final_summary)
+                    print(f"   📄 Generated summary: {summary_length} characters")
+                    print(f"   📊 ArXiv results: {len(arxiv_results)}")
+                    print(f"   🌐 Web results: {len(web_results)}")
+                    
+                    # Show first 200 characters of summary
+                    print(f"   📝 Summary preview: {final_summary[:200]}...")
+                    
+                else:
+                    print("   ⚠️ No summary found in result")
+                    print(f"   🔍 Result type: {type(result)}")
+                    print(f"   🔍 Result keys: {list(result.keys()) if isinstance(result, dict) else dir(result)}")
                     
             except asyncio.TimeoutError:
                 print("   ❌ Pipeline timed out after 60 seconds")
@@ -143,8 +157,11 @@ async def test_paper_query():
                 from research_pipeline.nvidia_nim import ChatNVIDIANIM
                 
                 nvidia_llm = ChatNVIDIANIM(
-                    model="qwen/qwen3-235b-a22b",
-                    temperature=0.2
+                    base_url="https://integrate.api.nvidia.com/v1",
+                    model="meta/llama-3.1-8b-instruct",
+                    temperature=0.2,
+                    enable_reasoning=False,  
+                    timeout=180.0  # Increase to 3 minutes for reasoning models
                 )
                 
                 response = await nvidia_llm.ainvoke("Hello, respond with 'NVIDIA NIM working'.")

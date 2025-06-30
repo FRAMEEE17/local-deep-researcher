@@ -66,6 +66,12 @@ class ResearchStateOutput:
     content_extracted: int = field(default=0)
     sources_gathered: List[str] = field(default_factory=list)
     processing_times: Dict[str, float] = field(default_factory=dict)
+    # Add missing fields that main.py expects
+    arxiv_results: List[Dict[str, Any]] = field(default_factory=list)
+    semantic_results: List[Dict[str, Any]] = field(default_factory=list)
+    web_results: List[Dict[str, Any]] = field(default_factory=list)
+    extracted_content: List[Dict[str, Any]] = field(default_factory=list)
+    research_metadata: Dict[str, Any] = field(default_factory=dict)
 
 # Backward compatibility
 SummaryState = ResearchState

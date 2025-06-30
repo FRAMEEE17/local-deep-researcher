@@ -83,10 +83,10 @@ def classify_intent(state: ResearchState, config: RunnableConfig) -> Dict[str, A
             strategy = "arxiv_search"
             confidence = 0.8
         elif any(word in topic_lower for word in ['news', 'current', 'latest', 'recent', 'today']):
-            strategy = "web_search"
+            strategy = "hybrid_search"
             confidence = 0.7
         else:
-            strategy = "hybrid_search"
+            strategy = "web_search"
             confidence = 0.6
         
         result = {
@@ -99,7 +99,7 @@ def classify_intent(state: ResearchState, config: RunnableConfig) -> Dict[str, A
     logger.info("COMPLETED NODE: classify_intent()")
     return result
 
-def generate_query(state: ResearchState, config: RunnableConfig):
+async def generate_query(state: ResearchState, config: RunnableConfig):
     """LangGraph node that generates a search query based on the research topic.
     
     Uses an LLM to create an optimized search query for web research based on
@@ -194,47 +194,98 @@ def generate_query(state: ResearchState, config: RunnableConfig):
             logger.info(f"Query metadata: {query_metadata}")
             
     except json.JSONDecodeError as e:
-        # JSON parsing failed - try to extract useful content
+        # JSON parsing failed - try to extract JSON from wrapped text
         logger.warning(f"JSON parsing failed: {e}")
-        logger.info("Attempting content extraction from raw response")
+        logger.info("Attempting JSON extraction from wrapped text")
         
-        if configurable.strip_thinking_tokens:
-            cleaned_content = strip_thinking_tokens(contents)
-        else:
-            cleaned_content = contents
-        
-        # Try to extract a reasonable query from the raw content
-        # Look for quoted strings first
         import re
-        quote_pattern = r'"([^"]+)"'
-        quotes = re.findall(quote_pattern, cleaned_content)
         
-        potential_query = None
-        if quotes:
-            # Use the first quoted string as potential query
-            potential_query = quotes[0].strip()
-            logger.info(f"Found quoted query: '{potential_query}'")
+        # Pattern 1: Find complete JSON objects with balanced braces
+        # This pattern correctly handles nested JSON objects
+        def find_json_objects(text):
+            json_objects = []
+            brace_count = 0
+            start_pos = None
+            
+            for i, char in enumerate(text):
+                if char == '{':
+                    if brace_count == 0:
+                        start_pos = i
+                    brace_count += 1
+                elif char == '}':
+                    brace_count -= 1
+                    if brace_count == 0 and start_pos is not None:
+                        json_objects.append(text[start_pos:i+1])
+                        start_pos = None
+            
+            return json_objects
+        
+        json_matches = find_json_objects(contents)
+        print(f"DEBUG: Found {len(json_matches)} JSON matches: {json_matches}")
+        extracted_query = None
+        query_metadata = None
+        
+        # Try to parse each JSON match
+        for json_match in json_matches:
+            # Clean up double braces from template formatting
+            clean_match = json_match.replace('{{', '{').replace('}}', '}')
+            try:
+                parsed_json = json.loads(json_match)
+                if 'query' in parsed_json and parsed_json['query'].strip():
+                    extracted_query = parsed_json.get('query', '').strip()
+                    logger.info(f"EXTRACTED QUERY from JSON block: '{extracted_query}'")
+                    query_metadata = {
+                        "rationale": parsed_json.get("rationale", "Extracted from wrapped text"),
+                        "optimization_type": parsed_json.get("optimization_type", state.search_intent),
+                        "confidence_level": parsed_json.get("confidence_level", "medium")
+                    }
+                    break
+            except json.JSONDecodeError:
+                continue
+        
+        if extracted_query:
+            # Successfully extracted query from JSON block
+            search_query = extracted_query
         else:
-            # Look for first meaningful line
-            lines = [line.strip() for line in cleaned_content.strip().split('\n') if line.strip()]
-            if lines:
-                potential_query = lines[0].strip()
-                logger.info(f"Using first line as query: '{potential_query}'")
-        
-        # Validate extracted content as query
-        if potential_query and 5 < len(potential_query) < 200:
-            search_query = potential_query
-            logger.info(f"EXTRACTED QUERY from raw content: '{search_query}'")
-        else:
-            search_query = f"Research on {state.research_topic}"
-            logger.info(f"FALLBACK QUERY: '{search_query}'")
-        
-        # Set default metadata for fallback
-        query_metadata = {
-            "rationale": "Fallback query due to JSON parsing failure",
-            "optimization_type": state.search_intent or "hybrid",
-            "confidence_level": "low"
-        }
+            # JSON extraction failed - fall back to regex patterns
+            logger.info("JSON extraction failed, trying regex patterns")
+            
+            if configurable.strip_thinking_tokens:
+                cleaned_content = strip_thinking_tokens(contents)
+            else:
+                cleaned_content = contents
+            
+            # Try to extract a reasonable query from the raw content
+            # Look for quoted strings first
+            quote_pattern = r'"([^"]+)"'
+            quotes = re.findall(quote_pattern, cleaned_content)
+            
+            potential_query = None
+            if quotes:
+                # Use the first quoted string as potential query
+                potential_query = quotes[0].strip()
+                logger.info(f"Found quoted query: '{potential_query}'")
+            else:
+                # Look for first meaningful line
+                lines = [line.strip() for line in cleaned_content.strip().split('\n') if line.strip()]
+                if lines:
+                    potential_query = lines[0].strip()
+                    logger.info(f"Using first line as query: '{potential_query}'")
+            
+            # Validate extracted content as query
+            if potential_query and 5 < len(potential_query) < 200:
+                search_query = potential_query
+                logger.info(f"EXTRACTED QUERY from raw content: '{search_query}'")
+            else:
+                search_query = f"Research on {state.research_topic}"
+                logger.info(f"FALLBACK QUERY: '{search_query}'")
+            
+            # Set default metadata for fallback
+            query_metadata = {
+                "rationale": "Fallback query due to JSON parsing failure",
+                "optimization_type": state.search_intent or "hybrid",
+                "confidence_level": "low"
+            }
     
     except Exception as e:
         logger.error(f"Unexpected error during query generation: {e}")
@@ -556,12 +607,14 @@ async def extract_content(state: ResearchState, config: RunnableConfig) -> Dict[
         papers_with_pdf = 0
             
         for i, paper in enumerate(top_papers):
-            if paper.get('pdf_url'):
+            # Check for both 'url' (ArXiv MCP format) and 'pdf_url' (legacy format)
+            pdf_url = paper.get('pdf_url') or paper.get('url')
+            if pdf_url:
                 papers_with_pdf += 1
                 logger.info(f"Queuing extraction task {i+1}: {paper.get('title', 'Unknown title')[:50]}...")
-                logger.info(f"PDF URL: {paper['pdf_url']}")
+                logger.info(f"PDF URL: {pdf_url}")
                 extraction_tasks.append(
-                    search_engines.extract_content_jina(paper['pdf_url'])
+                    search_engines.extract_content_jina(pdf_url)
                 )
             else:
                 logger.warning(f"Paper {i+1} has no PDF URL, skipping: {paper.get('title', 'Unknown')[:50]}...")
@@ -863,7 +916,7 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
                 model=configurable.get_model_name(),
                 temperature=0.1,  # want factual responses
                 nvidia_api_key=configurable.nvidia_api_key,
-                enable_reasoning=True  # Enable reasoning for research synthesis
+                enable_reasoning=False  # Enable reasoning for research synthesis
             )
         else:  # Default to Ollama
             logger.info(f"Using Ollama LLM: {configurable.local_llm}")
@@ -1090,7 +1143,7 @@ def reflect_on_research(state: ResearchState, config: RunnableConfig):
         return {"search_query": f"More about {state.research_topic}"}                   
 
 def finalize_research(state: ResearchState) -> Dict[str, Any]:
-    """Enhanced research finalization with quality assessment and verification metadata.
+    """research finalization with quality assessment and verification metadata.
     
     Creates a comprehensive final summary with research quality indicators,
     confidence scoring, and structured source documentation.
@@ -1101,7 +1154,7 @@ def finalize_research(state: ResearchState) -> Dict[str, Any]:
     Returns:
         Dictionary with enhanced final_summary and quality metadata
     """
-    logger.info("EXECUTING NODE: finalize_research() - Enhanced final research output")
+    logger.info("EXECUTING NODE: finalize_research() - final research output")
     logger.info(f"INPUT: research_topic = '{state.research_topic}'")
     logger.info(f"INPUT: research_loop_count = {state.research_loop_count}")
     logger.info(f"INPUT: search_intent = '{state.search_intent}' (confidence: {state.intent_confidence:.2f})")
@@ -1109,7 +1162,8 @@ def finalize_research(state: ResearchState) -> Dict[str, Any]:
     start_time = time.time()
     
     try:
-        # Enhanced metrics calculation
+        
+        # metrics calculation
         total_papers = len(state.arxiv_results or []) + len(state.semantic_results or [])
         total_web_results = len(state.web_results or [])
         total_extractions = len(state.extracted_content or [])
@@ -1257,15 +1311,33 @@ def finalize_research(state: ResearchState) -> Dict[str, Any]:
             }
         }
         
-        logger.info(f"Enhanced research finalization completed in {finalization_time:.2f}s")
+        logger.info(f"research finalization completed in {finalization_time:.2f}s")
         logger.info(f"Final summary: {len(final_summary)} characters")
         logger.info(f"Research quality: {content_confidence:.2f} confidence, {source_diversity}/4 diversity")
+        
+        # Prepare final results for output
+        return_arxiv = state.arxiv_results or []
+        return_semantic = state.semantic_results or []
+        return_web = state.web_results or []
+        return_extracted = state.extracted_content or []
+        
         logger.info("COMPLETED NODE: finalize_research()")
         
+        # CRITICAL: Return ALL fields needed in final output
+        # LangGraph only preserves fields explicitly returned by the final node
         return {
             "final_summary": final_summary,
-            "running_summary": final_summary,
-            "research_metadata": research_metadata
+            "running_summary": final_summary, 
+            "research_metadata": research_metadata,
+            "arxiv_results": return_arxiv,  # Ensure ArXiv results are in final output
+            "semantic_results": return_semantic,  # Ensure semantic results are in final output
+            "web_results": return_web,  # Ensure web results are in final output
+            "extracted_content": return_extracted,  # Ensure extracted content is in final output
+            # Preserve other essential state fields for final output
+            "search_intent": state.search_intent,
+            "intent_confidence": state.intent_confidence,
+            "sources_gathered": state.sources_gathered,
+            "processing_times": state.processing_times
         }
         
     except Exception as e:
@@ -1310,83 +1382,75 @@ def finalize_research(state: ResearchState) -> Dict[str, Any]:
                 "running_summary": basic_summary
             }
         
-def route_research_flow(state: ResearchState, config: RunnableConfig) -> Literal["finalize_research", "extract_content", "execute_search"]:
-    """LangGraph routing function that determines the next step in the research flow.
-    
-    Controls the research loop by deciding whether to continue gathering information
-    or to finalize the summary based on the configured maximum number of research loops.
-    
-    Args:
-        state: Current graph state containing the research loop count
-        config: Configuration for the runnable, including max_web_research_loops setting
-        
-    Returns:
-        String literal indicating the next node to visit based on research progress
-    """
+def route_research_flow(state: ResearchState) -> Literal["execute_search", "extract_content", "finalize_research"]:
+    """Build router that prevents infinite content extraction loops."""
+    config = Configuration()
     logger.info("EXECUTING ROUTER: route_research_flow() - Determining next workflow step")
     logger.info(f"INPUT: research_loop_count = {state.research_loop_count}")
     logger.info(f"INPUT: research_topic = '{state.research_topic}'")
     
-    configurable = Configuration.from_runnable_config(config)
-    max_loops = configurable.max_web_research_loops
-    
+    max_loops = getattr(state, 'max_web_research_loops', 3)
     logger.info(f"CONFIGURATION: max_web_research_loops = {max_loops}")
-    logger.info(f"CONFIGURATION: jina_api_key_configured = {bool(configurable.jina_api_key)}")
     
-    # Analyze current state
-    arxiv_count = len(state.arxiv_results or [])
-    semantic_count = len(state.semantic_results or [])
-    web_count = len(state.web_results or [])
-    extracted_count = len(state.extracted_content or [])
-    
-    logger.info("CURRENT STATE ANALYSIS:")
-    logger.info(f"  - ArXiv results: {arxiv_count}")
-    logger.info(f"  - Semantic results: {semantic_count}")
-    logger.info(f"  - Web results: {web_count}")
-    logger.info(f"  - Extracted content: {extracted_count}")
-    
-    # Check if we've reached the maximum research loops
+    # Check if we've reached the loop limit
     logger.info("DECISION POINT 1: Checking research loop limit")
-    if state.research_loop_count > max_loops:
+    if state.research_loop_count >= max_loops:
         logger.info(f"ROUTING DECISION: finalize_research")
-        logger.info(f"REASON: Research loop count ({state.research_loop_count}) exceeds maximum ({max_loops})")
-        logger.info("COMPLETED ROUTER: route_research_flow()")
+        logger.info(f"REASON: Reached max loops ({state.research_loop_count}/{max_loops})")
         return "finalize_research"
-    else:
-        logger.info(f"Loop limit check: {state.research_loop_count}/{max_loops} - continuing research")
     
-    # If we have search results but no extracted content, extract content
+    logger.info(f"Loop limit check: {state.research_loop_count}/{max_loops} - continuing research")
+    
+    # Check current state
     logger.info("DECISION POINT 2: Checking content extraction needs")
-    has_results = (state.arxiv_results or state.semantic_results or state.web_results)
-    needs_extraction = has_results and not state.extracted_content
+    has_search_results = bool(state.arxiv_results or state.semantic_results or state.web_results)
+    has_extracted_content = bool(state.extracted_content)
+    jina_configured = bool(config.jina_api_key) or has_extracted_content
     
-    logger.info(f"Has search results: {has_results}")
-    logger.info(f"Has extracted content: {bool(state.extracted_content)}")
-    logger.info(f"Needs content extraction: {needs_extraction}")
+    # Track content extraction attempts to prevent infinite loops
+    extraction_attempts = getattr(state, 'content_extraction_attempts', 0)
+    max_extraction_attempts = 2  # Limit extraction attempts
     
-    if needs_extraction and configurable.jina_api_key:
-        logger.info(f"ROUTING DECISION: extract_content")
-        logger.info(f"REASON: Have search results ({arxiv_count + semantic_count + web_count} total) but no extracted content, and Jina API key is configured")
-        logger.info("COMPLETED ROUTER: route_research_flow()")
+    logger.info(f"Has search results: {has_search_results}")
+    logger.info(f"Has extracted content: {has_extracted_content}")
+    logger.info(f"Jina configured: {jina_configured}")
+    logger.info(f"Content extraction attempts: {extraction_attempts}/{max_extraction_attempts}")
+    
+    # Only try content extraction if:
+    # 1. We have search results
+    # 2. We don't have extracted content yet
+    # 3. Jina API is configured
+    # 4. We haven't exceeded max extraction attempts
+    if (has_search_results and 
+        not has_extracted_content and 
+        jina_configured and 
+        extraction_attempts < max_extraction_attempts):
+        
+        logger.info("ROUTING DECISION: extract_content")
+        logger.info(f"REASON: Have search results but no extracted content (attempt {extraction_attempts + 1}/{max_extraction_attempts})")
+        
+        # Increment extraction attempts
+        state.content_extraction_attempts = extraction_attempts + 1
+        
         return "extract_content"
-    elif needs_extraction and not configurable.jina_api_key:
-        logger.warning("Content extraction needed but Jina API key not configured - skipping extraction")
-    elif not has_results:
-        logger.info("No search results available yet - continuing with search")
-    elif state.extracted_content:
-        logger.info(f"Content already extracted ({extracted_count} sources) - continuing with search")
     
-    # Continue with more searches if needed
-    logger.info("DECISION POINT 3: Default routing to continue research")
-    logger.info(f"ROUTING DECISION: execute_search")
-    logger.info(f"REASON: Continue research loop ({state.research_loop_count + 1}/{max_loops})")
+    # If we've tried extraction too many times, give up and finalize
+    elif extraction_attempts >= max_extraction_attempts:
+        logger.info("ROUTING DECISION: finalize_research")
+        logger.info(f"REASON: Max content extraction attempts reached ({extraction_attempts}/{max_extraction_attempts})")
+        return "finalize_research"
     
-    # Log next iteration context
-    if state.search_intent:
-        logger.info(f"Next search will use strategy: {state.search_intent}")
+    # If we have enough content, finalize
+    elif has_search_results or has_extracted_content:
+        logger.info("ROUTING DECISION: finalize_research")
+        logger.info(f"REASON: Have sufficient content for analysis")
+        return "finalize_research"
     
-    logger.info("COMPLETED ROUTER: route_research_flow()")
-    return "execute_search"
+    # Otherwise, continue searching
+    else:
+        logger.info("ROUTING DECISION: execute_search")
+        logger.info(f"REASON: Need more research content")
+        return "execute_search"
 
 # Enhanced LangGraph workflow with intent classification and MCPO integration
 builder = StateGraph(ResearchState, input=ResearchStateInput, output=ResearchStateOutput, config_schema=Configuration)
@@ -1404,10 +1468,10 @@ builder.add_node("finalize_research", finalize_research)
 builder.add_edge(START, "classify_intent")
 builder.add_edge("classify_intent", "generate_query")
 builder.add_edge("generate_query", "execute_search")
-builder.add_edge("execute_search", "synthesize_research")
+builder.add_edge("execute_search", "extract_content")  # Missing connection fixed!
+builder.add_edge("extract_content", "synthesize_research")
 builder.add_edge("synthesize_research", "reflect_on_research")
 builder.add_conditional_edges("reflect_on_research", route_research_flow)
-builder.add_edge("extract_content", "synthesize_research")
 builder.add_edge("finalize_research", END)
 
 # Compile the enhanced graph

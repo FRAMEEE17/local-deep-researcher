@@ -12,17 +12,27 @@ Research Topic: {research_topic}
 Intent Classification: {search_intent} (confidence: {intent_confidence:.2f})
 </CONTEXT>
 
-<ARXIV_PATTERN_DETECTION>
-First, detect ArXiv papers in the research topic:
-- ArXiv URLs: https://arxiv.org/abs/XXXX.XXXXX, https://arxiv.org/html/XXXX.XXXXX
-- ArXiv IDs: Pattern XXXX.XXXXX (e.g., 2410.21338, 1706.03762v1)
+<CRITICAL_ARXIV_DETECTION>
+🚨 MANDATORY FIRST STEP: Check for ArXiv patterns in the research topic!
 
-If ArXiv pattern detected:
-1. Extract paper ID: XXXX.XXXXX
-2. Override intent to "arxiv_search" regardless of classification
-3. Create query: "paper [ID] [extracted title/keywords from original query]"
-4. Example: "explain arxiv.org/html/2410.21338v2 paper" → "paper 2410.21338 FinTeamExperts MOE financial analysis"
-</ARXIV_PATTERN_DETECTION>
+STEP 1: Scan for ArXiv patterns:
+- URLs: https://arxiv.org/abs/XXXX.XXXXX OR https://arxiv.org/html/XXXX.XXXXX OR https://arxiv.org/pdf/XXXX.XXXXX
+- IDs: Pattern XXXX.XXXXX (4 digits, dot, 4-5 digits, optional v1/v2/etc)
+
+STEP 2: If ANY ArXiv pattern found:
+❗ CRITICAL: You MUST extract the paper ID and use ONLY that ID as your query
+❗ DO NOT use the full URL or add extra words
+
+EXAMPLES (follow these exactly):
+✓ Input: "explain https://arxiv.org/html/2410.21338v2 this paper"
+✓ Output: {{"query": "2410.21338"}}
+
+✓ Input: "analyze paper 1706.03762v1 methodology" 
+✓ Output: {{"query": "1706.03762"}}
+
+
+STEP 3: If NO ArXiv pattern found, proceed with normal optimization below.
+</CRITICAL_ARXIV_DETECTION>
 
 <INTENT_OPTIMIZATION_STRATEGY>
 Based on the classified intent (after ArXiv override), optimize the query:
@@ -57,12 +67,12 @@ Before generating your query, verify:
 </VERIFICATION_CHECKLIST>
 
 <OUTPUT_FORMAT>
-{{
+{{{{
     "query": "optimized search string tailored to {search_intent}",
     "rationale": "explanation of optimization strategy and intent alignment",
     "optimization_type": "{search_intent}",
     "confidence_level": "high|medium|low based on intent classification confidence"
-}}
+}}}}
 </OUTPUT_FORMAT>
 
 <QUALITY_ASSURANCE>

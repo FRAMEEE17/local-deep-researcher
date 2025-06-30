@@ -23,13 +23,13 @@ class ChatNVIDIANIM(ChatOpenAI):
     def __init__(
         self,
         base_url: str = "https://integrate.api.nvidia.com/v1",
-        model: str = "qwen/qwen3-235b-a22b",
+        model: str = "meta/llama-3.1-8b-instruct",
         temperature: float = 0.2,
         top_p: float = 0.7,
-        max_tokens: int = 8192,
+        # max_tokens: int = 8192,
         timeout: float = 60.0,  # Add 60 second timeout
         nvidia_api_key: Optional[str] = None,
-        enable_reasoning: bool = True,
+        enable_reasoning: bool = False,
         **kwargs: Any,
     ):
         """Initialize NVIDIA NIM client."""
@@ -43,7 +43,7 @@ class ChatNVIDIANIM(ChatOpenAI):
             model=model,
             temperature=temperature,
             top_p=top_p,
-            max_tokens=max_tokens,
+            # max_tokens=max_tokens,
             timeout=timeout,  # Pass timeout to parent
             api_key=api_key,
             **kwargs,

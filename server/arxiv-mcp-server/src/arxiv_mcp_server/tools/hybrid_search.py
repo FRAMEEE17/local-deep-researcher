@@ -158,7 +158,7 @@ async def extract_content_jina(url: str, jina_api_key: str) -> Dict[str, Any]:
         jina_url = f"https://r.jina.ai/{url}"
         headers = {"Authorization": f"Bearer {jina_api_key}"}
         
-        response = requests.get(jina_url, headers=headers, timeout=60)
+        response = requests.get(jina_url, headers=headers, timeout=180)
         
         if response.status_code == 200:
             return {

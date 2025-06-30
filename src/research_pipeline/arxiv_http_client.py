@@ -69,8 +69,13 @@ class ArxivMCPOClient:
                             "tool": tool_name
                         }
             else:
+                print(f"DEBUG: Making request to {url}")
+                print(f"DEBUG: Request body: {arguments}")
                 # For other endpoints, use POST with arguments as body
                 async with self.session.post(url, json=arguments) as response:
+                    print(f"DEBUG: Response status: {response.status}")
+                    response_text = await response.text()
+                    print(f"DEBUG: Response text: {response_text[:500]}...")
                     if response.status == 200:
                         result = await response.json()
                         return {
@@ -144,7 +149,7 @@ class ArxivMCPOClient:
 
 async def execute_arxiv_search_strategy(query: str, strategy: str, config: Configuration) -> Dict[str, Any]:
     """
-    Execute ArXiv search strategy by calling the enhanced MCP server.
+    Execute ArXiv search strategy by calling the MCP server.
     
     For ArXiv papers, performs dual search:
     1. Direct paper ID search for exact paper
@@ -157,8 +162,10 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
         try:
             # Detect ArXiv paper ID in query
             arxiv_id_pattern = r'\b(\d{4}\.\d{4,5}(?:v\d+)?)\b'
+            # arxiv_match = re.search(arxiv_id_pattern, query)
+            print(f"DEBUG: Checking ArXiv ID in query: {query}")
             arxiv_match = re.search(arxiv_id_pattern, query)
-            
+            print(f"DEBUG: ArXiv match found: {arxiv_match.group(1) if arxiv_match else 'None'}")
             if strategy == "arxiv_search":
                 all_papers = []
                 search_methods = []
@@ -166,15 +173,22 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
                 if arxiv_match:
                     # Dual search approach for ArXiv papers
                     paper_id = arxiv_match.group(1)
+                    print(f"DEBUG: Starting dual search for paper ID: {paper_id}")
                     
+                    # Strip version number for MCP server compatibility
+                    clean_paper_id = paper_id.split('v')[0]  # "2410.21338v2" → "2410.21338"
+                    print(f"DEBUG: Original ID: {paper_id}, Clean ID: {clean_paper_id}")
                     # Search 1: Direct paper ID search
+                    print(f"DEBUG: Executing direct search with query: {paper_id}")
                     direct_result = await client.search_papers_basic(
-                        query=paper_id,
+                        query=clean_paper_id,
                         max_results=1
                     )
-                    
+                    print(f"DEBUG: Direct search result: {direct_result.get('success')}")
                     if direct_result.get("success"):
                         direct_data = direct_result.get("data", {})
+                        print(f"DEBUG: Direct result data type: {type(direct_data)}")
+                        print(f"DEBUG: Direct result data: {direct_data}")
                         if isinstance(direct_data, str):
                             try:
                                 direct_data = json.loads(direct_data)
@@ -192,8 +206,9 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
                         
                         all_papers.extend(direct_papers)
                         search_methods.append(f"direct_id_search:{paper_id}")
-                    
+                    print(f"DEBUG: Direct papers found: {len(direct_papers)}")
                     # Search 2: Complex query search for related papers
+                    print(f"DEBUG: Executing complex search with query: {query}")
                     related_result = await client.hybrid_search(
                         query=query,
                         max_results=config.max_papers_per_search - len(all_papers),
@@ -201,9 +216,11 @@ async def execute_arxiv_search_strategy(query: str, strategy: str, config: Confi
                         include_content=bool(config.jina_api_key),
                         jina_api_key=config.jina_api_key
                     )
-                    
+                    print(f"DEBUG: Complex search result: {related_result.get('success')}")
                     if related_result.get("success"):
                         related_data = related_result.get("data", {})
+                        print(f"DEBUG: Related result data type: {type(related_data)}")
+                        print(f"DEBUG: Related result data: {related_data}")
                         if isinstance(related_data, str):
                             try:
                                 related_data = json.loads(related_data)

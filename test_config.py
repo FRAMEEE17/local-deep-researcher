@@ -26,7 +26,7 @@ def test_config():
         runnable_config = RunnableConfig(
             configurable={
                 "llm_provider": "nvidia_nim",
-                "local_llm": "qwen/qwen3-235b-a22b",
+                "local_llm": "meta/llama-3.1-8b-instruct",
                 "search_api": "searxng"
             }
         )

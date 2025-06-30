@@ -16,7 +16,7 @@ export NVIDIA_API_KEY="your-nvidia-api-key-here"
 ### 2. Available Models
 
 Popular NVIDIA NIM models:
-- `qwen/qwen3-235b-a22b` (recommended for reasoning)
+- `meta/llama-3.1-8b-instruct` (recommended for reasoning)
 - `meta/llama-3.1-405b-instruct`
 - `meta/llama-3.1-70b-instruct`
 - `meta/llama-3.1-8b-instruct` (faster)
@@ -35,7 +35,7 @@ from langchain_core.runnables import RunnableConfig
 config = RunnableConfig(
     configurable={
         "llm_provider": "nvidia_nim",
-        "local_llm": "qwen/qwen3-235b-a22b",
+        "local_llm": "meta/llama-3.1-8b-instruct",
         "nvidia_api_key": None,  # Uses NVIDIA_API_KEY env var
         "max_web_research_loops": 2,
     }
@@ -58,7 +58,7 @@ from research_pipeline.nvidia_nim import ChatNVIDIANIM
 
 # With reasoning (recommended for research)
 llm = ChatNVIDIANIM(
-    model="qwen/qwen3-235b-a22b",
+    model="meta/llama-3.1-8b-instruct",
     temperature=0.2,
     enable_reasoning=True
 )
@@ -118,7 +118,7 @@ All NVIDIA NIM settings in `configuration.py`:
 llm_provider: "nvidia_nim"
 nvidia_nim_base_url: "https://integrate.api.nvidia.com/v1"
 nvidia_api_key: Optional[str]  # Or use NVIDIA_API_KEY env var
-local_llm: "qwen/qwen3-235b-a22b"  # Model name
+local_llm: "meta/llama-3.1-8b-instruct"  # Model name
 ```
 
 ## Troubleshooting

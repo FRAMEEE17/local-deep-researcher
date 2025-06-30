@@ -108,8 +108,6 @@ class IntentClassifier:
         }
     
     def _map_intent_to_strategy(self, intent_class: str) -> str:
-        """Map intent class to search strategy following the trained model"""
-        # Based on your xlm_roberta_ft.ipynb label mapping:
         # 0: Academic Research Query
         # 1: Casual Conversation and General Query  
         # 2: Hybrid Research Query
@@ -125,8 +123,7 @@ class IntentClassifier:
         return intent_mapping.get(intent_class, "hybrid_search")  # Default fallback
     
     def _preprocess_for_classification(self, text: str) -> str:
-        """Preprocess text to improve intent classification accuracy.
-        
+        """
         Detects ArXiv patterns and enhances text with academic context clues.
         """
         import re
@@ -135,8 +132,8 @@ class IntentClassifier:
         
         # Detect ArXiv URLs and IDs
         arxiv_url_pattern = r'https?://arxiv\.org/(?:abs|html|pdf)/(\d{4}\.\d{4,5}(?:v\d+)?)'
-        arxiv_id_pattern = r'\b(\d{4}\.\d{4,5}(?:v\d+)?)\b'
-        
+        # arxiv_id_pattern = r'\b(\d{4}\.\d{4,5}(?:v\d+)?)\b'
+        arxiv_id_pattern = r'(\d{4}\.\d{4,5}(?:v\d+)?)'  # Remove word boundaries that break on slashes
         # Check for ArXiv URL
         arxiv_url_match = re.search(arxiv_url_pattern, text)
         if arxiv_url_match:

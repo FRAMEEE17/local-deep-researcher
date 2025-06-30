@@ -37,7 +37,7 @@ class Configuration(BaseModel):
         description="Model name for LMStudio provider"
     )
     nvidia_nim_model: str = Field(
-        default="qwen/qwen3-235b-a22b",
+        default="meta/llama-3.1-8b-instruct",
         title="NVIDIA NIM Model", 
         description="Model name for NVIDIA NIM provider"
     )
@@ -121,7 +121,7 @@ class Configuration(BaseModel):
     
     # Processing Limits
     max_papers_per_search: int = Field(
-        default=10,
+        default=15,
         title="Max Papers Per Search",
         description="Maximum papers to retrieve per search"
     )
