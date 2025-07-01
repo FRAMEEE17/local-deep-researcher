@@ -118,7 +118,7 @@ class IntentClassifier:
         
         intent_mapping = {
             "Academic Research Query": "arxiv_search",           # Label 0 → ArXiv MCP
-            "Casual Conversation and General Query": "web_search", # Label 1 → SearXNG 
+            "Casual Conversation and General Query": "casual_chat", # Label 1 → Direct LLM response
             "Hybrid Research Query": "hybrid_search",            # Label 2 → Both
             "Web Search and Current Information Query": "web_search" # Label 3 → SearXNG
         }

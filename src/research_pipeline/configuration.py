@@ -84,6 +84,11 @@ class Configuration(BaseModel):
         title="Strip Thinking Tokens",
         description="Whether to strip <think> tokens from model responses"
     )
+    is_explanation_query: bool = Field(
+        default=False,
+        title="Is Explanation Query",
+        description="Whether this is an explanation query requiring Medium.com-style article format"
+    )
 
     # Intent Classification 
     intent_model_path: str = Field(

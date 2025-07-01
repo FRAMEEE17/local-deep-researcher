@@ -997,14 +997,27 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
         logger.info(f"Research compilation completed: {total_sources} total sources")
         logger.info(f"Combined research content length: {len(combined_research)} characters")
         
-        summarizer_prompt = summarizer_instructions.format(
-            
-            search_intent = state.search_intent or "hybrid",
-            intent_confidence=state.intent_confidence or 0.6,
-            research_loop_count = state.research_loop_count,
-            max_loops = state.max_loops,
-            research_topic = state.research_topic
-        )
+        # Choose the appropriate prompt based on query type
+        configurable = Configuration.from_runnable_config(config)
+        is_explanation_query = getattr(configurable, "is_explanation_query", False)
+        
+        if is_explanation_query:
+            from research_pipeline.prompts import explanation_article_instructions
+            summarizer_prompt = explanation_article_instructions.format(
+                search_intent = state.search_intent or "hybrid",
+                intent_confidence=state.intent_confidence or 0.6,
+                research_loop_count = state.research_loop_count,
+                max_loops = state.max_loops,
+                research_topic = state.research_topic
+            )
+        else:
+            summarizer_prompt = summarizer_instructions.format(
+                search_intent = state.search_intent or "hybrid",
+                intent_confidence=state.intent_confidence or 0.6,
+                research_loop_count = state.research_loop_count,
+                max_loops = state.max_loops,
+                research_topic = state.research_topic
+            )
         # # Build the human message with comprehensive research context
         # if existing_summary:
         #     logger.info("Building UPDATE prompt with existing summary")
@@ -1156,11 +1169,12 @@ def synthesize_research(state: ResearchState, config: RunnableConfig):
             "error_type": type(e).__name__,
             "fallback_used": True
         }
+        fallback_summary = state.running_summary or f"Error synthesizing research for: {state.research_topic}"
         return {
-            "running_summary": state.running_summary or f"Error synthesizing research for: {state.research_topic}",
+            "running_summary": fallback_summary,
             "verification_metadata": error_metadata,
             "processing_times": processing_times,
-            "agent_status": f"✅ Synthesis Agent Complete: {len(running_summary)} chars analyzed"
+            "agent_status": f"✅ Synthesis Agent Complete: {len(fallback_summary)} chars analyzed"
         }
 
 def reflect_on_research(state: ResearchState, config: RunnableConfig):
