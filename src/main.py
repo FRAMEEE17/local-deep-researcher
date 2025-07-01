@@ -9,6 +9,22 @@ default_config = Configuration()
 # Add research_pipeline to path
 sys.path.insert(0, str(Path(__file__).parent / "research_pipeline"))
 
+# def format_agent_progress(event):
+#     """Format LangGraph event for streaming display"""
+#     node_name = list(event.keys())[0] if event else "unknown"
+    
+#     status_map = {
+#         "classify_intent": "🧠 Intent Classification Complete",
+#         "generate_query": "📝 Query Optimization Complete", 
+#         "execute_search": "🔍 Multi-Agent Search Complete",
+#         "extract_content": "📄 Content Extraction Complete",
+#         "synthesize_research": "⚡ Research Synthesis Complete"
+#     }
+    
+#     return {
+#         "type": "agent_update",
+#         "content": status_map.get(node_name, f"Agent {node_name} complete")
+#     }
 async def test_search_flow():
     
     try:
@@ -38,7 +54,14 @@ async def test_search_flow():
         start_time = time.time()
         
         # Execute pipeline
-        result = await app.ainvoke(input_data, config=config)
+        #result = await app.ainvoke(input_data, config=config)
+        result = None
+        async for event in app.astream(input_data, config=config):
+            result = event
+            # if "node" in event:
+            #     yield format_agent_progress(event)
+
+        # yield {"type": "final", "content": result.get("final_summary", "")}
         
         end_time = time.time()
         duration = end_time - start_time
@@ -49,16 +72,26 @@ async def test_search_flow():
         web_results = []
         
         # Check what's actually in the LangGraph result
-        print(f"DEBUG: result type = {type(result)}")
-        print(f"DEBUG: dir(result) = {[attr for attr in dir(result) if not attr.startswith('_')]}")
+        # print(f"DEBUG: result type = {type(result)}")
+        # print(f"DEBUG: dir(result) = {[attr for attr in dir(result) if not attr.startswith('_')]}")
         
-        # Handle LangGraph AddableValuesDict result type
         try:
-            # Try to access as dict-like object first
-            final_summary = result.get('final_summary') or result.get('running_summary')
-            arxiv_results = result.get('arxiv_results', []) or result.get('papers', [])
-            web_results = result.get('web_results', [])
-            metadata = result.get('research_metadata', {})
+            if 'finalize_research' in result:
+                final_data = result['finalize_research']
+                final_summary = final_data.get('final_summary') or final_data.get('running_summary')
+                arxiv_results = final_data.get('arxiv_results', [])
+                web_results = final_data.get('web_results', [])
+                metadata = final_data.get('research_metadata', {})
+            else:
+                final_summary = result.get('final_summary') or result.get('running_summary')
+                arxiv_results = result.get('arxiv_results', []) or result.get('papers', [])
+                web_results = result.get('web_results', [])
+                metadata = result.get('research_metadata', {})
+            # # Try to access as dict-like object first
+            # final_summary = result.get('final_summary') or result.get('running_summary')
+            # arxiv_results = result.get('arxiv_results', []) or result.get('papers', [])
+            # web_results = result.get('web_results', [])
+            # metadata = result.get('research_metadata', {})
             
             # Check all keys in the result
             if hasattr(result, 'keys'):

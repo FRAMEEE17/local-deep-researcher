@@ -256,4 +256,7 @@ Before submitting, verify:
 ✗ Don't create overly broad searches that lack focus
 </QUALITY_CHECK>
 
+CRITICAL: You MUST respond with ONLY valid JSON.
+
+DO NOT include any text before or after the JSON. DO NOT use markdown code blocks.
 Analyze the current summary and generate your systematic gap analysis:"""

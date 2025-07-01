@@ -20,13 +20,13 @@
   #### Terminal 3: Check services
   ```
   curl http://localhost:9937/docs  # MCPO endpoints
-  curl http://localhost:9099       # Pipelines server
+  curl http://localhost:9097      # Pipelines server
   ```
 
   ### 🔗 OpenWebUI Configuration
 
 - 1. Settings → Connections → OpenAI API
-- 2. API Base URL: http://localhost:9099
+- 2. API Base URL: http://localhost:9097
 - 3. API Key: 0p3n-w3bu!
 - 4. Save & Test Connection
 

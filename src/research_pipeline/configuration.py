@@ -13,7 +13,11 @@ class SearchAPI(Enum):
     JINA = "jina"  # Content extraction
 
 class Configuration(BaseModel):
-
+    max_research_loops: int = Field(
+        default=3,
+        title="Max Research Loops",
+        description="Maximum number of research loops for reflection"
+    )
     max_web_research_loops: int = Field(
         default=3,
         title="Research Depth",

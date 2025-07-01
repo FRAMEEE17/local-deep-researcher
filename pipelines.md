@@ -30,14 +30,14 @@ For a streamlined setup using Docker:
 
 Run the Pipelines container:
 
-docker run -d -p 9099:9099 --add-host=host.docker.internal:host-gateway -v pipelines:/app/pipelines --name pipelines --restart always ghcr.io/open-webui/pipelines:main
+docker run -d -p 9097:9097 --add-host=host.docker.internal:host-gateway -v pipelines:/app/pipelines --name pipelines --restart always ghcr.io/open-webui/pipelines:main
 
 
 Connect to Open WebUI:
 
 Navigate to the Admin Panel > Settings > Connections section in Open WebUI.
 When you're on this page, you can press the + button to add another connection.
-Set the API URL to http://localhost:9099 and the API key to 0p3n-w3bu!.
+Set the API URL to http://localhost:9097 and the API key to 0p3n-w3bu!.
 Once you've added your pipelines connection and verified it, you will see an icon appear within the API Base URL field for the added connection. When hovered over, the icon itself will be labeled Pipelines. Your pipelines should now be active.
 info
 If your Open WebUI is running in a Docker container, replace localhost with host.docker.internal in the API URL.
@@ -53,7 +53,7 @@ If you need to install a custom pipeline with additional dependencies:
 
 Run the following command:
 
-docker run -d -p 9099:9099 --add-host=host.docker.internal:host-gateway -e PIPELINES_URLS="https://github.com/open-webui/pipelines/blob/main/examples/filters/detoxify_filter_pipeline.py" -v pipelines:/app/pipelines --name pipelines --restart always ghcr.io/open-webui/pipelines:main
+docker run -d -p 9097:9097 --add-host=host.docker.internal:host-gateway -e PIPELINES_URLS="https://github.com/open-webui/pipelines/blob/main/examples/filters/detoxify_filter_pipeline.py" -v pipelines:/app/pipelines --name pipelines --restart always ghcr.io/open-webui/pipelines:main
 
 
 Alternatively, you can directly install pipelines from the admin settings by copying and pasting the pipeline URL, provided it doesn't have additional dependencies.
