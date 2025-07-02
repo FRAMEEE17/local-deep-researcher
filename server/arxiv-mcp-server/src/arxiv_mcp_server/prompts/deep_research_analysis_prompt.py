@@ -1,5 +1,3 @@
-"""Deep research analysis prompt for the arXiv MCP server."""
-
 # Consolidated comprehensive paper analysis prompt
 PAPER_ANALYSIS_PROMPT = """
 You are an AI research assistant tasked with analyzing academic papers from arXiv. You have access to several tools to help with this analysis:

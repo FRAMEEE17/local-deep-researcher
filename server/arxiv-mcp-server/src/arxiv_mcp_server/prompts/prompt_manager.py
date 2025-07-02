@@ -1,5 +1,3 @@
-"""Research journey prompt management for the arXiv MCP server."""
-
 from typing import Dict, Optional
 from mcp.types import Prompt
 from .prompts import PROMPTS

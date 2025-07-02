@@ -1,5 +1,3 @@
-"""Resource management and storage for arXiv papers."""
-
 from pathlib import Path
 from typing import List
 import arxiv

@@ -1,5 +1,3 @@
-"""Handlers for prompt-related requests with paper analysis functionality."""
-
 from typing import List, Dict, Optional
 from mcp.types import Prompt, PromptMessage, TextContent, GetPromptResult
 from .prompts import PROMPTS

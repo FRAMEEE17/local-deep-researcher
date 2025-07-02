@@ -240,3 +240,11 @@ Thumbs.db
 .wget-hsts
 .sudo_as_admin_successful
 
+/knowledge-repos
+/notebooks
+/ollama_deep_researcher.egg-info
+/data
+/.langgraph_api
+CLAUDE.local.md
+.claude_code_config.json
+~/.arxiv-mcp-server/

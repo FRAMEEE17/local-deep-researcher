@@ -1,5 +1,3 @@
-"""Configuration settings for the arXiv MCP server."""
-
 import sys
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pathlib import Path

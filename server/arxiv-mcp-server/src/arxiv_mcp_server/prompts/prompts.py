@@ -1,5 +1,3 @@
-"""Prompt definitions for arXiv MCP server with research journey support."""
-
 from mcp.types import (
     Prompt,
     PromptArgument,

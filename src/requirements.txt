@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pydantic
+httpx
+torch
+python-multipart
+langgraph
+langchain-text-splitters
+langchain-core
+pinecone-client
+python-dotenv
+tiktoken
+pandas
+numpy
+requests
+tqdm
+arxiv
